@@ -1,4 +1,12 @@
+package src;
 
+import IA.DistFS.Requests;
+import IA.DistFS.Servers;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Set;
 
 public class State{
 
@@ -17,27 +25,28 @@ public class State{
 	public void initialState1(Servers servers, Requests requests){
 		serversInfo = servers;
 		transmissionTimes = new ArrayList<Integer>(Collections.nCopies(servers.size(), 0));
-		dataStructure = new ArrayList<Set<fileID>>(servers.size());
+		dataStructure = new ArrayList<Set<Integer>>(servers.size());
 
 		for(int i = 0; i < requests.size(); ++i){
 			int[] req = requests.getRequest(i); //[userID, fileID]
 			Set<Integer> loc = servers.fileLocations(req[1]);
 			Iterator<Integer> it = loc.iterator();
-			float min = 5001; 
+			float min = 5001;
 			float minServer = 0;
 			while(it.hasNext()){
 				Integer serverID = it.next();
-				float current = servers.transmissionTime(serverID, req[0]);
+
+				var current = servers.tranmissionTime(serverID, req[0]);
 				if(min > current){
 					minServer = serverID;
 					min = current;
 				}
 			}
 			
-			dataStructure[minServer].add(fileID);
-			transmissionTimes[minServer] += min;
+			dataStructure.get(minServer).add(fileID);
+			transmissionTimes.get(minServer) += min;
 		}
-		calculateMaxAndSum()
+		calculateMaxAndSum();
 	}
 
 	public void initialState2(Servers servers, Requests requests){
@@ -47,10 +56,10 @@ public class State{
 
 	private void calculateMaxAndSum(){
 		maxServerID = 0; // max
-		sumTransmissionTimes = 0.0;
-		maxTransmissionTime = 0.0;
+		sumTransmissionTimes = (float) 0.0;
+		maxTransmissionTime = (float) 0.0;
 		for(int i = 0; i < transmissionTimes.size(); ++i){
-			float current = transmissionTimes[i];
+			float current = transmissionTimes.get(i);
 			if(current > maxTransmissionTime){
 				maxServerID = i;
 				maxTransmissionTime = current;
@@ -69,10 +78,10 @@ public class State{
 		float h1 = maxTransmissionTime;
 		float h2 = sumTransmissionTimes;
 		float mean = sumTransmissionTimes / transmissionTimes.size();	
-		float h3 = 0.0; // std
+		float h3 = (float) 0.0; // std
 		for(int i = 0; i < transmissionTimes.size(); ++i){
-			float term = transmissionTimes[i] - mean;
-			h3 += term * term
+			float term = transmissionTimes.get(i) - mean;
+			h3 += term * term;
 		}
 		h3 /= transmissionTimes.size() - 1;
 		return h1 + h2  + h3; 
@@ -93,6 +102,6 @@ public class State{
 	private int maxServerID;
 	private static Servers serversInfo;
 	private ArrayList<Integer> transmissionTimes; 
-	private ArrayList<Set<fileID>> dataStructure;
+	private ArrayList<Set<Integer>> dataStructure;
 
 }
