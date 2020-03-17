@@ -8,16 +8,20 @@ import java.util.*;
 public class State{
 
 
+	public State(){}
 
-
-	public State(){
-
-	}
-
+	/**
+	 * Copies a state into a new one
+	 * */
 	public State(State s){
 		maxServerID = s.maxServerID;
-		dataStructure = s.dataStructure;
-		transmissionTimes = s.transmissionTimes;
+		fillArrayList();
+		for(int i = 0; i < nServers; ++i){
+			dataStructure.set(i, new PriorityQueue<>(s.dataStructure.get(i)));
+		}
+		transmissionTimes = new ArrayList<>(s.transmissionTimes);
+		maxTransmissionTime = s.maxTransmissionTime;
+		sumTransmissionTimes = s.sumTransmissionTimes;
 	}
 
 	/************************************
@@ -25,31 +29,31 @@ public class State{
 	 *************************************/
 
 	/**
-	 * @brief Initializes each request to the server with the fastest user-server transmission
+	 * Initializes each request to the server with the fastest user-server transmission
+	 * @param servers Contains informations about the servers
+	 * @param requests Contains information about each request and user
 	 * */
 	public void initialState1(Servers servers, Requests requests){
 		serversInfo = servers;
-		transmissionTimes = new ArrayList<Float>();
+		nServers = servers.size();
 		fillArrayList();
-
-		System.out.println("Total servers: " + servers.size());
-		System.out.println("Data structure size: " + dataStructure.size());
 		for(int i = 0; i < requests.size(); ++i){
-			int[] req = requests.getRequest(i); //[userID, fileID]
-			Set<Integer> loc = servers.fileLocations(req[1]);
+			int[] req = requests.getRequest(i); //[userID, fileID
+			File currentFile = new File(req[0], req[1]);
+			Set<Integer> loc = servers.fileLocations(currentFile.getFileID());
 			Iterator<Integer> it = loc.iterator();
 			float min = 5001;
 			int minServer = 0;
 			while(it.hasNext()){
 				Integer serverID = it.next();
-				var current = servers.tranmissionTime(serverID, req[0]);
+				var current = servers.tranmissionTime(serverID, currentFile.getUserID());
 				if(min > current){
 					minServer = serverID;
 					min = current;
 				}
 			}
-			System.out.println("Fastest Server: " + minServer);
-			dataStructure.get(minServer).add(req[1]); // <= SEG FAULT
+			currentFile.setTransmissionTime(min);
+			dataStructure.get(minServer).add(currentFile); // <= SEG FAULT
 			transmissionTimes.set(minServer, transmissionTimes.get(minServer) + min);
 		}
 		calculateMaxAndSum();
@@ -64,9 +68,44 @@ public class State{
 	 * 			OPERATORS
 	 *************************************/
 
-	public void operatorA(){
+	public void moveMaxFile(int newLocation){
+		// get max file
+		File maxFile = dataStructure.get(maxServerID).poll();
+		// update transmission times
+		if(maxFile == null){
+			System.out.println(maxServerID);
+		}
+		int userID = maxFile.getUserID();
+		float newTransmissionTime = serversInfo.tranmissionTime(newLocation, userID);
+		transmissionTimes.set(maxServerID, transmissionTimes.get(maxServerID) - maxFile.getTransmissionTime());
+		maxFile.setTransmissionTime(newTransmissionTime);
+		dataStructure.get(newLocation).add(maxFile);
+		// recalculate variables
+		calculateMaxAndSum();
+	}
 
 
+	/**
+	 * This move operator selects the file with the lowest
+	 *transmission time from the lowest server and moves it into n - 1
+	 *servers (to the rest of the servers) this operator tries to minimize
+	 *the transmission time and create a balance
+	 *In total it creates n - 1 new states
+	 * */
+	public List<State> move(){
+		// create empty list
+		List<State> nextStates = new ArrayList<>();
+		// copy the max file
+		for(int i = 0; i < nServers; ++i){ // for each server create a new state
+			if(i != maxServerID){
+				// create a new State and update it
+				State modified = new State(this);
+				modified.moveMaxFile(i);
+				nextStates.add(modified);
+			}
+		}
+
+		return nextStates;
 	}
 
 	/************************************
@@ -77,7 +116,7 @@ public class State{
 		maxServerID = 0; // max
 		sumTransmissionTimes = (float) 0.0;
 		maxTransmissionTime = (float) 0.0;
-		for(int i = 0; i < transmissionTimes.size(); ++i){
+		for(int i = 0; i < nServers; ++i){
 			float current = transmissionTimes.get(i);
 			if(current > maxTransmissionTime){
 				maxServerID = i;
@@ -89,10 +128,10 @@ public class State{
 	}
 
 	private void fillArrayList(){
-		dataStructure = new ArrayList<>(serversInfo.size());
-		transmissionTimes = new ArrayList<>(serversInfo.size());
-		for(int i = 0; i < serversInfo.size(); ++i){
-			dataStructure.add(new HashSet<>());
+		dataStructure = new ArrayList<>(nServers);
+		transmissionTimes = new ArrayList<>(nServers);
+		for(int i = 0; i < nServers; ++i){
+			dataStructure.add(new PriorityQueue<>());
 			transmissionTimes.add(0.0f);
 		}
 	}
@@ -131,12 +170,16 @@ public class State{
 	* 			ATTRIBUTES
 	*************************************/
 
+
 	private float sumTransmissionTimes;
 	private float maxTransmissionTime;
 	private int maxServerID;
 	private static Servers serversInfo;
+	private static int nServers;
 	private ArrayList<Float> transmissionTimes;
-	private ArrayList<Set<Integer>> dataStructure;
+	// !!!!!!!!!!!!!!!!!!
+	private ArrayList<PriorityQueue<File>> dataStructure; // IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+	// WHICH IS THE ORDERING????
 
 
 

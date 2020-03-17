@@ -9,6 +9,10 @@ import aima.search.framework.SearchAgent;
 import aima.search.informed.HillClimbingSearch;
 import aima.search.informed.SimulatedAnnealingSearch;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
+
 public class main {
 
     private enum Algorithm{
@@ -30,7 +34,7 @@ public class main {
         DummyGoalTest goal = new DummyGoalTest();
         Search algorithm = null;
         FirstSuccessorFunction successorFunction = new FirstSuccessorFunction();
-
+        FirstHeuristicFunction heuristic = new FirstHeuristicFunction();
 
         if(algType == Algorithm.HillClimbing){
             System.out.println("Starting Hill Climbing...");
@@ -40,13 +44,36 @@ public class main {
             System.out.println("Starting Simulated Annealing...");
             algorithm = new SimulatedAnnealingSearch(); // <= falta pasar parametros
         }
-        Problem p = new Problem(initialState, successorFunction, goal);
+        Problem p = new Problem(initialState, successorFunction, goal, heuristic);
 
         // Instantiate the SearchAgent object
         long timeIni = java.lang.System.currentTimeMillis();
-     //   SearchAgent agent = new SearchAgent(p, algorithm);
+        SearchAgent agent = new SearchAgent(p, algorithm);
         long timeFi = java.lang.System.currentTimeMillis();
 
+
+        System.out.println();
+        printActions(agent.getActions());
+        printInstrumentation(agent.getInstrumentation());
+    }
+
+
+    //  PRINT FUNCTIONS (SOURCE = PDF IA)
+    private static void printInstrumentation(Properties properties) {
+        Iterator keys = properties.keySet().iterator();
+        while (keys.hasNext()) {
+            String key = (String) keys.next();
+            String property = properties.getProperty(key);
+            System.out.println(key + " : " + property);
+        }
+
+    }
+
+    private static void printActions(List actions) {
+        for (int i = 0; i < actions.size(); i++) {
+            String action = (String) actions.get(i);
+            System.out.println(action);
+        }
     }
 
 
