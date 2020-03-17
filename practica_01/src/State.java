@@ -49,7 +49,7 @@ public class State{
 				}
 			}
 			
-			dataStructure.get(minServer).add(req[1]);
+			// dataStructure.get(minServer).add(req[1]); // <= SEG FAULT
 			transmissionTimes.set(minServer, transmissionTimes.get(minServer) + min);
 		}
 		calculateMaxAndSum();
