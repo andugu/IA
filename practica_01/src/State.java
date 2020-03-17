@@ -78,6 +78,7 @@ public class State{
 		int userID = maxFile.getUserID();
 		float newTransmissionTime = serversInfo.tranmissionTime(newLocation, userID);
 		transmissionTimes.set(maxServerID, transmissionTimes.get(maxServerID) - maxFile.getTransmissionTime());
+		transmissionTimes.set(newLocation, newTransmissionTime);
 		maxFile.setTransmissionTime(newTransmissionTime);
 		dataStructure.get(newLocation).add(maxFile);
 		// recalculate variables
@@ -96,14 +97,20 @@ public class State{
 		// create empty list
 		List<State> nextStates = new ArrayList<>();
 		// copy the max file
-		for(int i = 0; i < nServers; ++i){ // for each server create a new state
-			if(i != maxServerID){
+		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(maxServerID).peek().getFileID());
+		Iterator<Integer> it = loc.iterator();
+		float min = 5001;
+		int minServer = 0;
+		while(it.hasNext()){ // for each server create a new state
+			Integer serverID = it.next();
+			if(serverID != maxServerID){
 				// create a new State and update it
 				State modified = new State(this);
-				modified.moveMaxFile(i);
+				modified.moveMaxFile(serverID);
 				nextStates.add(modified);
 			}
 		}
+
 
 		return nextStates;
 	}
@@ -136,8 +143,10 @@ public class State{
 		}
 	}
 
-	public void printState(){
-		System.out.println("State print not implemented!");
+	public String printState(){
+		return "MaxTransmissionTime: " + maxTransmissionTime +
+				"\nSumTransmissionTime: " + sumTransmissionTimes +
+				"\nBalance: " + getSTD();
 	}
 
 

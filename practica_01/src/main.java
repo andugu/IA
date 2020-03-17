@@ -47,14 +47,21 @@ public class main {
         Problem p = new Problem(initialState, successorFunction, goal, heuristic);
 
         // Instantiate the SearchAgent object
-        long timeIni = java.lang.System.currentTimeMillis();
+        long initialTime = java.lang.System.currentTimeMillis();
         SearchAgent agent = new SearchAgent(p, algorithm);
-        long timeFi = java.lang.System.currentTimeMillis();
-
-
-        System.out.println();
+        long finalTime = java.lang.System.currentTimeMillis();
+        System.out.println("STEPS");
         printActions(agent.getActions());
         printInstrumentation(agent.getInstrumentation());
+        System.out.println("Time: " + (finalTime-initialTime) + "ms");
+        State finalState = (State)algorithm.getGoalState();
+        System.out.println("InitialState");
+        System.out.println(initialState.printState());
+        System.out.println("FinalState");
+        System.out.println(finalState.printState());
+
+
+
     }
 
 
