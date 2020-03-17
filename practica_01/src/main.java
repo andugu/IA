@@ -86,7 +86,7 @@ public class main {
 
     public static void main(String[] args) {
         // DEFINE EXPERIMENT PARAMETERS
-        int seed = 67646574;
+        int seed = 14154;
         int nServers = 5;
         int nRepetitions = 2; // < nServers
         int nUsers = 50;
