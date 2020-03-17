@@ -3,10 +3,7 @@ package src;
 import IA.DistFS.Requests;
 import IA.DistFS.Servers;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class State{
 
@@ -27,12 +24,16 @@ public class State{
 	 * 			INITIAL STATES
 	 *************************************/
 
+	/**
+	 * @brief Initializes each request to the server with the fastest user-server transmission
+	 * */
 	public void initialState1(Servers servers, Requests requests){
 		serversInfo = servers;
 		transmissionTimes = new ArrayList<Float>();
-		fillArrayList(transmissionTimes, (float)0.0, servers.size());
-		dataStructure = new ArrayList<Set<Integer>>(servers.size());
+		fillArrayList();
 
+		System.out.println("Total servers: " + servers.size());
+		System.out.println("Data structure size: " + dataStructure.size());
 		for(int i = 0; i < requests.size(); ++i){
 			int[] req = requests.getRequest(i); //[userID, fileID]
 			Set<Integer> loc = servers.fileLocations(req[1]);
@@ -41,15 +42,14 @@ public class State{
 			int minServer = 0;
 			while(it.hasNext()){
 				Integer serverID = it.next();
-
 				var current = servers.tranmissionTime(serverID, req[0]);
 				if(min > current){
 					minServer = serverID;
 					min = current;
 				}
 			}
-			
-			// dataStructure.get(minServer).add(req[1]); // <= SEG FAULT
+			System.out.println("Fastest Server: " + minServer);
+			dataStructure.get(minServer).add(req[1]); // <= SEG FAULT
 			transmissionTimes.set(minServer, transmissionTimes.get(minServer) + min);
 		}
 		calculateMaxAndSum();
@@ -88,9 +88,12 @@ public class State{
 
 	}
 
-	private void fillArrayList(ArrayList<Float> list, float value, int repetitions){
-		for(int i = 0; i < repetitions; ++i){
-			list.add(value);
+	private void fillArrayList(){
+		dataStructure = new ArrayList<>(serversInfo.size());
+		transmissionTimes = new ArrayList<>(serversInfo.size());
+		for(int i = 0; i < serversInfo.size(); ++i){
+			dataStructure.add(new HashSet<>());
+			transmissionTimes.add(0.0f);
 		}
 	}
 
