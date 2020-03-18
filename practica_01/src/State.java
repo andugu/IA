@@ -38,7 +38,7 @@ public class State{
 		nServers = servers.size();
 		fillArrayList();
 		for(int i = 0; i < requests.size(); ++i){
-			int[] req = requests.getRequest(i); //[userID, fileID
+			int[] req = requests.getRequest(i); //[userID, fileID]
 			File currentFile = new File(req[0], req[1]);
 			Set<Integer> loc = servers.fileLocations(currentFile.getFileID());
 			Iterator<Integer> it = loc.iterator();
@@ -53,15 +53,41 @@ public class State{
 				}
 			}
 			currentFile.setTransmissionTime(min);
-			dataStructure.get(minServer).add(currentFile); // <= SEG FAULT
+			dataStructure.get(minServer).add(currentFile);
 			transmissionTimes.set(minServer, transmissionTimes.get(minServer) + min);
 		}
 		calculateMaxAndSum();
 	}
 
+	/**
+	 * Initializes each request to a random server
+	 * @param servers Contains informations about the servers
+	 * @param requests Contains information about each request and user
+	 * */
 	public void initialState2(Servers servers, Requests requests){
-
-
+		serversInfo = servers;
+		nServers = servers.size();
+		fillArrayList();
+		for(int i = 0; i < requests.size(); ++i){
+			int[] req = requests.getRequest(i); //[userID, fileID]
+			File currentFile = new File(req[0], req[1]);
+			Set<Integer> loc = servers.fileLocations(currentFile.getFileID());
+			Iterator<Integer> it = loc.iterator();
+			Random r = new Random();
+			r.setSeed(1234);
+			int rand = r.nextInt(loc.size());
+			int j = 0;
+			while (j != rand) {
+				j++;
+				it.next();
+			}
+			Integer serverID = it.next();
+			var time = servers.tranmissionTime(serverID, currentFile.getUserID());
+			currentFile.setTransmissionTime(time);
+			dataStructure.get(serverID).add(currentFile);
+			transmissionTimes.set(serverID, transmissionTimes.get(serverID) + time);
+		}
+		calculateMaxAndSum();
 	}
 
 	/************************************
@@ -72,13 +98,10 @@ public class State{
 		// get max file
 		File maxFile = dataStructure.get(maxServerID).poll();
 		// update transmission times
-		if(maxFile == null){
-			System.out.println(maxServerID);
-		}
 		int userID = maxFile.getUserID();
 		float newTransmissionTime = serversInfo.tranmissionTime(newLocation, userID);
 		transmissionTimes.set(maxServerID, transmissionTimes.get(maxServerID) - maxFile.getTransmissionTime());
-		transmissionTimes.set(newLocation, newTransmissionTime);
+		transmissionTimes.set(newLocation, transmissionTimes.get(newLocation) + newTransmissionTime);
 		maxFile.setTransmissionTime(newTransmissionTime);
 		dataStructure.get(newLocation).add(maxFile);
 		// recalculate variables
@@ -110,6 +133,14 @@ public class State{
 				nextStates.add(modified);
 			}
 		}
+		return nextStates;
+	}
+
+
+	public List<State> swap() {
+		List<State> nextStates = new ArrayList<>();
+
+
 
 
 		return nextStates;

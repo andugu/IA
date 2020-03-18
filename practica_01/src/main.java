@@ -2,7 +2,6 @@ package src;
 
 import IA.DistFS.Requests;
 import IA.DistFS.Servers;
-import aima.search.framework.GoalTest;
 import aima.search.framework.Problem;
 import aima.search.framework.Search;
 import aima.search.framework.SearchAgent;
@@ -28,13 +27,15 @@ public class main {
 
         // CREATE INITIAL STATE
         State initialState = new State();
-        initialState.initialState1(servers, requests);
+        initialState.initialState2(servers, requests);
         initialState.printState();
         // CREATE PROBLEM
         DummyGoalTest goal = new DummyGoalTest();
         Search algorithm = null;
         FirstSuccessorFunction successorFunction = new FirstSuccessorFunction();
-        FirstHeuristicFunction heuristic = new FirstHeuristicFunction();
+        // SELECT HEURISTIC
+        //FirstHeuristicFunction heuristic = new FirstHeuristicFunction();
+        SlowestServerHeuristicFunction heuristic = new SlowestServerHeuristicFunction();
 
         if(algType == Algorithm.HillClimbing){
             System.out.println("Starting Hill Climbing...");
@@ -86,11 +87,11 @@ public class main {
 
     public static void main(String[] args) {
         // DEFINE EXPERIMENT PARAMETERS
-        int seed = 14154;
-        int nServers = 5;
-        int nRepetitions = 2; // < nServers
-        int nUsers = 50;
-        int nRequests = 15;
+        int seed = 1234;
+        int nServers = 50;
+        int nRepetitions = 15; // < nServers
+        int nUsers = 200;
+        int nRequests = 600;
         Algorithm type = Algorithm.HillClimbing;
 
         try{
