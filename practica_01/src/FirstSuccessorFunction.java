@@ -8,7 +8,6 @@ import java.util.List;
 
 public class FirstSuccessorFunction implements  SuccessorFunction{
 
-
     @Override
     public List getSuccessors(Object state) {
         ArrayList retVal = new ArrayList();
@@ -17,8 +16,6 @@ public class FirstSuccessorFunction implements  SuccessorFunction{
         for(State s : successors){
             retVal.add(new Successor("Move slowest file from lowest server", s));
         }
-
         return retVal;
-
     }
 }

@@ -180,7 +180,6 @@ public class State{
 				"\nBalance: " + getSTD();
 	}
 
-
 	/************************************
 	 * 			GETTERS
 	 *************************************/
@@ -220,7 +219,5 @@ public class State{
 	// !!!!!!!!!!!!!!!!!!
 	private ArrayList<PriorityQueue<File>> dataStructure; // IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 	// WHICH IS THE ORDERING????
-
-
 
 }
