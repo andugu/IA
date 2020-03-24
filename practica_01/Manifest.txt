@@ -1,0 +1,2 @@
+Main-Class: src.main
+Class-Path: libs/AIMA.jar libs/DistributedFS.jar
