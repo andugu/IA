@@ -4,15 +4,15 @@ En aquesta pràctica experimentarem amb AIMA per tal de resoldre un problema de 
 
 #### Estructura:
 
-libs 			-> frameworks i llibreries necessaries
+libs 			--> frameworks i llibreries necessaries
 
-src  			-> codi font de la pràctica
+src  			--> codi font de la pràctica
 
-enunciat.pdf 	-> enunciat de la pràctica
+enunciat.pdf 	--> enunciat de la pràctica
 
-makefile.sh  	-> executable per compilar el projecte automàticament
+makefile.sh  	--> executable per compilar el projecte automàticament
 
-Manifest.txt 	-> informació necessaria per compilar el jar final
+Manifest.txt 	--> informació necessaria per compilar el jar final
 
 #### Compilació i execució:
 
