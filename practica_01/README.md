@@ -44,10 +44,10 @@ successorFunction (operator)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveSlowest --> moves slowest file from lowest server
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> //TODO
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> //TODO
 
 heuristic:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;best&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  --> take into account maxTransmissionTime and the std from all servers
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;best&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> take into account maxTransmissionTime and the std from all servers
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slowest --> only checks MaxTransmissionTime

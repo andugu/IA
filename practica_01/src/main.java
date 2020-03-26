@@ -43,7 +43,7 @@ public class main {
         if (sucFunc.equals("moveSlowest"))
             successorFunction = new FirstSuccessorFunction();
         else
-            successorFunction = new FirstSuccessorFunction(); //TODO
+            successorFunction = new SecondSuccessorFunction();
 
         // SELECT HEURISTIC
         HeuristicFunction heuristic;
@@ -128,7 +128,7 @@ public class main {
             System.out.println("");
             System.out.println("successorFunction (operator)");
             System.out.println("    moveSlowest --> moves slowest file from lowest server");
-            System.out.println("    second      --> //TODO");
+            System.out.println("    swap        --> //TODO");
             System.out.println("");
             System.out.println("heuristic:");
             System.out.println("    best    --> take into account maxTransmissionTime & std from all servers");
@@ -152,7 +152,7 @@ public class main {
             System.exit(-1);
         }
 
-        if (!args[7].equals("moveSlowest") && !args[7].equals("second")){
+        if (!args[7].equals("moveSlowest") && !args[7].equals("swap")){
             System.out.println(args[7]+" isn't a valid successorFunction");
             System.exit(-1);
         }

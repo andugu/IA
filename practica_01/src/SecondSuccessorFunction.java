@@ -6,15 +6,15 @@ import aima.search.framework.SuccessorFunction;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstSuccessorFunction implements  SuccessorFunction{
+public class SecondSuccessorFunction implements  SuccessorFunction{
 
     @Override
     public List getSuccessors(Object state) {
         ArrayList retVal = new ArrayList();
         State currentState = (State)state;
-        var successors = currentState.move();
+        var successors = currentState.swap();
         for(State s : successors){
-            retVal.add(new Successor("Move slowest file from lowest server", s));
+            retVal.add(new Successor("Swaped request form server", s));
         }
         return retVal;
     }
