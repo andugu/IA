@@ -29,7 +29,7 @@ public class main {
 
         // CREATE INITIAL STATE
         State initialState = new State();
-        if (initSt.equals("fastest"))
+        if (initSt.equals("state1"))
             initialState.initialState1(servers, requests);
         else
             initialState.initialState2(servers, requests);
@@ -40,7 +40,7 @@ public class main {
 
         // CREATE OPERATORS
         SuccessorFunction successorFunction;
-        if (sucFunc.equals("moveSlowest"))
+        if (sucFunc.equals("moveMaxFile"))
             successorFunction = new FirstSuccessorFunction();
         else
             successorFunction = new SecondSuccessorFunction();
@@ -123,16 +123,16 @@ public class main {
             System.out.println("    sa --> SimulatedAnnealing");
             System.out.println("");
             System.out.println("initialState:");
-            System.out.println("    fastest --> assign each request to the server with less delay");
-            System.out.println("    random  --> for random assignation");
+            System.out.println("    state1 --> assign each request to the server with less delay");
+            System.out.println("    state2  --> for random assignation");
             System.out.println("");
             System.out.println("successorFunction (operator)");
-            System.out.println("    moveSlowest --> moves slowest file from lowest server");
-            System.out.println("    swap        --> a random server is selected, and the file at its peak is moved to all others");
+            System.out.println("    moveMaxFile    --> moves slowest file from lowest server");
+            System.out.println("    moveRandomFile --> a random server is selected, and the file at its peak is moved to all others");
             System.out.println("");
             System.out.println("heuristic:");
-            System.out.println("    best    --> take into account maxTransmissionTime & std from all servers");
-            System.out.println("    slowest --> only checks MaxTransmissionTime");
+            System.out.println("    best          --> take into account maxTransmissionTime & std from all servers");
+            System.out.println("    slowestServer --> only checks MaxTransmissionTime");
             System.out.println("");
             System.exit(-1);
         }
@@ -147,17 +147,17 @@ public class main {
             System.exit(-1);
         }
 
-        if (!args[6].equals("fastest") && !args[6].equals("random")){
+        if (!args[6].equals("state1") && !args[6].equals("state2")){
             System.out.println(args[6]+" isn't a valid initialState");
             System.exit(-1);
         }
 
-        if (!args[7].equals("moveSlowest") && !args[7].equals("swap")){
+        if (!args[7].equals("moveMaxFile") && !args[7].equals("moveRandomFile")){
             System.out.println(args[7]+" isn't a valid successorFunction");
             System.exit(-1);
         }
 
-        if (!args[8].equals("best") && !args[8].equals("slowest")){
+        if (!args[8].equals("best") && !args[8].equals("slowestServer")){
             System.out.println(args[8]+" isn't a valid heuristic");
             System.exit(-1);
         }
