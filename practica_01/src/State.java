@@ -108,13 +108,23 @@ public class State{
 		calculateMaxAndSum();
 	}
 
+	public void moveRandomFile(int origin, int serverID){
+		File top = dataStructure.get(origin).poll();
+		int userID = top.getUserID();
+		float newTransmissionTime = serversInfo.tranmissionTime(serverID, userID);
+		transmissionTimes.set(origin, transmissionTimes.get(origin) - top.getTransmissionTime());
+		transmissionTimes.set(serverID, transmissionTimes.get(serverID) + newTransmissionTime);
+		top.setTransmissionTime(newTransmissionTime);
+		dataStructure.get(serverID).add(top);
+		calculateMaxAndSum();
+	}
 
 	/**
 	 * This move operator selects the file with the lowest
-	 *transmission time from the lowest server and moves it into n - 1
-	 *servers (to the rest of the servers) this operator tries to minimize
-	 *the transmission time and create a balance
-	 *In total it creates n - 1 new states
+	 * transmission time from the lowest server and moves it into n - 1
+	 * servers (to the rest of the servers) this operator tries to minimize
+	 * the transmission time and create a balance
+	 * In total it creates n - 1 new states
 	 * */
 	public List<State> move(){
 		// create empty list
@@ -122,8 +132,6 @@ public class State{
 		// copy the max file
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(maxServerID).peek().getFileID());
 		Iterator<Integer> it = loc.iterator();
-		float min = 5001;
-		int minServer = 0;
 		while(it.hasNext()){ // for each server create a new state
 			Integer serverID = it.next();
 			if(serverID != maxServerID){
@@ -136,13 +144,29 @@ public class State{
 		return nextStates;
 	}
 
-
+	/**
+	* This operator swaps the file from the peek of a random server and 
+	* all the others where it is present to another random server
+	* */
 	public List<State> swap() {
 		List<State> nextStates = new ArrayList<>();
+		int origin = (int)(Math.random() * dataStructure.size());
+		while (dataStructure.get(origin).size() == 0)
+			origin = (int)(Math.random() * dataStructure.size());
+		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(origin).peek().getFileID());
+		Iterator<Integer> it = loc.iterator();
 
-
-
-
+		while(it.hasNext()){ // for each server create a new state
+			Integer serverID = it.next();
+			if(serverID != origin){
+				// create a new State and update it
+				State modified = new State(this);
+				modified.moveRandomFile(origin, serverID);
+				nextStates.add(modified);
+			}
+		}
+		if (nextStates.size() == 0)
+			nextStates.add(this);
 		return nextStates;
 	}
 
@@ -181,7 +205,7 @@ public class State{
 	}
 
 	/************************************
-	 * 			GETTERS
+	 * 			   GETTERS
 	 *************************************/
 
 	public float getMaxTransmissionTime() {
@@ -216,8 +240,5 @@ public class State{
 	private static Servers serversInfo;
 	private static int nServers;
 	private ArrayList<Float> transmissionTimes;
-	// !!!!!!!!!!!!!!!!!!
-	private ArrayList<PriorityQueue<File>> dataStructure; // IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-	// WHICH IS THE ORDERING????
-
+	private ArrayList<PriorityQueue<File>> dataStructure;
 }

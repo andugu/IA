@@ -113,7 +113,7 @@ public class main {
 
         System.out.println("");
         
-        if (args.length != 9){
+        if (args.length != 9 || args[0].equals("-h")){
             System.out.println("Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic");
             System.out.println("");
             System.out.println("seed, nServers, nRepetitions, nUsers, nRequests are int numbers");
@@ -128,7 +128,7 @@ public class main {
             System.out.println("");
             System.out.println("successorFunction (operator)");
             System.out.println("    moveSlowest --> moves slowest file from lowest server");
-            System.out.println("    swap        --> //TODO");
+            System.out.println("    swap        --> a random server is selected, and the file at its peak is moved to all others");
             System.out.println("");
             System.out.println("heuristic:");
             System.out.println("    best    --> take into account maxTransmissionTime & std from all servers");

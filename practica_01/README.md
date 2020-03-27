@@ -44,7 +44,7 @@ successorFunction (operator)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveSlowest --> moves slowest file from lowest server
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> //TODO
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> a random server is selected, and the file at its peak is moved to all others
 
 heuristic:
 
