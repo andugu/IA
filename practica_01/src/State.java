@@ -178,6 +178,7 @@ public class State{
 		maxServerID = 0; // max
 		sumTransmissionTimes = (float) 0.0;
 		maxTransmissionTime = (float) 0.0;
+
 		for(int i = 0; i < nServers; ++i){
 			float current = transmissionTimes.get(i);
 			if(current > maxTransmissionTime){
