@@ -40,10 +40,17 @@ public class main {
 
         // CREATE OPERATORS
         SuccessorFunction successorFunction;
-        if (sucFunc.equals("moveMaxFile"))
-            successorFunction = new FirstSuccessorFunction();
-        else
-            successorFunction = new SecondSuccessorFunction();
+        switch (sucFunc) {
+            case "op1":
+                successorFunction = new FirstSuccessorFunction();
+                break;
+            case "op2":
+                successorFunction = new SecondSuccessorFunction();
+                break;
+            default:
+                successorFunction = new ThirdSuccessorFunction();
+
+        }
 
         // SELECT HEURISTIC
         HeuristicFunction heuristic;
@@ -127,8 +134,9 @@ public class main {
             System.out.println("    state2  --> for random assignation");
             System.out.println("");
             System.out.println("successorFunction (operator)");
-            System.out.println("    moveMaxFile    --> moves slowest file from lowest server");
-            System.out.println("    moveRandomFile --> a random server is selected, and the file at its peak is moved to all others");
+            System.out.println("    op1    --> moveMaxFile: moves slowest file from lowest server");
+            System.out.println("    op2    --> moveRandomFile: a random server is selected, and the file at its peak is moved to all others");
+            System.out.println("    op3    --> combination: op1 + op2");
             System.out.println("");
             System.out.println("heuristic:");
             System.out.println("    best          --> take into account maxTransmissionTime & std from all servers");
@@ -152,7 +160,7 @@ public class main {
             System.exit(-1);
         }
 
-        if (!args[7].equals("moveMaxFile") && !args[7].equals("moveRandomFile")){
+        if (!args[7].equals("op1") && !args[7].equals("op2") && !args[7].equals("op3")){
             System.out.println(args[7]+" isn't a valid successorFunction");
             System.exit(-1);
         }
