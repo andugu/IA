@@ -7,7 +7,9 @@ public class TwoHeuristicFunction implements HeuristicFunction {
     @Override
     public double getHeuristicValue(Object state) {
         State currentState = (State) state;
-        return -1; // NO IMPLEMENTADA YA QUE NO SE SI INCLUIR
+        float h1 = currentState.getMaxTransmissionTime();
+        float h2 = currentState.getSumTransmissionTimes();
+        return h1 + h2; // NO IMPLEMENTADA YA QUE NO SE SI INCLUIR
         // EL BALANCE EN ESTE CRITERIO O NO!?!!?
     }
 }

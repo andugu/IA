@@ -132,11 +132,13 @@ public class State{
 		// create empty list
 		List<State> nextStates = new ArrayList<>();
 		// copy the max file
+		assert  serversInfo != null;
+		assert dataStructure != null;
+		assert dataStructure.get(maxServerID).peek() != null;
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(maxServerID).peek().getFileID());
-		Iterator<Integer> it = loc.iterator();
-		while(it.hasNext()){ // for each server create a new state
-			Integer serverID = it.next();
-			if(serverID != maxServerID){
+		assert  loc != null;
+		for (Integer serverID : loc) { // for each server create a new state
+			if (serverID != maxServerID) {
 				// create a new State and update it
 				State modified = new State(this);
 				modified.moveMaxFile(serverID);
@@ -167,8 +169,7 @@ public class State{
 				nextStates.add(modified);
 			}
 		}
-		if (nextStates.size() == 0)
-			nextStates.add(this);
+
 		return nextStates;
 	}
 

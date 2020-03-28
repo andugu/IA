@@ -13,6 +13,7 @@ import aima.search.framework.HeuristicFunction;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 public class main {
 
@@ -22,84 +23,102 @@ public class main {
     }
 
     public static void RunExperiment(int seed, int nServers, int nRepetitions, int nUsers , int nRequests, Algorithm algType, String initSt, String sucFunc, String heur) throws Exception {
+        int rounds = 1000;
+        long elapsedTime = 0;
+        long initialMaxTransmissionTime = 0;
+        long finalMaxTransmissionTime = 0;
+        int steps = 100000;
+        int stiter = 50;
+        int k = 50;
+        double lambda = 0.005;
+        Random rand = new Random();
+        rand.setSeed(seed);
+        for(int i = 0; i < rounds; ++i){
+            System.out.println("Current round: " + i);
+            // GENERATE PROBLEM DATA
+            Servers servers = new Servers(nServers, nRepetitions, seed);
+            Requests requests = new Requests(nUsers, nRequests, seed);
 
-        // GENERATE PROBLEM DATA
-        Servers servers = new Servers(nServers, nRepetitions, seed);
-        Requests requests = new Requests(nUsers, nRequests, seed);
+            // CREATE INITIAL STATE
+            State initialState = new State(seed);
+            if (initSt.equals("state1"))
+                initialState.initialState1(servers, requests);
+            else
+                initialState.initialState2(servers, requests);
+            initialState.printState();
 
-        // CREATE INITIAL STATE
-        State initialState = new State(seed);
-        if (initSt.equals("state1"))
-            initialState.initialState1(servers, requests);
-        else
-            initialState.initialState2(servers, requests);
-        initialState.printState();
+            // SET NO GOAL
+            DummyGoalTest goal = new DummyGoalTest();
 
-        // SET NO GOAL
-        DummyGoalTest goal = new DummyGoalTest();
+            // CREATE OPERATORS
+            SuccessorFunction successorFunction;
+            switch (sucFunc) {
+                case "op1":
+                    successorFunction = new FirstSuccessorFunction();
+                    break;
+                case "op2":
+                    successorFunction = new SecondSuccessorFunction();
+                    break;
+                case "op4":
+                    successorFunction = new AndSuccessorFunction();
+                    break;
+                default:
+                    successorFunction = new ThirdSuccessorFunction();
 
-        // CREATE OPERATORS
-        SuccessorFunction successorFunction;
-        switch (sucFunc) {
-            case "op1":
-                successorFunction = new FirstSuccessorFunction();
-                break;
-            case "op2":
-                successorFunction = new SecondSuccessorFunction();
-                break;
-            case "op4":
-                successorFunction = new AndSuccessorFunction();
-                break;
-            default:
-                successorFunction = new ThirdSuccessorFunction();
+            }
 
+            // SELECT HEURISTIC
+            HeuristicFunction heuristic;
+            if (heur.equals("best"))
+                heuristic = new FirstHeuristicFunction();
+            else
+                heuristic = new SlowestServerHeuristicFunction();
+
+            // ALGORITHM
+            // steps = numero de temperaturs
+            // stiter = numero de iteraciones
+            // k = temp inicial
+            // lamb = decremento
+
+            Search algorithm = null;
+            if(algType == Algorithm.HillClimbing){
+                algorithm = new HillClimbingSearch();
+            }
+            else if(algType == Algorithm.SimulatedAnnealing){
+                algorithm = new SimulatedAnnealingSearch(steps, stiter, k, lambda); // <= falta pasar parametros
+            }
+
+            // CREATE PROBLEM
+            Problem p = new Problem(initialState, successorFunction, goal, heuristic);
+
+            // Instantiate the SearchAgent object
+            long initialTime = java.lang.System.currentTimeMillis();
+            SearchAgent agent = new SearchAgent(p, algorithm);
+            long finalTime = java.lang.System.currentTimeMillis();
+
+            //System.out.println("STEPS");
+            // printActions(agent.getActions());
+            //System.out.println("");
+
+            elapsedTime += finalTime-initialTime;
+            State finalState = (State)algorithm.getGoalState();
+            elapsedTime += finalTime-initialTime;
+            initialMaxTransmissionTime += initialState.getMaxTransmissionTime();
+            finalMaxTransmissionTime += finalState.getMaxTransmissionTime();
+
+            // update seed
+            seed = rand.nextInt();
         }
-
-        // SELECT HEURISTIC
-        HeuristicFunction heuristic;
-        if (heur.equals("best"))
-            heuristic = new FirstHeuristicFunction();
-        else
-            heuristic = new SlowestServerHeuristicFunction();
-
-        // ALGORITHM
-        Search algorithm = null;
-        if(algType == Algorithm.HillClimbing){
-            System.out.println("Starting Hill Climbing...");
-            algorithm = new HillClimbingSearch();
-        }
-        else if(algType == Algorithm.SimulatedAnnealing){
-            System.out.println("Starting Simulated Annealing...");
-            algorithm = new SimulatedAnnealingSearch(); // <= falta pasar parametros
-        }
-
-        // CREATE PROBLEM
-        Problem p = new Problem(initialState, successorFunction, goal, heuristic);
-
-        // Instantiate the SearchAgent object
-        long initialTime = java.lang.System.currentTimeMillis();
-        SearchAgent agent = new SearchAgent(p, algorithm);
-        long finalTime = java.lang.System.currentTimeMillis();
-
-        //System.out.println("STEPS");
-        //printActions(agent.getActions());
-        //System.out.println("");
-
-        printInstrumentation(agent.getInstrumentation());
-        System.out.println("");
-
-        System.out.println("Time: " + (finalTime-initialTime) + "ms");
-        System.out.println("");
-
-        State finalState = (State)algorithm.getGoalState();
-
-        System.out.println("InitialState:");
-        System.out.println(initialState.printState());
-        System.out.println("");
-
-        System.out.println("FinalState:");
-        System.out.println(finalState.printState());
-        System.out.println("");
+        elapsedTime /= rounds;
+        initialMaxTransmissionTime /= rounds;
+        finalMaxTransmissionTime /= rounds;
+        System.out.println("Steps = " + steps);
+        System.out.println("stiter = " + stiter);
+        System.out.println("k = " + k);
+        System.out.println("lambda = " + lambda);
+        System.out.println("Elapsed time: " + elapsedTime);
+        System.out.println("InitialMaxTransmissionTime: " + initialMaxTransmissionTime);
+        System.out.println("FinalMaxTransmissionTime: " + finalMaxTransmissionTime);
     }
 
     //  PRINT FUNCTIONS (SOURCE = PDF IA)
@@ -169,7 +188,10 @@ public class main {
         }
 
         try{
-            RunExperiment(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]), Integer.parseInt(args[4]), type, args[6], args[7], args[8]);
+            RunExperiment(Integer.parseInt(args[0]), Integer.parseInt(args[1]),
+                          Integer.parseInt(args[2]), Integer.parseInt(args[3]),
+                          Integer.parseInt(args[4]), type, args[6], args[7], args[8]);
+
         }
         catch (Exception e){
             e.printStackTrace();
