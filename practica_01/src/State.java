@@ -77,6 +77,7 @@ public class State{
 			Iterator<Integer> it = loc.iterator();
 			Random r = new Random();
 			r.setSeed(randomSeed);
+
 			int rand = r.nextInt(loc.size());
 			int j = 0;
 			while (j != rand) {
