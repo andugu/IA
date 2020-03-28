@@ -64,7 +64,7 @@ public class State{
 	 * @param servers Contains informations about the servers
 	 * @param requests Contains information about each request and user
 	 * */
-	public void initialState2(Servers servers, Requests requests){
+	public void initialState2(Servers servers, Requests requests, int seed){
 		serversInfo = servers;
 		nServers = servers.size();
 		fillArrayList();
@@ -74,7 +74,7 @@ public class State{
 			Set<Integer> loc = servers.fileLocations(currentFile.getFileID());
 			Iterator<Integer> it = loc.iterator();
 			Random r = new Random();
-			r.setSeed(1234);
+			r.setSeed(seed);
 			int rand = r.nextInt(loc.size());
 			int j = 0;
 			while (j != rand) {

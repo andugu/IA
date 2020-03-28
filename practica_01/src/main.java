@@ -32,7 +32,7 @@ public class main {
         if (initSt.equals("state1"))
             initialState.initialState1(servers, requests);
         else
-            initialState.initialState2(servers, requests);
+            initialState.initialState2(servers, requests, seed);
         initialState.printState();
 
         // SET NO GOAL
