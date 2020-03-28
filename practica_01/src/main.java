@@ -28,7 +28,7 @@ public class main {
         Requests requests = new Requests(nUsers, nRequests, seed);
 
         // CREATE INITIAL STATE
-        State initialState = new State();
+        State initialState = new State(seed);
         if (initSt.equals("state1"))
             initialState.initialState1(servers, requests);
         else
@@ -46,6 +46,9 @@ public class main {
                 break;
             case "op2":
                 successorFunction = new SecondSuccessorFunction();
+                break;
+            case "op4":
+                successorFunction = new AndSuccessorFunction();
                 break;
             default:
                 successorFunction = new ThirdSuccessorFunction();
@@ -121,27 +124,22 @@ public class main {
         System.out.println("");
         
         if (args.length != 9 || args[0].equals("-h")){
-            System.out.println("Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic");
-            System.out.println("");
-            System.out.println("seed, nServers, nRepetitions, nUsers, nRequests are int numbers");
-            System.out.println("");
-            System.out.println("algorithm:");
-            System.out.println("    hc --> HillClimbing");
-            System.out.println("    sa --> SimulatedAnnealing");
-            System.out.println("");
-            System.out.println("initialState:");
-            System.out.println("    state1 --> assign each request to the server with less delay");
-            System.out.println("    state2  --> for random assignation");
-            System.out.println("");
-            System.out.println("successorFunction (operator)");
-            System.out.println("    op1    --> moveMaxFile: moves slowest file from lowest server");
-            System.out.println("    op2    --> moveRandomFile: a random server is selected, and the file at its peak is moved to all others");
-            System.out.println("    op3    --> combination: op1 + op2");
-            System.out.println("");
-            System.out.println("heuristic:");
-            System.out.println("    best          --> take into account maxTransmissionTime & std from all servers");
-            System.out.println("    slowestServer --> only checks MaxTransmissionTime");
-            System.out.println("");
+            System.out.println("Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic\n");
+            System.out.println("seed, nServers, nRepetitions, nUsers, nRequests are int numbers\n");
+            System.out.println("algorithm:\n");
+            System.out.println("    hc --> HillClimbing\n");
+            System.out.println("    sa --> SimulatedAnnealing\n");
+            System.out.println("initialState:\n");
+            System.out.println("    state1 --> assign each request to the server with less delay\n");
+            System.out.println("    state2  --> for random assignation\n");
+            System.out.println("successorFunction (operator)\n");
+            System.out.println("    op1    --> moveMaxFile: moves slowest file from lowest server\n");
+            System.out.println("    op2    --> moveRandomFile: a random server is selected, and the file at its peak is moved to all others\n");
+            System.out.println("    op3    --> combination: op1 + op2\n");
+            System.out.println("    op4    --> combination: op1 intersection op2\n");
+            System.out.println("heuristic:\n");
+            System.out.println("    best          --> take into account maxTransmissionTime & std from all servers\n");
+            System.out.println("    slowestServer --> only checks MaxTransmissionTime\n");
             System.exit(-1);
         }
 
@@ -160,7 +158,7 @@ public class main {
             System.exit(-1);
         }
 
-        if (!args[7].equals("op1") && !args[7].equals("op2") && !args[7].equals("op3")){
+        if (!args[7].equals("op1") && !args[7].equals("op2") && !args[7].equals("op3")&& !args[7].equals("op4")){
             System.out.println(args[7]+" isn't a valid successorFunction");
             System.exit(-1);
         }

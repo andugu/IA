@@ -24,7 +24,7 @@ if [ $n == 1 ]; then
 
 	echo ""
 
-	pdflatex -output-directory=./docs ./docs/documentació.tex
+	pdflatex -output-directory=./docs ./docs/docs.tex
 	rm ./docs/*.aux
 	rm ./docs/*.log
 fi

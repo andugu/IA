@@ -8,7 +8,9 @@ import java.util.*;
 public class State{
 
 
-	public State(){}
+	public State(int seed){
+		randomSeed = seed;
+	}
 
 	/**
 	 * Copies a state into a new one
@@ -74,7 +76,7 @@ public class State{
 			Set<Integer> loc = servers.fileLocations(currentFile.getFileID());
 			Iterator<Integer> it = loc.iterator();
 			Random r = new Random();
-			r.setSeed(1234);
+			r.setSeed(randomSeed);
 			int rand = r.nextInt(loc.size());
 			int j = 0;
 			while (j != rand) {
@@ -150,9 +152,11 @@ public class State{
 	* */
 	public List<State> swap() {
 		List<State> nextStates = new ArrayList<>();
-		int origin = (int)(Math.random() * dataStructure.size());
+		Random r = new Random();
+		r.setSeed(randomSeed);
+		int origin = r.nextInt(dataStructure.size());
 		while (dataStructure.get(origin).size() == 0)
-			origin = (int)(Math.random() * dataStructure.size());
+			origin = r.nextInt(dataStructure.size());
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(origin).peek().getFileID());
 		Iterator<Integer> it = loc.iterator();
 
@@ -205,6 +209,18 @@ public class State{
 				"\nBalance: " + getSTD();
 	}
 
+	public int compare(State state) {
+		for(int i = 0; i < nServers; ++i){
+			if(transmissionTimes.get(i) < state.transmissionTimes.get(i)){
+				return -1; // current state is less than parameter "state"
+			}
+			else if(transmissionTimes.get(i) > state.transmissionTimes.get(i)){
+				return 1; // current state is greater
+			}
+		}
+		return 0; // equal
+	}
+
 	/************************************
 	 * 			   GETTERS
 	 *************************************/
@@ -238,8 +254,12 @@ public class State{
 	private float sumTransmissionTimes;
 	private float maxTransmissionTime;
 	private int maxServerID;
+	private int randomSeed;
 	private static Servers serversInfo;
 	private static int nServers;
 	private ArrayList<Float> transmissionTimes;
 	private ArrayList<PriorityQueue<File>> dataStructure;
+
+
+
 }
