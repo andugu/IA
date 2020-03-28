@@ -9,7 +9,8 @@ public class State{
 
 
 	public State(int seed){
-		randomSeed = seed;
+		randGenerator = new Random();
+		randGenerator.setSeed(seed);
 	}
 
 	/**
@@ -75,10 +76,8 @@ public class State{
 			File currentFile = new File(req[0], req[1]);
 			Set<Integer> loc = servers.fileLocations(currentFile.getFileID());
 			Iterator<Integer> it = loc.iterator();
-			Random r = new Random();
-			r.setSeed(randomSeed);
 
-			int rand = r.nextInt(loc.size());
+			int rand = randGenerator.nextInt(loc.size());
 			int j = 0;
 			while (j != rand) {
 				j++;
@@ -153,11 +152,9 @@ public class State{
 	* */
 	public List<State> swap() {
 		List<State> nextStates = new ArrayList<>();
-		Random r = new Random();
-		r.setSeed(randomSeed);
-		int origin = r.nextInt(dataStructure.size());
+		int origin = randGenerator.nextInt(dataStructure.size());
 		while (dataStructure.get(origin).size() == 0)
-			origin = r.nextInt(dataStructure.size());
+			origin = randGenerator.nextInt(dataStructure.size());
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(origin).peek().getFileID());
 		Iterator<Integer> it = loc.iterator();
 
@@ -255,7 +252,7 @@ public class State{
 	private float sumTransmissionTimes;
 	private float maxTransmissionTime;
 	private int maxServerID;
-	private int randomSeed;
+	private static Random randGenerator;
 	private static Servers serversInfo;
 	private static int nServers;
 	private ArrayList<Float> transmissionTimes;
