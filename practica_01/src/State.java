@@ -143,16 +143,9 @@ public class State{
 	 * In total it creates n - 1 new states
 	 * */
 	public List<State> move(){
-		System.out.println("MOVE " + counter);
-		counter++;
 		// create empty list
 		List<State> nextStates = new ArrayList<>();
 		// copy the max file
-		if(dataStructure.get(maxServerID).peek() == null){
-			for(int i = 0; i < nServers; ++i) {
-				System.out.println("Time of server " + i + " = " + transmissionTimes.get(i));
-			}
-		}
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(maxServerID).peek().getFileID());
 
 		for (Integer serverID : loc) { // for each server create a new state
@@ -252,11 +245,11 @@ public class State{
 	public float getSTD() {
 		float mean = sumTransmissionTimes / transmissionTimes.size();
 		float std = (float) 0.0; // std
-		for(int i = 0; i < transmissionTimes.size(); ++i){
+		for(int i = 0; i < nServers; ++i){
 			float term = transmissionTimes.get(i) - mean;
 			std += term * term;
 		}
-		std /= transmissionTimes.size() - 1;
+		std /= nServers - 1;
 		return std;
 	}
 
@@ -264,9 +257,6 @@ public class State{
 	/************************************
 	* 			ATTRIBUTES
 	*************************************/
-
-
-	private static int counter = 0;
 
 	private float sumTransmissionTimes;
 	private float maxTransmissionTime;
