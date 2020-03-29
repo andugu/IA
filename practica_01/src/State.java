@@ -8,9 +8,10 @@ import java.util.*;
 public class State{
 
 
-	public State(int seed){
+	public State(int seed, int servers){
 		randGenerator = new Random();
 		randGenerator.setSeed(seed);
+		nServers = servers;
 	}
 
 	/**
@@ -19,9 +20,20 @@ public class State{
 	public State(State s){
 		maxServerID = s.maxServerID;
 		fillArrayList();
+		// Hot fix ;)
 		for(int i = 0; i < nServers; ++i){
-			dataStructure.set(i, new PriorityQueue<>(s.dataStructure.get(i)));
+			PriorityQueue<File> queue = new PriorityQueue<>();
+			PriorityQueue<File> oldQueue = new PriorityQueue<>();
+			File file = s.dataStructure.get(i).poll();
+			while(file != null){
+				queue.add(new File(file));
+				oldQueue.add(file);
+				file = s.dataStructure.get(i).poll();
+			}
+			s.dataStructure.set(i, oldQueue);
+			dataStructure.set(i, queue);
 		}
+
 		transmissionTimes = new ArrayList<>(s.transmissionTimes);
 		maxTransmissionTime = s.maxTransmissionTime;
 		sumTransmissionTimes = s.sumTransmissionTimes;
@@ -38,7 +50,6 @@ public class State{
 	 * */
 	public void initialState1(Servers servers, Requests requests){
 		serversInfo = servers;
-		nServers = servers.size();
 		fillArrayList();
 		for(int i = 0; i < requests.size(); ++i){
 			int[] req = requests.getRequest(i); //[userID, fileID]
@@ -69,7 +80,6 @@ public class State{
 	 * */
 	public void initialState2(Servers servers, Requests requests){
 		serversInfo = servers;
-		nServers = servers.size();
 		fillArrayList();
 		for(int i = 0; i < requests.size(); ++i){
 			int[] req = requests.getRequest(i); //[userID, fileID]
@@ -98,8 +108,12 @@ public class State{
 
 	public void moveMaxFile(int newLocation){
 		// get max file
+
 		File maxFile = dataStructure.get(maxServerID).poll();
+
+
 		// update transmission times
+
 		int userID = maxFile.getUserID();
 		float newTransmissionTime = serversInfo.tranmissionTime(newLocation, userID);
 		transmissionTimes.set(maxServerID, transmissionTimes.get(maxServerID) - maxFile.getTransmissionTime());
@@ -132,11 +146,8 @@ public class State{
 		// create empty list
 		List<State> nextStates = new ArrayList<>();
 		// copy the max file
-		assert  serversInfo != null;
-		assert dataStructure != null;
-		assert dataStructure.get(maxServerID).peek() != null;
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(maxServerID).peek().getFileID());
-		assert  loc != null;
+
 		for (Integer serverID : loc) { // for each server create a new state
 			if (serverID != maxServerID) {
 				// create a new State and update it
@@ -158,11 +169,9 @@ public class State{
 		while (dataStructure.get(origin).size() == 0)
 			origin = randGenerator.nextInt(dataStructure.size());
 		Set<Integer> loc = serversInfo.fileLocations(dataStructure.get(origin).peek().getFileID());
-		Iterator<Integer> it = loc.iterator();
 
-		while(it.hasNext()){ // for each server create a new state
-			Integer serverID = it.next();
-			if(serverID != origin){
+		for (Integer serverID : loc) { // for each server create a new state
+			if (serverID != origin) {
 				// create a new State and update it
 				State modified = new State(this);
 				modified.moveRandomFile(origin, serverID);
@@ -236,11 +245,11 @@ public class State{
 	public float getSTD() {
 		float mean = sumTransmissionTimes / transmissionTimes.size();
 		float std = (float) 0.0; // std
-		for(int i = 0; i < transmissionTimes.size(); ++i){
+		for(int i = 0; i < nServers; ++i){
 			float term = transmissionTimes.get(i) - mean;
 			std += term * term;
 		}
-		std /= transmissionTimes.size() - 1;
+		std /= nServers - 1;
 		return std;
 	}
 
@@ -248,7 +257,6 @@ public class State{
 	/************************************
 	* 			ATTRIBUTES
 	*************************************/
-
 
 	private float sumTransmissionTimes;
 	private float maxTransmissionTime;

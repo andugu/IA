@@ -27,24 +27,34 @@ public class main {
         long elapsedTime = 0;
         long initialMaxTransmissionTime = 0;
         long finalMaxTransmissionTime = 0;
-        int steps = 100000;
+        long totalTime = 0;
+        int steps = 750;
         int stiter = 50;
-        int k = 50;
-        double lambda = 0.005;
+        int k = 225;
+        double lambda = 0.0004;
         Random rand = new Random();
         rand.setSeed(seed);
         for(int i = 0; i < rounds; ++i){
+            long initialTime, finalTime;
             System.out.println("Current round: " + i);
             // GENERATE PROBLEM DATA
             Servers servers = new Servers(nServers, nRepetitions, seed);
             Requests requests = new Requests(nUsers, nRequests, seed);
 
             // CREATE INITIAL STATE
-            State initialState = new State(seed);
-            if (initSt.equals("state1"))
+            State initialState = new State(seed, nServers);
+            if (initSt.equals("state1")) {
+                initialTime = java.lang.System.currentTimeMillis();
                 initialState.initialState1(servers, requests);
-            else
+                finalTime = java.lang.System.currentTimeMillis();
+            }
+            else{
+                initialTime = java.lang.System.currentTimeMillis();
                 initialState.initialState2(servers, requests);
+                finalTime = java.lang.System.currentTimeMillis();
+            }
+            elapsedTime += finalTime  - initialTime;
+
             initialState.printState();
 
             // SET NO GOAL
@@ -92,9 +102,9 @@ public class main {
             Problem p = new Problem(initialState, successorFunction, goal, heuristic);
 
             // Instantiate the SearchAgent object
-            long initialTime = java.lang.System.currentTimeMillis();
+            initialTime = java.lang.System.currentTimeMillis();
             SearchAgent agent = new SearchAgent(p, algorithm);
-            long finalTime = java.lang.System.currentTimeMillis();
+            finalTime = java.lang.System.currentTimeMillis();
 
             //System.out.println("STEPS");
             // printActions(agent.getActions());
@@ -105,6 +115,7 @@ public class main {
             elapsedTime += finalTime-initialTime;
             initialMaxTransmissionTime += initialState.getMaxTransmissionTime();
             finalMaxTransmissionTime += finalState.getMaxTransmissionTime();
+            totalTime += finalState.getSumTransmissionTimes();
 
             // update seed
             seed = rand.nextInt();
@@ -112,6 +123,7 @@ public class main {
         elapsedTime /= rounds;
         initialMaxTransmissionTime /= rounds;
         finalMaxTransmissionTime /= rounds;
+        totalTime /= rounds;
         System.out.println("Steps = " + steps);
         System.out.println("stiter = " + stiter);
         System.out.println("k = " + k);
@@ -119,6 +131,7 @@ public class main {
         System.out.println("Elapsed time: " + elapsedTime);
         System.out.println("InitialMaxTransmissionTime: " + initialMaxTransmissionTime);
         System.out.println("FinalMaxTransmissionTime: " + finalMaxTransmissionTime);
+        System.out.println("Tiempo total de transmision: " + totalTime);
     }
 
     //  PRINT FUNCTIONS (SOURCE = PDF IA)
