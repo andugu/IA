@@ -24,7 +24,7 @@ Manifest.txt --> informació necessaria per compilar el jar final
 
 `1`
 
-Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic
+`Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic
 
 seed, nServers, nRepetitions, nUsers, nRequests are int numbers
 
