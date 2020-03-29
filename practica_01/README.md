@@ -24,30 +24,24 @@ Manifest.txt --> informació necessaria per compilar el jar final
 
 `1`
 
-`Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic`
+Usage: java -jar practica_01.jar seed nServers nRepetitions nUsers nRequests algorithm initialState successorFunction heuristic
 
-seed, nServers, nRepetitions, nUsers, nRequests són nombres enters.
+seed, nServers, nRepetitions, nUsers, nRequests are int numbers
 
 algorithm:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hc --> HillClimbing
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sa --> SimulatedAnnealing
+* hc --> HillClimbing
+* sa --> SimulatedAnnealing
 
 initialState:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fastest --> assign each request to the server with less delay
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random  --> for random assignation
+* state1 --> assign each request to the server with less delay
+* state2  --> for random assignation
 
 successorFunction (operator)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moveSlowest --> moves slowest file from lowest server
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> a random server is selected, and the file at its peak is moved to all others
+* op1    --> moveMaxFile: moves slowest file from lowest server
+* op2    --> moveRandomFile: a random server is selected, and the file at its peak is moved to all others
+* op3    --> combination: op1 + op2
+* op4    --> combination: op1 intersection op2
 
 heuristic:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;best&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--> take into account maxTransmissionTime and the std from all servers
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slowest --> only checks MaxTransmissionTime
+* best          --> take into account maxTransmissionTime & std from all servers
+* slowestServer --> only checks MaxTransmissionTime
