@@ -36,7 +36,7 @@ initialState:
 * state1 --> assign each request to the server with less delay
 * state2  --> for random assignation
 
-successorFunction (operator)
+successorFunction (operator):
 * op1    --> moveMaxFile: moves slowest file from lowest server
 * op2    --> moveRandomFile: a random server is selected, and the file at its peak is moved to all others
 * op3    --> combination: op1 + op2
