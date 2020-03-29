@@ -43,15 +43,17 @@ public class File implements Comparable<File> {
     }
 
 
-    private float transmissionTime;
-    private int userID;
-    private int fileID;
-
-
     @Override
     public int compareTo(File f2) {
         if(transmissionTime == f2.transmissionTime)return 0;
         else if(transmissionTime < f2.transmissionTime) return -1;
         else return 1;
     }
+
+    private float transmissionTime;
+    private int userID;
+    private int fileID;
+
+
+
 }

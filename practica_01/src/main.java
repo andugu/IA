@@ -27,7 +27,7 @@ public class main {
         long elapsedTime = 0;
         long initialMaxTransmissionTime = 0;
         long finalMaxTransmissionTime = 0;
-        int steps = 100000;
+        int steps = 7000;
         int stiter = 50;
         int k = 50;
         double lambda = 0.005;
@@ -40,7 +40,7 @@ public class main {
             Requests requests = new Requests(nUsers, nRequests, seed);
 
             // CREATE INITIAL STATE
-            State initialState = new State(seed);
+            State initialState = new State(seed, nServers);
             if (initSt.equals("state1"))
                 initialState.initialState1(servers, requests);
             else

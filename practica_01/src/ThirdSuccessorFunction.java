@@ -11,12 +11,14 @@ public class ThirdSuccessorFunction implements SuccessorFunction {
     public List getSuccessors(Object state) {
         ArrayList retVal = new ArrayList();
         State currentState = (State)state;
-        var successors = currentState.move();
-        for(State s : successors){
+        var moveSuc = currentState.move();
+        var successors = currentState.swap();
+        for(State s : successors) retVal.add(new Successor("Swaped request form server", s));
+        for(State s : moveSuc){
             retVal.add(new Successor("Move slowest file from lowest server", s));
         }
-        successors = currentState.swap();
-        for(State s : successors) retVal.add(new Successor("Swaped request form server", s));
+
+
         return retVal;
     }
 }
