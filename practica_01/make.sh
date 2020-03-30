@@ -9,10 +9,8 @@ echo "##############################"
 echo ""
 echo "Please select an option:"
 echo ""
-echo "1. Compile project and docs & make .jar executabl"
-echo "2. Make docs"
-echo "3. Remove all *.class and *.jar files"
-echo "4. Remove docs.pdf"
+echo "1. Compile project make .jar executabl"
+echo "2. Remove all *.class and *.jar files"
 echo ""
 echo "I choose:"
 echo ""
@@ -25,19 +23,15 @@ if [ $n == 1 ]; then
 fi
 
 if [ $n == 2 ]; then
-	pdflatex -output-directory=./docs ./docs/docs.tex
-	rm ./docs/*.aux
-	rm ./docs/*.log
-fi
-
-if [ $n == 3 ]; then
 	rm -rf ./src/*.class
 	rm -rf ./*.jar
 fi
 
-if [ $n == 4 ]; then
-	rm -rf ./docs/docs.pdf
-fi
+#if [ $n == 3 ]; then
+#	pdflatex -output-directory=./docs ./docs/docs.tex
+#	rm ./docs/*.aux
+#	rm ./docs/*.log
+#fi
 
 echo ""
 echo "Done, enjoy!"
