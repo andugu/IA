@@ -35,7 +35,7 @@ public class main {
         Random rand = new Random();
         rand.setSeed(seed);
         for(int i = 0; i < rounds; ++i){
-            long initialTime, finalTime;
+            long initialTime, finalTime; 
             System.out.println("Current round: " + i);
             // GENERATE PROBLEM DATA
             Servers servers = new Servers(nServers, nRepetitions, seed);
