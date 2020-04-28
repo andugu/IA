@@ -1,0 +1,14 @@
+digraph "ontologia" {
+
+"Person" [shape=record, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0", label="{Person|{height|Float}|{weight|Float}|{age|Integer}|{min_blood_pressure|Float}|{max_blood_presure|Float}|{...}}"]
+"Day" [shape=box, label="Day", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Physical" [shape=box, label="Physical", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Problem"->"Physical" [dir=back, label=isa, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Program" [shape=box, label="Program", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Exercice" [shape=box, label="Exercice", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Habit" [shape=box, label="Habit", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Problem" [shape=box, label="Problem", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"PersonalExercice" [shape=box, label="PersonalExercice", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Diet" [shape=box, label="Diet", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Problem"->"Diet" [dir=back, label=isa, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+}
