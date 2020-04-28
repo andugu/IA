@@ -1,2 +1,24 @@
-(load ../ont/clases.pont)
-(load ../ont/instancias.pins)
+
+;;;======================================================
+;;;     Coaching potato routine generator 
+;;;
+;;;     This expert system generates weekly routines 
+;;;     for customeres at the gym
+;;;
+;;;
+;;;     To execute: clips -f run 
+;;;======================================================
+
+;;**************************
+;;* IMPORT PROGRAM MODULES *
+;;**************************
+
+
+(load ../ont/clases.pont) ; ontology classes
+(load ../ont/instancias.pins) ; ontology instances 
+(load questions.clp) ; 
+
+;;**************************
+;;* EXECUTE PROGRAM        *
+;;**************************
+(run) 
