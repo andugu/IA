@@ -1,0 +1,2 @@
+(load ../ont/clases.pont)
+(load ../ont/instancias.pins)
