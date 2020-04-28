@@ -1,4 +1,4 @@
-; Tue Apr 28 10:27:21 CEST 2020
+; Tue Apr 28 13:02:21 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,12 +20,13 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class10132]
-		[ontologia_ProjectKB_Class10133]
-		[ontologia_ProjectKB_Class10134]))
+		[ontologia_ProjectKB_Class10145]
+		[ontologia_ProjectKB_Class10146]
+		[ontologia_ProjectKB_Class10147]))
 
 ([CLSES_TAB] of  Widget
 
+	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.ClsesTab"))
 
 ([CREATION_TIMESTAMP_WIDGET] of  Widget
@@ -38,6 +39,7 @@
 
 ([FORMS_TAB] of  Widget
 
+	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.FormsTab"))
 
 ([INSTANCE_ANNOTATION_FORM_WIDGET] of  Widget
@@ -61,6 +63,7 @@
 
 ([INSTANCES_TAB] of  Widget
 
+	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
 ([KB_747776_Class0] of  Map
@@ -72,7 +75,11 @@
 	(string_value "edu.stanford.smi.protege.storage.clips.ClipsKnowledgeBaseFactory"))
 
 ([KB_758705_Class1] of  Map
-)
+
+	(entries
+		[ontologia_ProjectKB_Class10148]
+		[ontologia_ProjectKB_Class10149]
+		[ontologia_ProjectKB_Class10150]))
 
 ([KB_758705_Class100] of  String
 
@@ -268,20 +275,41 @@
 ([ontologia_ProjectKB_Class10117] of  Property_List
 )
 
-([ontologia_ProjectKB_Class10132] of  String
+([ontologia_ProjectKB_Class10145] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([ontologia_ProjectKB_Class10133] of  String
+([ontologia_ProjectKB_Class10146] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([ontologia_ProjectKB_Class10134] of  String
+([ontologia_ProjectKB_Class10147] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10148] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([ontologia_ProjectKB_Class10149] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([ontologia_ProjectKB_Class10150] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
 
 ([ontologia_ProjectKB_Class11] of  Widget
 
@@ -645,7 +673,7 @@
 
 ([ontologia_ProjectKB_Class9] of  Widget
 
-	(is_hidden TRUE)
+	(is_hidden FALSE)
 	(property_list [ontologia_ProjectKB_Class10])
 	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
 
@@ -712,6 +740,7 @@
 	(display_hidden_classes TRUE)
 	(display_multi_parent_class_icon TRUE)
 	(is_readonly FALSE)
+	(tabbed_instance_form_layout FALSE)
 	(undo_enabled TRUE)
 	(update_modification_slots FALSE))
 
@@ -791,6 +820,7 @@
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
 	(default_slot_metaclass ":STANDARD-SLOT")
+	(journaling_enabled FALSE)
 	(next_frame_number 0)
 	(options [option_instance])
 	(property_map [KB_758705_Class1])
@@ -800,15 +830,54 @@
 		[SLOTS_TAB]
 		[FORMS_TAB]
 		[INSTANCES_TAB]
-		[QUERIES_TAB]))
+		[QUERIES_TAB]
+		[ontologia_ProjectKB_Class57]
+		[ontologia_ProjectKB_Class37]
+		[ontologia_ProjectKB_Class17]
+		[ontologia_ProjectKB_Class71]
+		[ontologia_ProjectKB_Class35]
+		[ontologia_ProjectKB_Class67]
+		[ontologia_ProjectKB_Class51]
+		[ontologia_ProjectKB_Class39]
+		[ontologia_ProjectKB_Class55]
+		[ontologia_ProjectKB_Class19]
+		[ontologia_ProjectKB_Class21]
+		[ontologia_ProjectKB_Class15]
+		[ontologia_ProjectKB_Class49]
+		[ontologia_ProjectKB_Class9]
+		[ontologia_ProjectKB_Class47]
+		[ontologia_ProjectKB_Class1]
+		[ontologia_ProjectKB_Class27]
+		[ontologia_ProjectKB_Class25]
+		[ontologia_ProjectKB_Class5]
+		[ontologia_ProjectKB_Class63]
+		[ontologia_ProjectKB_Class23]
+		[ontologia_ProjectKB_Class43]
+		[ontologia_ProjectKB_Class69]
+		[ontologia_ProjectKB_Class41]
+		[ontologia_ProjectKB_Class53]
+		[ontologia_ProjectKB_Class61]
+		[ontologia_ProjectKB_Class65]
+		[ontologia_ProjectKB_Class73]
+		[ontologia_ProjectKB_Class3]
+		[ontologia_ProjectKB_Class11]
+		[ontologia_ProjectKB_Class33]
+		[ontologia_ProjectKB_Class29]
+		[ontologia_ProjectKB_Class45]
+		[ontologia_ProjectKB_Class59]
+		[ontologia_ProjectKB_Class7]
+		[ontologia_ProjectKB_Class31]
+		[ontologia_ProjectKB_Class13]))
 
 ([QUERIES_TAB] of  Widget
 
+	(is_hidden FALSE)
 	(property_list [KB_758705_Class98])
 	(widget_class_name "edu.stanford.smi.protegex.queries_tab.QueriesTab"))
 
 ([SLOTS_TAB] of  Widget
 
+	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.SlotsTab"))
 
 ([SOURCES] of  Property_List

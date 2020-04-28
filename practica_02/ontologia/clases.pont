@@ -1,4 +1,4 @@
-; Tue Apr 28 10:31:18 CEST 2020
+; Tue Apr 28 13:02:19 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,11 +11,20 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot habits
-		(type INSTANCE)
-;+		(allowed-classes Habit)
+	(single-slot max_repetitions
+		(type INTEGER)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot problems
+	(single-slot min_repetitions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot weekdays
+		(type INSTANCE)
+;+		(allowed-classes Day)
+		(cardinality 7 7)
+		(create-accessor read-write))
+	(multislot benefits
 		(type INSTANCE)
 ;+		(allowed-classes Problem)
 		(create-accessor read-write))
@@ -24,7 +33,7 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot min_blood_pressure
+	(single-slot calories_per_time
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -32,15 +41,77 @@
 		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot height
-		(type FLOAT)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot max_blood_presure
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot min_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot exercices
+		(type INSTANCE)
+;+		(allowed-classes Exercice)
+		(create-accessor read-write))
+	(single-slot dificulty
+		(type SYMBOL)
+		(allowed-values moderate normal hard)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot harms
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot habits
+		(type INSTANCE)
+;+		(allowed-classes Habit)
+		(create-accessor read-write))
+	(multislot problems
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+		(create-accessor read-write))
+	(single-slot frequency
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot daily_exercices
+		(type INSTANCE)
+;+		(allowed-classes PersonalExercice)
+		(create-accessor read-write))
+	(single-slot programa_personal
+		(type INSTANCE)
+;+		(allowed-classes Program)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot day_name
+		(type SYMBOL)
+		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot base_exercice
+		(type INSTANCE)
+;+		(allowed-classes Exercice)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot min_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot height
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot weight
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duration
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
@@ -84,23 +155,61 @@
 	(single-slot max_blood_presure
 		(type FLOAT)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot programa_personal
+		(type INSTANCE)
+;+		(allowed-classes Program)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Habit
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot frequency
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass Program
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(multislot weekdays
+		(type INSTANCE)
+;+		(allowed-classes Day)
+		(cardinality 7 7)
+		(create-accessor read-write)))
 
 (defclass PersonalExercice
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot base_exercice
+		(type INSTANCE)
+;+		(allowed-classes Exercice)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dificulty
+		(type SYMBOL)
+		(allowed-values moderate normal hard)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass Day
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot day_name
+		(type SYMBOL)
+		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot daily_exercices
+		(type INSTANCE)
+;+		(allowed-classes PersonalExercice)
+		(create-accessor read-write)))
 
 (defclass Problem
 	(is-a USER)
@@ -116,4 +225,37 @@
 
 (defclass Exercice
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot max_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot min_repetitions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max_repetitions
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot min_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot benefits
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+		(create-accessor read-write))
+	(multislot exercices
+		(type INSTANCE)
+;+		(allowed-classes Exercice)
+		(create-accessor read-write))
+	(single-slot harms
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
