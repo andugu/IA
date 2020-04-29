@@ -1,4 +1,105 @@
-; Tue Apr 28 13:02:19 CEST 2020
+; Wed Apr 29 18:12:36 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_Class10] of  Diet
+
+	(instance_name "Picar entre horas"))
+
+([ontologia_Class11] of  Diet
+
+	(instance_name "Diabetico"))
+
+([ontologia_Class12] of  Physical
+
+	(instance_name "Dolor de espalda"))
+
+([ontologia_Class13] of  Physical
+
+	(instance_name "Dolor articulaciones"))
+
+([ontologia_Class14] of  Physical
+
+	(instance_name "Dolor cervicales"))
+
+([ontologia_Class16] of  WeightLoss
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19]
+		[ontologia_Class13])
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 400.0)
+	(calories_per_time_medium 600.0)
+	(harms [ontologia_Class9])
+	(instance_name "Bicicleta estatica activacion")
+	(max_exercice_duration 60.0)
+	(min_exercice_duration 15.0))
+
+([ontologia_Class19] of  Diet
+
+	(instance_name "Sobrepeso"))
+
+([ontologia_Class20] of  Diet
+
+	(instance_name "Obesidad"))
+
+([ontologia_Class21] of  WeightLoss
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19])
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 400.0)
+	(calories_per_time_medium 600.0)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class9])
+	(instance_name "Cinta activacion")
+	(max_exercice_duration 60.0)
+	(min_exercice_duration 30.0))
+
+([ontologia_Class23] of  MuscleGrowth
+
+	(body_parts Pectoral Brazos)
+	(instance_name "Press banca")
+	(repetitions 15)
+	(sets 3))
+
+([ontologia_Class34] of  Manteinance
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19]
+		[ontologia_Class13])
+	(body_parts Piernas Gluteos)
+	(instance_name "Bicicleta estatica chill")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 10.0))
+
+([ontologia_Class35] of  Manteinance
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19])
+	(body_parts Piernas Gluteos)
+	(harms [ontologia_Class13])
+	(instance_name "Cinta chill")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 10.0))
+
+([ontologia_Class6] of  Person
+
+	(fatigue TRUE)
+	(instance_name "Pol"))
+
+([ontologia_Class8] of  Diet
+
+	(instance_name "Consumo de fruta"))
+
+([ontologia_Class9] of  Diet
+
+	(instance_name "Abuso de sal"))

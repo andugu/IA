@@ -13,9 +13,8 @@
 ;;* IMPORT PROGRAM MODULES *
 ;;**************************
 
-
-(load ../ont/clases.pont) ; ontology classes
-(load ../ont/instancias.pins) ; ontology instances 
+(load ../ont/clases.pont) ;
+(load-instances ../ont/instancias.pins)  
 (load questions.clp) ; 
 
 ;;**************************
