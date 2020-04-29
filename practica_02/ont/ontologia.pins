@@ -1,4 +1,4 @@
-; Wed Apr 29 16:34:31 CEST 2020
+; Wed Apr 29 17:21:38 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -23,19 +23,19 @@
 
 	(name "Dolor cervicales"))
 
-([ontologia_Class16] of  Exercice
+([ontologia_Class16] of  WeightLoss
 
 	(benefits
 		[ontologia_Class20]
-		[ontologia_Class19])
-	(calories_per_time_hard 1000.0)
-	(calories_per_time_low 420.0)
-	(calories_per_time_medium 700.0)
+		[ontologia_Class19]
+		[ontologia_Class13])
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 400.0)
+	(calories_per_time_medium 600.0)
 	(max_exercice_duration 60.0)
-	(max_repetitions 1)
 	(min_exercice_duration 15.0)
-	(min_repetitions 1)
-	(name "Bicicleta estatica"))
+	(name "Bicicleta estatica activacion"))
 
 ([ontologia_Class19] of  Diet
 
@@ -44,6 +44,49 @@
 ([ontologia_Class20] of  Diet
 
 	(name "Obesidad"))
+
+([ontologia_Class21] of  WeightLoss
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19])
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 400.0)
+	(calories_per_time_medium 600.0)
+	(harms [ontologia_Class13])
+	(max_exercice_duration 60.0)
+	(min_exercice_duration 30.0)
+	(name "Cinta activacion"))
+
+([ontologia_Class23] of  MuscleGrowth
+
+	(body_parts Pectoral Brazos)
+	(name "Press banca")
+	(repetitions 15)
+	(sets 3))
+
+([ontologia_Class34] of  Manteinance
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19]
+		[ontologia_Class13])
+	(body_parts Piernas Gluteos)
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 10.0)
+	(name "Bicicleta estatica chill"))
+
+([ontologia_Class35] of  Manteinance
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19])
+	(body_parts Piernas Gluteos)
+	(harms [ontologia_Class13])
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 10.0)
+	(name "Cinta chill"))
 
 ([ontologia_Class6] of  Person
 
