@@ -1,4 +1,4 @@
-; Tue Apr 28 13:02:21 CEST 2020
+; Wed Apr 29 16:34:31 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,6 +7,10 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot bpm
 		(type FLOAT)
 ;+		(cardinality 0 1)
@@ -21,20 +25,24 @@
 		(create-accessor read-write))
 	(multislot weekdays
 		(type INSTANCE)
-;+		(allowed-classes Day)
+;+		(allowed-classes)
 		(cardinality 7 7)
 		(create-accessor read-write))
 	(multislot benefits
 		(type INSTANCE)
 ;+		(allowed-classes Problem)
 		(create-accessor read-write))
+	(single-slot calories_per_time_hard
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_low
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot fatigue
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot calories_per_time
-		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot age
@@ -42,6 +50,10 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot max_blood_presure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_medium
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -53,9 +65,14 @@
 		(type INSTANCE)
 ;+		(allowed-classes Exercice)
 		(create-accessor read-write))
+	(single-slot day
+		(type SYMBOL)
+		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot dificulty
 		(type SYMBOL)
-		(allowed-values moderate normal hard)
+		(allowed-values low normal hard)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot harms
@@ -88,11 +105,6 @@
 		(type INSTANCE)
 ;+		(allowed-classes Program)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot day_name
-		(type SYMBOL)
-		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot base_exercice
 		(type INSTANCE)
@@ -140,6 +152,10 @@
 		(type INSTANCE)
 ;+		(allowed-classes Problem)
 		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot age
 		(type INTEGER)
 ;+		(cardinality 0 1)
@@ -180,7 +196,7 @@
 	(role concrete)
 	(multislot weekdays
 		(type INSTANCE)
-;+		(allowed-classes Day)
+;+		(allowed-classes)
 		(cardinality 7 7)
 		(create-accessor read-write)))
 
@@ -192,28 +208,24 @@
 ;+		(allowed-classes Exercice)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot dificulty
-		(type SYMBOL)
-		(allowed-values moderate normal hard)
-;+		(cardinality 0 1)
-		(create-accessor read-write)))
-
-(defclass Day
-	(is-a USER)
-	(role concrete)
-	(single-slot day_name
+	(single-slot day
 		(type SYMBOL)
 		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot daily_exercices
-		(type INSTANCE)
-;+		(allowed-classes PersonalExercice)
+	(single-slot dificulty
+		(type SYMBOL)
+		(allowed-values low normal hard)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Problem
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass Diet
 	(is-a Problem)
@@ -226,16 +238,28 @@
 (defclass Exercice
 	(is-a USER)
 	(role concrete)
-	(single-slot max_exercice_duration
+	(single-slot calories_per_time_hard
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot calories_per_time
+	(single-slot calories_per_time_low
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max_exercice_duration
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot min_repetitions
 		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_medium
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot max_repetitions

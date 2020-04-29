@@ -1,4 +1,59 @@
-; Tue Apr 28 13:02:21 CEST 2020
+; Wed Apr 29 16:34:31 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_Class10] of  Diet
+
+	(name "Picar entre horas"))
+
+([ontologia_Class11] of  Diet
+
+	(name "Diabetico"))
+
+([ontologia_Class12] of  Physical
+
+	(name "Dolor de espalda"))
+
+([ontologia_Class13] of  Physical
+
+	(name "Dolor articulaciones"))
+
+([ontologia_Class14] of  Physical
+
+	(name "Dolor cervicales"))
+
+([ontologia_Class16] of  Exercice
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19])
+	(calories_per_time_hard 1000.0)
+	(calories_per_time_low 420.0)
+	(calories_per_time_medium 700.0)
+	(max_exercice_duration 60.0)
+	(max_repetitions 1)
+	(min_exercice_duration 15.0)
+	(min_repetitions 1)
+	(name "Bicicleta estatica"))
+
+([ontologia_Class19] of  Diet
+
+	(name "Sobrepeso"))
+
+([ontologia_Class20] of  Diet
+
+	(name "Obesidad"))
+
+([ontologia_Class6] of  Person
+
+	(fatigue FALSE)
+	(name "Pol"))
+
+([ontologia_Class8] of  Diet
+
+	(name "Consumo de fruta"))
+
+([ontologia_Class9] of  Diet
+
+	(name "Abuso de sal"))
