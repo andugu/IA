@@ -20,7 +20,22 @@
     (bind ?maxPA (readline))
     (printout t "Introdueix BPM:" 
     (bind ?bpm (readline))
-    (bind ?habits (find-all-instances ((?inst Habit))))
+    
+    
+    (printout t "Fas alguna activitat sedentaria o de baixa intensitat?(per exemple ...)" crlf)
+    (while (bind ?habitName (read)) ~"" do ; name frequency duration \n  
+        (bind ?freq (read))
+        (bind ?duration (read))
+        (make-instance ?habitName of Habit
+            (instance_name ?habitName)
+            (frequency ?freq)
+            (duration ?duration)  
+            (activity low) 
+        )
+    ) 
+    
+
+
     (make-instance user of Person 
         (instance_name ?name) 
         (age ?age)

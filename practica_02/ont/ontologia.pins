@@ -1,25 +1,19 @@
-; Thu Apr 30 20:08:13 CEST 2020
+; Thu Apr 30 21:09:19 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
-
-([ontologia_Class0] of  Habit
-
-	(duration 0.0)
-	(frequency 0)
-	(instance_name "Sedentario"))
-
-([ontologia_Class1] of  Habit
-
-	(duration 0.0)
-	(frequency 0)
-	(instance_name "Intensidad alta"))
 
 ([ontologia_Class10] of  Diet
 
 	(instance_name "Picar entre horas"))
 
-([ontologia_Class10006] of  Flexibility
+([ontologia_Class10002] of  Habit
+
+	(duration 0.0)
+	(frequency 0)
+	(instance_name "dsdsdasdsa"))
+
+([ontologia_Class10006] of  BodyBalance
 
 	(instance_name "Mariposa"))
 
@@ -63,17 +57,11 @@
 	(max_exercice_duration 60.0)
 	(min_exercice_duration 15.0))
 
-([ontologia_Class19] of  Diet
+([ontologia_Class19] of  Physical
 
 	(instance_name "Sobrepeso"))
 
-([ontologia_Class2] of  Habit
-
-	(duration 0.0)
-	(frequency 0)
-	(instance_name "Intensidad media"))
-
-([ontologia_Class20] of  Diet
+([ontologia_Class20] of  Physical
 
 	(instance_name "Obesidad"))
 
@@ -101,12 +89,6 @@
 	(min_exercice_duration 5.0)
 	(repetitions 15)
 	(sets 3))
-
-([ontologia_Class3] of  Habit
-
-	(duration 0.0)
-	(frequency 0)
-	(instance_name "Intensidad baja"))
 
 ([ontologia_Class34] of  Manteinance
 
@@ -139,11 +121,6 @@
 
 	(body_parts Gluteos Piernas Espalda Piernas)
 	(instance_name "Plancha lateral con levantamiento de piernas"))
-
-([ontologia_Class6] of  Person
-
-	(fatigue TRUE)
-	(instance_name "Pol"))
 
 ([ontologia_Class8] of  Diet
 
