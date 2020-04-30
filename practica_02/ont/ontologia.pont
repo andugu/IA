@@ -1,4 +1,4 @@
-; Thu Apr 30 18:13:07 CEST 2020
+; Thu Apr 30 20:08:13 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -95,6 +95,7 @@
 	(single-slot frequency
 		(type INTEGER)
 		(range 1 10)
+		(default 0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot daily_exercices
@@ -129,6 +130,7 @@
 		(create-accessor read-write))
 	(single-slot duration
 		(type FLOAT)
+		(default 0.0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -188,6 +190,7 @@
 	(single-slot frequency
 		(type INTEGER)
 		(range 1 10)
+		(default 0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot instance_name
@@ -196,6 +199,7 @@
 		(create-accessor read-write))
 	(single-slot duration
 		(type FLOAT)
+		(default 0.0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 

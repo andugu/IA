@@ -20,7 +20,7 @@
     (bind ?maxPA (readline))
     (printout t "Introdueix BPM:" 
     (bind ?bpm (readline))
-     
+    (bind ?habits (find-all-instances ((?inst Habit))))
     (make-instance user of Person 
         (instance_name ?name) 
         (age ?age)

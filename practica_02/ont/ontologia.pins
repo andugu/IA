@@ -1,19 +1,36 @@
-; Thu Apr 30 18:13:07 CEST 2020
+; Thu Apr 30 20:08:13 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([ontologia_Class0] of  Habit
 
-	(instance_name "Planchar"))
+	(duration 0.0)
+	(frequency 0)
+	(instance_name "Sedentario"))
 
 ([ontologia_Class1] of  Habit
 
-	(instance_name "Barrer"))
+	(duration 0.0)
+	(frequency 0)
+	(instance_name "Intensidad alta"))
 
 ([ontologia_Class10] of  Diet
 
 	(instance_name "Picar entre horas"))
+
+([ontologia_Class10006] of  Flexibility
+
+	(instance_name "Mariposa"))
+
+([ontologia_Class10007] of  MuscleGrowth
+
+	(body_parts Gluteos Piernas)
+	(instance_name "Sentadillas con pesas")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions 20)
+	(sets 3))
 
 ([ontologia_Class11] of  Diet
 
@@ -52,7 +69,9 @@
 
 ([ontologia_Class2] of  Habit
 
-	(instance_name "Ver television"))
+	(duration 0.0)
+	(frequency 0)
+	(instance_name "Intensidad media"))
 
 ([ontologia_Class20] of  Diet
 
@@ -78,12 +97,16 @@
 
 	(body_parts Pectoral Brazos)
 	(instance_name "Press banca")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
 	(repetitions 15)
 	(sets 3))
 
 ([ontologia_Class3] of  Habit
 
-	(instance_name "Caminar"))
+	(duration 0.0)
+	(frequency 0)
+	(instance_name "Intensidad baja"))
 
 ([ontologia_Class34] of  Manteinance
 
@@ -107,13 +130,15 @@
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0))
 
-([ontologia_Class4] of  Habit
+([ontologia_Class4] of  BodyBalance
 
-	(instance_name "Correr"))
+	(body_parts Piernas Gluteos Espalda)
+	(instance_name "Desplazamiento lateral"))
 
-([ontologia_Class5] of  Habit
+([ontologia_Class5] of  BodyBalance
 
-	(instance_name "Deporte"))
+	(body_parts Gluteos Piernas Espalda Piernas)
+	(instance_name "Plancha lateral con levantamiento de piernas"))
 
 ([ontologia_Class6] of  Person
 
