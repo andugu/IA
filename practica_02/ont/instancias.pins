@@ -1,7 +1,15 @@
-; Wed Apr 29 18:12:36 CEST 2020
+; Thu Apr 30 18:13:17 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([ontologia_Class0] of  Habit
+
+	(instance_name "Planchar"))
+
+([ontologia_Class1] of  Habit
+
+	(instance_name "Barrer"))
 
 ([ontologia_Class10] of  Diet
 
@@ -42,6 +50,10 @@
 
 	(instance_name "Sobrepeso"))
 
+([ontologia_Class2] of  Habit
+
+	(instance_name "Ver television"))
+
 ([ontologia_Class20] of  Diet
 
 	(instance_name "Obesidad"))
@@ -69,6 +81,10 @@
 	(repetitions 15)
 	(sets 3))
 
+([ontologia_Class3] of  Habit
+
+	(instance_name "Caminar"))
+
 ([ontologia_Class34] of  Manteinance
 
 	(benefits
@@ -90,6 +106,14 @@
 	(instance_name "Cinta chill")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0))
+
+([ontologia_Class4] of  Habit
+
+	(instance_name "Correr"))
+
+([ontologia_Class5] of  Habit
+
+	(instance_name "Deporte"))
 
 ([ontologia_Class6] of  Person
 
