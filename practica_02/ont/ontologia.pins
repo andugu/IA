@@ -1,4 +1,4 @@
-; Thu Apr 30 21:09:19 CEST 2020
+; Thu Apr 30 21:10:51 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,12 +6,6 @@
 ([ontologia_Class10] of  Diet
 
 	(instance_name "Picar entre horas"))
-
-([ontologia_Class10002] of  Habit
-
-	(duration 0.0)
-	(frequency 0)
-	(instance_name "dsdsdasdsa"))
 
 ([ontologia_Class10006] of  BodyBalance
 
