@@ -16,7 +16,7 @@
 (load ../ont/clases.pont) ;
 (load-instances ../ont/instancias.pins)
 (load solution.clp) ;
-(load questions.clp) ;
+(load io_module.clp) ;
 
 ;;**************************
 ;;* EXECUTE PROGRAM        *
