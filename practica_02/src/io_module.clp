@@ -3,6 +3,15 @@
 ;;**************************
 
 
+;; MESSAGE HANDLER DEFINITIONS 
+(defmessage-handler PersonalExercice print primary()
+    (printout t "Exercici: " ?self:instance_name crlf)
+    (printout t "Duració: "  ?self:duration crlf)
+)
+
+
+
+
 ;; AUXILIAR FUNCTION DEFINITIONS 
 
 ;; Asks a question to the user 
@@ -75,6 +84,31 @@
     (send ?user put-bpm                (ask "Introdueix BPM:"))
     (assert (asked_basic_questions)) 
 )
+
+
+; output solution module 
+(defrule print_exercices 
+    (solution_calculated)
+    => 
+    (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice)) TRUE))
+    (make-instance program of Program
+        (exercices personal_exercices)
+    )
+    (loop-for-count (?day 1 7) do
+        (printout t "Day:" ?day crlf)
+        (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))(eq ?day ?exercice:day)))
+        (progn$ (?e ?personal_exercices)
+            (printout t
+                (send (send ?e get-base_exercice) get-instance_name) " " ; name
+                (send ?e get-duration) " minuts"
+            crlf)
+        )
+
+    )
+)
+
+
+
 
 
 
