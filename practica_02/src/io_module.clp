@@ -5,8 +5,11 @@
 
 ;; MESSAGE HANDLER DEFINITIONS 
 (defmessage-handler PersonalExercice print primary()
-    (printout t "Exercici: " ?self:instance_name crlf)
+    (bind ?base ?self:base_exercice)
+    (printout t "===========================" crlf)
+    (printout t "Exercici: " (send ?base get-instance_name) crlf)
     (printout t "Duració: "  ?self:duration crlf)
+    (printout t "===========================" crlf)
 )
 
 
@@ -98,10 +101,7 @@
         (printout t "Day:" ?day crlf)
         (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))(eq ?day ?exercice:day)))
         (progn$ (?e ?personal_exercices)
-            (printout t
-                (send (send ?e get-base_exercice) get-instance_name) " " ; name
-                (send ?e get-duration) " minuts"
-            crlf)
+            (send ?e print)
         )
 
     )

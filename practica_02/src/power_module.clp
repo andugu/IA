@@ -3,12 +3,9 @@
 ;;**************************
 
 
-
-
-
-(deffunction functionFinal "Funcio final"
-    ()
-
+(defrule calculate_solution "Rule that calculates the best solution"
+    (asked_all)
+    => 
     (bind ?exercices (find-all-instances ((?exercice Exercice))TRUE))
 
     (bind ?count 0)
@@ -31,21 +28,8 @@
             (bind ?duration (+ ?duration ?currentDuration))
         )
     )
-
-    (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice)) TRUE))
-    (make-instance program of Program
-        (exercices personal_exercices)
-    )
-    (loop-for-count (?day 1 7) do
-        (printout t "Day:" ?day crlf)
-        (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))(eq ?day ?exercice:day)))
-        (progn$ (?e ?personal_exercices)
-            (printout t
-                (send (send ?e get-base_exercice) get-instance_name) " " ; name
-                (send ?e get-duration) " minuts"
-            crlf)
-        )
-
-    )
+    (assert (solution_calculated))
 
 )
+
+    
