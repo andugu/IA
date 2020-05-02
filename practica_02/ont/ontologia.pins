@@ -1,4 +1,4 @@
-; Sat May 02 12:17:43 CEST 2020
+; Sat May 02 12:43:21 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -9,9 +9,12 @@
 
 ([ontologia_Class10006] of  BodyBalance
 
+	(body_parts Pectoral)
 	(instance_name "Mariposa")
 	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0))
+	(min_exercice_duration 10.0)
+	(repetitions 10)
+	(sets 1))
 
 ([ontologia_Class10007] of  MuscleGrowth
 
@@ -113,14 +116,18 @@
 	(body_parts Piernas Gluteos Espalda)
 	(instance_name "Desplazamiento lateral")
 	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0))
+	(min_exercice_duration 10.0)
+	(repetitions 1)
+	(sets 1))
 
 ([ontologia_Class5] of  BodyBalance
 
 	(body_parts Gluteos Piernas Espalda Piernas)
-	(instance_name "Plancha lateral con levantamiento de piernas")
+	(instance_name "Plancha lateral")
 	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0))
+	(min_exercice_duration 10.0)
+	(repetitions 1)
+	(sets 1))
 
 ([ontologia_Class8] of  Diet
 
