@@ -1,4 +1,4 @@
-; Thu Apr 30 21:09:32 CEST 2020
+; Sat May 02 12:17:51 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -41,10 +41,6 @@
 		(allowed-values Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot max_blood_presure
-		(type FLOAT)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot calories_per_time_medium
 		(type FLOAT)
 ;+		(cardinality 0 1)
@@ -63,8 +59,8 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot day
-		(type SYMBOL)
-		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
+		(type INTEGER)
+		(range 1 7)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot dificulty
@@ -123,6 +119,10 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot max_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot height
 		(type FLOAT)
 ;+		(cardinality 0 1)
@@ -157,6 +157,10 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot max_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot age
 		(type INTEGER)
 ;+		(cardinality 0 1)
@@ -171,10 +175,6 @@
 		(create-accessor read-write))
 	(single-slot instance_name
 		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot max_blood_presure
-		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot activity
@@ -240,13 +240,17 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot day
-		(type SYMBOL)
-		(allowed-values monday tuesday wednesday thursday friday saturday sunday)
+		(type INTEGER)
+		(range 1 7)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot dificulty
 		(type SYMBOL)
 		(allowed-values low normal hard)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duration
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 

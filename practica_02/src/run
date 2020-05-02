@@ -1,12 +1,12 @@
 
 ;;;======================================================
-;;;     Coaching potato routine generator 
+;;;     Coaching potato routine generator
 ;;;
-;;;     This expert system generates weekly routines 
+;;;     This expert system generates weekly routines
 ;;;     for customeres at the gym
 ;;;
 ;;;
-;;;     To execute: clips -f run 
+;;;     To execute: clips -f run
 ;;;======================================================
 
 ;;**************************
@@ -14,10 +14,11 @@
 ;;**************************
 
 (load ../ont/clases.pont) ;
-(load-instances ../ont/instancias.pins)  
-(load questions.clp) ; 
+(load-instances ../ont/instancias.pins)
+(load solution.clp) ;
+(load questions.clp) ;
 
 ;;**************************
 ;;* EXECUTE PROGRAM        *
 ;;**************************
-(run) 
+(run)
