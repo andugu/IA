@@ -1,11 +1,54 @@
-; Sat May 02 12:42:36 CEST 2020
+; Sat May 02 16:30:39 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
+([ontologia_Class0] of  MuscleGrowth
+
+	(body_parts Piernas Gluteos)
+	(instance_name "Zancadas")
+	(max_exercice_duration 20.0)
+	(min_exercice_duration 10.0)
+	(repetitions 30)
+	(sets 4)
+	(weights_high "15")
+	(weights_low 5.0)
+	(weights_medium "10"))
+
+([ontologia_Class1] of  MuscleGrowth
+
+	(body_parts Pectoral Brazos)
+	(instance_name "Press inclinado")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 10.0)
+	(repetitions 20)
+	(sets 4)
+	(weights_high "50")
+	(weights_low 5.0)
+	(weights_medium "30"))
+
 ([ontologia_Class10] of  Diet
 
 	(instance_name "Picar entre horas"))
+
+([ontologia_Class10004] of  BodyBalance
+
+	(body_parts Espalda Abdominales Piernas)
+	(instance_name "Saltos de torsion")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions 10)
+	(sets 2))
+
+([ontologia_Class10005] of  WeightLoss
+
+	(body_parts Pectoral Brazos Abdominales)
+	(calories_per_time_hard 300.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 200.0)
+	(instance_name "Flexiones")
+	(max_exercice_duration 20.0)
+	(min_exercice_duration 10.0))
 
 ([ontologia_Class10006] of  BodyBalance
 
@@ -60,6 +103,18 @@
 
 	(instance_name "Sobrepeso"))
 
+([ontologia_Class2] of  MuscleGrowth
+
+	(body_parts Espalda Hombros)
+	(instance_name "Jalon con polea por delante")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 10.0)
+	(repetitions 30)
+	(sets 5)
+	(weights_high "20")
+	(weights_low 5.0)
+	(weights_medium "10"))
+
 ([ontologia_Class20] of  Physical
 
 	(instance_name "Obesidad"))
@@ -88,6 +143,15 @@
 	(min_exercice_duration 5.0)
 	(repetitions 15)
 	(sets 3))
+
+([ontologia_Class3] of  BodyBalance
+
+	(body_parts Piernas Espalda)
+	(instance_name "Equilibrio sobre una pierna")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0)
+	(repetitions 1)
+	(sets 1))
 
 ([ontologia_Class34] of  Manteinance
 
