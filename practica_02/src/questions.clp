@@ -22,7 +22,7 @@
     
     
     (printout t "Fas alguna activitat sedentaria o de baixa intensitat?(per exemple ...)" crlf)
-    (while (neq "no" (bind ?habitName (read))) do ; name frequency duration \n  
+    (while (neq no (bind ?habitName (read))) do ; name frequency duration \n  
         (printout t "Quina?" crlf)
         (bind ?habitName (read))
         (printout t "Amb quina frequencia?" crlf)
