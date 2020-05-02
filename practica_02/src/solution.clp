@@ -42,8 +42,7 @@
         (progn$ (?e ?personal_exercices)
             (printout t
                 (send (send ?e get-base_exercice) get-instance_name) " " ; name
-                (send ?e get-duration) " minuts amb dificultad "
-                (send ?e get-dificulty)
+                (send ?e get-duration) " minuts"
             crlf)
         )
 
