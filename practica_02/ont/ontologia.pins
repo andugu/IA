@@ -1,4 +1,4 @@
-; Sun May 03 10:50:29 CEST 2020
+; Sun May 03 11:17:29 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -9,7 +9,9 @@
 	(instance_name "Zancadas")
 	(max_exercice_duration 20.0)
 	(min_exercice_duration 10.0)
-	(repetitions 30)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(repetitons_hard 30.0)
 	(sets 4))
 
 ([ontologia_Class1] of  MuscleGrowth
@@ -18,7 +20,9 @@
 	(instance_name "Press inclinado")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
-	(repetitions 20)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(repetitons_hard 15.0)
 	(sets 4))
 
 ([ontologia_Class10] of  Diet
@@ -29,22 +33,30 @@
 
 	(instance_name "Hipertension"))
 
+([ontologia_Class10002] of  Physical
+
+	(instance_name "Dolor de rodilla"))
+
 ([ontologia_Class10004] of  BodyBalance
 
 	(body_parts Espalda Abdominales Piernas)
+	(harms
+		[ontologia_Class12]
+		[ontologia_Class10002])
 	(instance_name "Saltos de torsion")
 	(max_exercice_duration 10.0)
-	(min_exercice_duration 5.0)
-	(repetitions 10)
-	(sets 2))
+	(min_exercice_duration 5.0))
 
 ([ontologia_Class10005] of  WeightLoss
 
+	(benefits
+		[ontologia_Class13]
+		[ontologia_Class10002])
 	(body_parts Pectoral Brazos Abdominales)
 	(calories_per_time_hard 300.0)
 	(calories_per_time_low 100.0)
 	(calories_per_time_medium 200.0)
-	(instance_name "Flexiones")
+	(instance_name "Eliptica")
 	(max_exercice_duration 20.0)
 	(min_exercice_duration 10.0))
 
@@ -53,9 +65,7 @@
 	(body_parts Pectoral)
 	(instance_name "Mariposa")
 	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0)
-	(repetitions 10)
-	(sets 1))
+	(min_exercice_duration 10.0))
 
 ([ontologia_Class10007] of  MuscleGrowth
 
@@ -63,7 +73,9 @@
 	(instance_name "Sentadillas con pesas")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0)
-	(repetitions 20)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(repetitons_hard 20.0)
 	(sets 3))
 
 ([ontologia_Class11] of  Diet
@@ -107,7 +119,9 @@
 	(instance_name "Jalon con polea por delante")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
-	(repetitions 30)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(repetitons_hard 15.0)
 	(sets 5))
 
 ([ontologia_Class20] of  Physical
@@ -136,17 +150,17 @@
 	(instance_name "Press banca")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0)
-	(repetitions 15)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(repetitons_hard 15.0)
 	(sets 3))
 
 ([ontologia_Class3] of  BodyBalance
 
 	(body_parts Piernas Espalda)
 	(instance_name "Equilibrio sobre una pierna")
-	(max_exercice_duration 7.0)
-	(min_exercice_duration 5.0)
-	(repetitions 1)
-	(sets 1))
+	(max_exercice_duration 5.0)
+	(min_exercice_duration 3.0))
 
 ([ontologia_Class34] of  Manteinance
 
@@ -175,18 +189,14 @@
 	(body_parts Piernas Gluteos Espalda)
 	(instance_name "Desplazamiento lateral")
 	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0)
-	(repetitions 1)
-	(sets 1))
+	(min_exercice_duration 10.0))
 
 ([ontologia_Class5] of  BodyBalance
 
 	(body_parts Gluteos Piernas Espalda Piernas)
 	(instance_name "Plancha lateral")
 	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0)
-	(repetitions 1)
-	(sets 1))
+	(min_exercice_duration 10.0))
 
 ([ontologia_Class8] of  Diet
 

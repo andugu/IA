@@ -5,7 +5,7 @@
 
 (defrule calculate_solution "Rule that calculates the best solution"
     (asked_all)
-    => 
+    =>
     (bind ?exercices (find-all-instances ((?exercice Exercice))TRUE))
 
     (bind ?count 0)
@@ -31,5 +31,3 @@
     (assert (solution_calculated))
 
 )
-
-    

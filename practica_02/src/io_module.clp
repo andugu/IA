@@ -28,7 +28,7 @@
 
 (deffunction ask_habit (?user ?type ?question)
     (printout t ?question crlf)
-    (bind ?counter 0)
+    (bind ?counter 1)
     (while (neq no (bind ?habitName (read))) do ; name frequency duration \n
         (bind ?habitName (ask "Quina?"))
         (bind ?freq (ask "Quants cops a la setmana?"))
@@ -94,7 +94,7 @@
     (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial minima:"))
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial máxima:"))
     (send ?user put-bpm                (ask "Introdueix BPM:"))
-    (send ?user put-bmi                (/ ?weight (* ?height ?height)))
+    (send ?user put-bmi                (/ ?weight (* ?height ?height))) ; abstract attribue 
     (assert (asked_basic_questions))
 )
 

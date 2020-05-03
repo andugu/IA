@@ -1,4 +1,4 @@
-; Sun May 03 10:50:36 CEST 2020
+; Sun May 03 11:17:39 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -23,6 +23,10 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot repetitions_medium
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot calories_per_time_low
 		(type FLOAT)
 ;+		(cardinality 0 1)
@@ -30,6 +34,10 @@
 	(single-slot fatigue
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_low
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot age
@@ -42,6 +50,10 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot bmi
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitons_hard
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
@@ -100,10 +112,6 @@
 	(single-slot programa_personal
 		(type INSTANCE)
 ;+		(allowed-classes Program)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot repetitions
-		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot base_exercice
@@ -318,8 +326,16 @@
 (defclass MuscleGrowth
 	(is-a Exercice)
 	(role concrete)
-	(single-slot repetitions
+	(single-slot repetitions_medium
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_low
 		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitons_hard
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot sets
@@ -329,12 +345,4 @@
 
 (defclass BodyBalance
 	(is-a Exercice)
-	(role concrete)
-	(single-slot repetitions
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot sets
-		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write)))
+	(role concrete))
