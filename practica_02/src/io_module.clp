@@ -3,7 +3,7 @@
 ;;**************************
 
 
-;; MESSAGE HANDLER DEFINITIONS 
+;; MESSAGE HANDLER DEFINITIONS
 (defmessage-handler PersonalExercice print primary()
     (bind ?base ?self:base_exercice)
     (printout t "===========================" crlf)
@@ -15,28 +15,31 @@
 
 
 
-;; AUXILIAR FUNCTION DEFINITIONS 
+;; AUXILIAR FUNCTION DEFINITIONS
 
-;; Asks a question to the user 
+;; Asks a question to the user
 (deffunction ask (?question)
     (printout t ?question crlf)
     (bind ?answer (read))
-    ?answer 
+    ?answer
 )
 
 (deffunction ask_habit (?user ?type ?question)
     (printout t ?question crlf)
+    (bind ?counter 0)
     (while (neq no (bind ?habitName (read))) do ; name frequency duration \n
         (bind ?habitName (ask "Quina?"))
         (bind ?freq (ask "Quants cops a la setmana?"))
         (bind ?duration (ask "Amb quina duració?"))
-        (make-instance ?habitName of Habit
+        (bind ?habit (make-instance ?habitName of Habit
             (instance_name ?habitName)
             (frequency ?freq)
             (duration ?duration)
-            (activity high)
-        )
+            (activity ?type)
+        ))
+        (slot-insert$ ?user habits ?counter ?habit)
         (printout t "Fas alguna altra?" crlf)
+        (bind ?counter (+ 1 ?counter))
     )
     ; (send ?user put-habits (all-instances HABIT))
 
@@ -47,27 +50,28 @@
 ;; START IO RULE DEFINITION
 
 (defrule init "initial rule"
-    (initial-fact); start on program run 
-    => 
+    (initial-fact); start on program run
+    =>
     (printout t crlf)
     (printout t "==============================================" crlf)
     (printout t "   Coaching Potato Expert Routine Generator   " crlf)
     (printout t "==============================================" crlf)
-    (printout t crlf) 
-    (assert (system_start)) ; tell the system that it needs to start 
+    (printout t crlf)
+    (assert (system_start)) ; tell the system that it needs to start
 )
 
 (defrule create_user "rule that creates a user when the system start"
-    (system_start) 
-    => 
+    (system_start)
+    =>
+    (seed 1556)
     (make-instance user of Person)
-    (assert (user_created)) 
-) 
+    (assert (user_created))
+)
 
 (defrule habit_questions "rule that asks which habit the person has"
     (asked_basic_questions)
     ?user <- (object (is-a Person))
-    => 
+    =>
     (ask_habit ?user low "Tens habits sedentaris?[si/no]")
     (ask_habit ?user medium "Tens habits de activitat mitjana?[si/no]")
     (ask_habit ?user high "Tens habits de alta activitat?[si/no]")
@@ -85,14 +89,14 @@
     (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial minima:"))
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial máxima:"))
     (send ?user put-bpm                (ask "Introdueix BPM:"))
-    (assert (asked_basic_questions)) 
+    (assert (asked_basic_questions))
 )
 
 
-; output solution module 
-(defrule print_exercices 
+; output solution module
+(defrule print_exercices
     (solution_calculated)
-    => 
+    =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice)) TRUE))
     (make-instance program of Program
         (exercices personal_exercices)
@@ -106,9 +110,3 @@
 
     )
 )
-
-
-
-
-
-
