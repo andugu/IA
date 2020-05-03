@@ -16,7 +16,7 @@
 (load ../ont/clases.pont) ;
 (load-instances ../ont/instancias.pins)
 (load io_module.clp) ;
-(load power_module.clp)
+(load brain_module.clp)
 
 ;;**************************
 ;;* EXECUTE PROGRAM        *

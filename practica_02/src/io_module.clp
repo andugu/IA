@@ -6,10 +6,10 @@
 ;; MESSAGE HANDLER DEFINITIONS
 (defmessage-handler PersonalExercice print primary()
     (bind ?base ?self:base_exercice)
-    (printout t "===========================" crlf)
+    (printout t "--------------------------------------------" crlf)
     (printout t "Exercici: " (send ?base get-instance_name) crlf)
     (printout t "Duració: "  ?self:duration crlf)
-    (printout t "===========================" crlf)
+    (printout t "--------------------------------------------" crlf)
 )
 
 
@@ -102,7 +102,8 @@
         (exercices personal_exercices)
     )
     (loop-for-count (?day 1 7) do
-        (printout t "Day:" ?day crlf)
+        (printout t "============================================" crlf)
+        (printout t "DIA:" ?day crlf)
         (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))(eq ?day ?exercice:day)))
         (progn$ (?e ?personal_exercices)
             (send ?e print)
