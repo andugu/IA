@@ -1,4 +1,4 @@
-; Sun May 03 11:17:39 CEST 2020
+; Sun May 03 12:57:35 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -9,9 +9,9 @@
 	(instance_name "Zancadas")
 	(max_exercice_duration 20.0)
 	(min_exercice_duration 10.0)
+	(repetitions_high 30.0)
 	(repetitions_low 5)
 	(repetitions_medium 10.0)
-	(repetitons_hard 30.0)
 	(sets 4))
 
 ([ontologia_Class1] of  MuscleGrowth
@@ -20,9 +20,9 @@
 	(instance_name "Press inclinado")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
+	(repetitions_high 15.0)
 	(repetitions_low 5)
 	(repetitions_medium 10.0)
-	(repetitons_hard 15.0)
 	(sets 4))
 
 ([ontologia_Class10] of  Diet
@@ -73,9 +73,9 @@
 	(instance_name "Sentadillas con pesas")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
 	(repetitions_low 5)
 	(repetitions_medium 10.0)
-	(repetitons_hard 20.0)
 	(sets 3))
 
 ([ontologia_Class11] of  Diet
@@ -119,9 +119,9 @@
 	(instance_name "Jalon con polea por delante")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
+	(repetitions_high 15.0)
 	(repetitions_low 5)
 	(repetitions_medium 10.0)
-	(repetitons_hard 15.0)
 	(sets 5))
 
 ([ontologia_Class20] of  Physical
@@ -150,9 +150,9 @@
 	(instance_name "Press banca")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0)
+	(repetitions_high 15.0)
 	(repetitions_low 5)
 	(repetitions_medium 10.0)
-	(repetitons_hard 15.0)
 	(sets 3))
 
 ([ontologia_Class3] of  BodyBalance

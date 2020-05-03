@@ -11,11 +11,23 @@
     (printout t "--------------------------------------------" crlf)
     (printout t "Exercici: " (send ?base get-instance_name) crlf)
     (printout t "Duració: "  ?self:duration crlf)
+    (send ?base print)
     (printout t "--------------------------------------------" crlf)
 )
 
+(defmessage-handler Exercice print primary()
+    ; print nothing
+)
 
 
+(defmessage-handler MuscleGrowth print primary()
+    (printout t "Sets: " ?self:sets crlf)
+    (bind ?user (find-instance ((?p Person)) TRUE))
+    (bind ?type (send [user] get-activity))
+    (if (eq low ?type) then (printout t "Repetitions: " ?self:repetitions_low crlf))
+    (if (eq medium ?type) then (printout t "Repetitions: " ?self:repetitions_medium crlf))
+    (if (eq high ?type) then (printout t "Repetitions: " ?self:repetitions_high crlf))
+)
 
 ;; AUXILIAR FUNCTION DEFINITIONS
 
@@ -32,7 +44,7 @@
     (while (neq no (bind ?habitName (read))) do ; name frequency duration \n
         (bind ?habitName (ask "Quina?"))
         (bind ?freq (ask "Quants cops a la setmana?"))
-        (bind ?duration (ask "Amb quina duració?"))
+        (bind ?duration (ask "Amb quina duració?[minuts]"))
         (bind ?habit (make-instance ?habitName of Habit
             (instance_name ?habitName)
             (frequency ?freq)
@@ -66,7 +78,10 @@
     (system_start)
     =>
     (seed 1556)
-    (make-instance user of Person)
+    (make-instance user of Person
+        (activity medium)
+    )
+
     (assert (user_created))
 )
 
@@ -86,15 +101,15 @@
     =>
     (send ?user put-instance_name      (ask "Introdueix el nom:"))
     (send ?user put-age                (ask "Introdueix la edat:"))
-    (bind ?weight                      (ask "Introdueix el pes (km):"))
-    (bind ?height                      (ask "Introdueix altura (cm):"))
+    (bind ?weight                      (ask "Introdueix el pes [kg]:"))
+    (bind ?height                      (ask "Introdueix altura [m]:"))
     (send ?user put-weight             ?weight)
     (send ?user put-height             ?height)
     (send ?user put-fatigue            (ask "Ara hauras de fer una prova de esforç. Et sents fatigat?"))
     (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial minima:"))
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial máxima:"))
     (send ?user put-bpm                (ask "Introdueix BPM:"))
-    (send ?user put-bmi                (/ ?weight (* ?height ?height))) ; abstract attribue 
+    (send ?user put-bmi                (/ ?weight (* ?height ?height))) ; abstract attribue
     (assert (asked_basic_questions))
 )
 

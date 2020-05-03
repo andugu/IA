@@ -1,4 +1,4 @@
-; Sun May 03 11:17:29 CEST 2020
+; Sun May 03 13:11:08 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -53,10 +53,6 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot repetitons_hard
-		(type FLOAT)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot calories_per_time_medium
 		(type FLOAT)
 ;+		(cardinality 0 1)
@@ -95,6 +91,10 @@
 	(multislot habits
 		(type INSTANCE)
 ;+		(allowed-classes Habit)
+		(create-accessor read-write))
+	(single-slot repetitions_high
+		(type FLOAT)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot problems
 		(type INSTANCE)
@@ -330,12 +330,12 @@
 		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot repetitions_low
-		(type INTEGER)
+	(single-slot repetitions_high
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot repetitons_hard
-		(type FLOAT)
+	(single-slot repetitions_low
+		(type INTEGER)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot sets
