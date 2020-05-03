@@ -1,4 +1,4 @@
-; Sat May 02 16:30:32 CEST 2020
+; Sun May 03 10:50:29 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class10063]
-		[ontologia_ProjectKB_Class10064]
-		[ontologia_ProjectKB_Class10065]
-		[ontologia_ProjectKB_Class10066]
-		[ontologia_ProjectKB_Class10067]
-		[ontologia_ProjectKB_Class10068]
-		[ontologia_ProjectKB_Class10069]
-		[ontologia_ProjectKB_Class10070]))
+		[ontologia_ProjectKB_Class10051]
+		[ontologia_ProjectKB_Class10052]
+		[ontologia_ProjectKB_Class10053]
+		[ontologia_ProjectKB_Class10054]
+		[ontologia_ProjectKB_Class10055]
+		[ontologia_ProjectKB_Class10056]
+		[ontologia_ProjectKB_Class10057]
+		[ontologia_ProjectKB_Class10058]))
 
 ([CLSES_TAB] of  Widget
 
@@ -71,6 +71,9 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
+([KB_157267_Class3] of  Map
+)
+
 ([KB_758705_Class0] of  String
 
 	(name "factory_class_name")
@@ -79,9 +82,9 @@
 ([KB_758705_Class1] of  Map
 
 	(entries
-		[ontologia_ProjectKB_Class10071]
-		[ontologia_ProjectKB_Class10072]
-		[ontologia_ProjectKB_Class10073]))
+		[ontologia_ProjectKB_Class10059]
+		[ontologia_ProjectKB_Class10060]
+		[ontologia_ProjectKB_Class10061]))
 
 ([KB_758705_Class100] of  String
 
@@ -175,9 +178,6 @@
 	(name "classes_file_name")
 	(string_value "ontologia.pont"))
 
-([KB_998651_Class3] of  Map
-)
-
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -192,61 +192,61 @@
 ([ontologia_ProjectKB_Class10] of  Property_List
 )
 
-([ontologia_ProjectKB_Class10063] of  String
+([ontologia_ProjectKB_Class10051] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([ontologia_ProjectKB_Class10064] of  String
+([ontologia_ProjectKB_Class10052] of  String
 
 	(name "Person")
 	(string_value "instance_name"))
 
-([ontologia_ProjectKB_Class10065] of  String
+([ontologia_ProjectKB_Class10053] of  String
 
 	(name "Physical")
 	(string_value "instance_name"))
 
-([ontologia_ProjectKB_Class10066] of  String
+([ontologia_ProjectKB_Class10054] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([ontologia_ProjectKB_Class10067] of  String
+([ontologia_ProjectKB_Class10055] of  String
 
 	(name "Exercice")
 	(string_value "instance_name"))
 
-([ontologia_ProjectKB_Class10068] of  String
+([ontologia_ProjectKB_Class10056] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([ontologia_ProjectKB_Class10069] of  String
+([ontologia_ProjectKB_Class10057] of  String
 
 	(name "Habit")
 	(string_value "instance_name"))
 
-([ontologia_ProjectKB_Class10070] of  String
+([ontologia_ProjectKB_Class10058] of  String
 
 	(name "Diet")
 	(string_value "instance_name"))
 
-([ontologia_ProjectKB_Class10071] of  Map_Entry
+([ontologia_ProjectKB_Class10059] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([ontologia_ProjectKB_Class10072] of  Map_Entry
+([ontologia_ProjectKB_Class10060] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([ontologia_ProjectKB_Class10073] of  Map_Entry
+([ontologia_ProjectKB_Class10061] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")

@@ -1,4 +1,4 @@
-; Sat May 02 16:30:32 CEST 2020
+; Sun May 03 10:50:29 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -10,10 +10,7 @@
 	(max_exercice_duration 20.0)
 	(min_exercice_duration 10.0)
 	(repetitions 30)
-	(sets 4)
-	(weights_high "15")
-	(weights_low 5.0)
-	(weights_medium "10"))
+	(sets 4))
 
 ([ontologia_Class1] of  MuscleGrowth
 
@@ -22,14 +19,15 @@
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
 	(repetitions 20)
-	(sets 4)
-	(weights_high "50")
-	(weights_low 5.0)
-	(weights_medium "30"))
+	(sets 4))
 
 ([ontologia_Class10] of  Diet
 
 	(instance_name "Picar entre horas"))
+
+([ontologia_Class10000] of  Diet
+
+	(instance_name "Hipertension"))
 
 ([ontologia_Class10004] of  BodyBalance
 
@@ -110,10 +108,7 @@
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
 	(repetitions 30)
-	(sets 5)
-	(weights_high "20")
-	(weights_low 5.0)
-	(weights_medium "10"))
+	(sets 5))
 
 ([ontologia_Class20] of  Physical
 

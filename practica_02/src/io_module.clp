@@ -1,6 +1,8 @@
-;;**************************
-;;*     INPUT/OUTPUT       *
-;;**************************
+;;***************************************
+;;*           INPUT/OUTPUT              *
+;;* This module works in all the        *
+;;* input/output operations to the user *
+;;***************************************
 
 
 ;; MESSAGE HANDLER DEFINITIONS
@@ -84,11 +86,15 @@
     =>
     (send ?user put-instance_name      (ask "Introdueix el nom:"))
     (send ?user put-age                (ask "Introdueix la edat:"))
-    (send ?user put-weight             (ask "Introdueix el pes:"))
+    (bind ?weight                      (ask "Introdueix el pes (km):"))
+    (bind ?height                      (ask "Introdueix altura (cm):"))
+    (send ?user put-weight             ?weight)
+    (send ?user put-height             ?height)
     (send ?user put-fatigue            (ask "Ara hauras de fer una prova de esforç. Et sents fatigat?"))
     (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial minima:"))
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial máxima:"))
     (send ?user put-bpm                (ask "Introdueix BPM:"))
+    (send ?user put-bmi                (/ ?weight (* ?height ?height)))
     (assert (asked_basic_questions))
 )
 

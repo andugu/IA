@@ -1,4 +1,4 @@
-; Sat May 02 16:30:32 CEST 2020
+; Sun May 03 10:50:29 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -41,6 +41,10 @@
 		(allowed-values Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(single-slot bmi
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot calories_per_time_medium
 		(type FLOAT)
 ;+		(cardinality 0 1)
@@ -53,10 +57,6 @@
 		(type INSTANCE)
 ;+		(allowed-classes PersonalExercice)
 		(cardinality 7 7)
-		(create-accessor read-write))
-	(single-slot weights_medium
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot day
 		(type INTEGER)
@@ -83,10 +83,6 @@
 	(multislot habits
 		(type INSTANCE)
 ;+		(allowed-classes Habit)
-		(create-accessor read-write))
-	(single-slot weights_low
-		(type FLOAT)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot problems
 		(type INSTANCE)
@@ -139,10 +135,6 @@
 	(single-slot duration
 		(type FLOAT)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot weights_high
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Person
@@ -175,6 +167,10 @@
 		(create-accessor read-write))
 	(single-slot instance_name
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot bmi
+		(type FLOAT)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot activity
@@ -324,18 +320,6 @@
 	(role concrete)
 	(single-slot repetitions
 		(type INTEGER)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot weights_low
-		(type FLOAT)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot weights_medium
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot weights_high
-		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot sets
