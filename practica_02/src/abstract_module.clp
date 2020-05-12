@@ -7,7 +7,7 @@
 
 ; AUXILIAR FUNCTIONS
 
-(deffunction get_activity_duration (?exercice, ?activity)
+(deffunction get_activity_duration (?exercice ?activity)
     (bind ?minDuration (send ?exercice get-min_exercice_duration))
     (bind ?maxDuration (send ?exercice get-max_exercice_duration))
     (if (eq ?activity low) then ?minDuration)
@@ -56,22 +56,23 @@
     (balance)
     ?user <- (object (is-a Person))
     =>
-    (bind ?exercices (find-all-instances ((?exercice Balance))TRUE))
+    (bind ?exercices (find-all-instances ((?exercice BodyBalance))TRUE))
     (bind ?activity (send ?user get-activity))
 
     (progn$ (?e ?exercices); for loop
         (bind ?duration (get_activity_duration ?e ?activity))
         (make-instance (gensym*) of PersonalExercice
+            (exercice_type bodybalance)
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
         )
     )
-    (assert (solution_calculated))
+    (assert (abstracted))
 
 )
 
-(defrule manteinance_rule ""
+(defrule manteinance_rule "Rule to add manteinance exercices"
     (manteinance)
     ?user <- (object (is-a Person))
     =>
@@ -81,15 +82,16 @@
     (progn$ (?e ?exercices); for loop
         (bind ?duration (get_activity_duration ?e ?activity))
         (make-instance (gensym*) of PersonalExercice
+            (exercice_type manteinance)
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
         )
     )
-    (assert (solution_calculated))
+    (assert (abstracted))
 )
 
-(defrule musclegrowth_rule ""
+(defrule musclegrowth_rule "Rule to add musclegrowth exercices"
     (musclegrowth)
     ?user <- (object (is-a Person))
     =>
@@ -99,16 +101,17 @@
     (progn$ (?e ?exercices); for loop
         (bind ?duration (get_activity_duration ?e ?activity))
         (make-instance (gensym*) of PersonalExercice
+            (exercice_type musclegrowth)
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
         )
     )
-    (assert (solution_calculated))
+    (assert (abstracted))
 
 )
 
-(defrule weightloss_rule ""
+(defrule weightloss_rule "Rule to add weightloss exercices"
     (weightloss)
     ?user <- (object (is-a Person))
     =>
@@ -118,12 +121,13 @@
     (progn$ (?e ?exercices); for loop
         (bind ?duration (get_activity_duration ?e ?activity))
         (make-instance (gensym*) of PersonalExercice
+            (exercice_type weightloss)
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
         )
     )
-    (assert (solution_calculated))
+    (assert (abstracted))
 )
 
 ;(defrule mal_esquena ""

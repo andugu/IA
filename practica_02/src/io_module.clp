@@ -112,9 +112,6 @@
     (printout t "2. Manteinance" crlf)
     (printout t "3. MuscleGrowth" crlf)
     (printout t "4. WeightLoss" crlf)
-    (bind ?objective (read))
-    (set_objective ?objective)
-    (printout t "Algun més?[nombre/no]" crlf)
     (while (neq no (bind ?objective (read))) do ; name frequency duration \n
         (set_objective ?objective)
         (printout t "Algun més?[nombre/no]" crlf)
