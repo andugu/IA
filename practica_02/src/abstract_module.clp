@@ -15,7 +15,7 @@
     ?user <- (object (is-a Person))
     =>
     (bind ?bmi (send ?user get-bmi))
-    (if (< 24.9 ?bmi) then
+    (if (>= 24.9 ?bmi) then
         (assert (normal_bmi))
      else (
          if (< 30 ?bmi) then (assert (overweight))

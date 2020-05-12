@@ -10,7 +10,7 @@
     (bind ?base ?self:base_exercice)
     (printout t "--------------------------------------------" crlf)
     (printout t "Exercici: " (send ?base get-instance_name) crlf)
-    (printout t "Duració: "  ?self:duration crlf)
+    (printout t "Duració: "  ?self:duration " minuts " crlf)
     (send ?base print)
     (printout t "--------------------------------------------" crlf)
 )
