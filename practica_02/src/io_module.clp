@@ -107,17 +107,17 @@
 )
 
 (deffunction ask_objectives ()
-    (printout t "Quins objectius t'agradaria aconseguir amb la rutina?[Escriu els valors separats per espai]" crlf)
+    (printout t "Quins objectius t'agradaria aconseguir amb la rutina?[Escriu un únic nombre de objectiu]" crlf)
     (printout t "1. Balance" crlf)
     (printout t "2. Manteinance" crlf)
     (printout t "3. MuscleGrowth" crlf)
     (printout t "4. WeightLoss" crlf)
     (bind ?objective (read))
     (set_objective ?objective)
-    (printout t "Algun mes?" crlf)
+    (printout t "Algun més?[nombre/no]" crlf)
     (while (neq no (bind ?objective (read))) do ; name frequency duration \n
         (set_objective ?objective)
-        (printout t "Algun mes?" crlf)
+        (printout t "Algun més?[nombre/no]" crlf)
     )
 
 )

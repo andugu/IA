@@ -7,6 +7,13 @@
 
 ; AUXILIAR FUNCTIONS
 
+(deffunction get_activity_duration (?exercice, ?activity)
+    (bind ?minDuration (send ?exercice get-min_exercice_duration))
+    (bind ?maxDuration (send ?exercice get-max_exercice_duration))
+    (if (eq ?activity low) then ?minDuration)
+    (if (eq ?activity medium) then (/ (+ ?minDuration ?maxDuration) 2))
+    (if (eq ?activity high) then  ?maxDuration)
+)
 
 ; RULE DEFINITION
 
@@ -44,6 +51,86 @@
     (slot-insert$ ?user problems ?last ?problem)
 
 )
+
+(defrule balance_rule "Rule to add balance exercices"
+    (balance)
+    ?user <- (object (is-a Person))
+    =>
+    (bind ?exercices (find-all-instances ((?exercice Balance))TRUE))
+    (bind ?activity (send ?user get-activity))
+
+    (progn$ (?e ?exercices); for loop
+        (bind ?duration (get_activity_duration ?e ?activity))
+        (make-instance (gensym*) of PersonalExercice
+            (dificulty ?activity)
+            (base_exercice ?e)
+            (duration ?duration)
+        )
+    )
+    (assert (solution_calculated))
+
+)
+
+(defrule manteinance_rule ""
+    (manteinance)
+    ?user <- (object (is-a Person))
+    =>
+    (bind ?exercices (find-all-instances ((?exercice Manteinance))TRUE))
+    (bind ?activity (send ?user get-activity))
+
+    (progn$ (?e ?exercices); for loop
+        (bind ?duration (get_activity_duration ?e ?activity))
+        (make-instance (gensym*) of PersonalExercice
+            (dificulty ?activity)
+            (base_exercice ?e)
+            (duration ?duration)
+        )
+    )
+    (assert (solution_calculated))
+)
+
+(defrule musclegrowth_rule ""
+    (musclegrowth)
+    ?user <- (object (is-a Person))
+    =>
+    (bind ?exercices (find-all-instances ((?exercice MuscleGrowth))TRUE))
+    (bind ?activity (send ?user get-activity))
+
+    (progn$ (?e ?exercices); for loop
+        (bind ?duration (get_activity_duration ?e ?activity))
+        (make-instance (gensym*) of PersonalExercice
+            (dificulty ?activity)
+            (base_exercice ?e)
+            (duration ?duration)
+        )
+    )
+    (assert (solution_calculated))
+
+)
+
+(defrule weightloss_rule ""
+    (weightloss)
+    ?user <- (object (is-a Person))
+    =>
+    (bind ?exercices (find-all-instances ((?exercice WeightLoss))TRUE))
+    (bind ?activity (send ?user get-activity))
+
+    (progn$ (?e ?exercices); for loop
+        (bind ?duration (get_activity_duration ?e ?activity))
+        (make-instance (gensym*) of PersonalExercice
+            (dificulty ?activity)
+            (base_exercice ?e)
+            (duration ?duration)
+        )
+    )
+    (assert (solution_calculated))
+)
+
+;(defrule mal_esquena ""
+;    (mal_esquena)
+;    =>
+;    (find-instances exercies que tengan probnlema espalda() )
+;)
 
 
 (defrule habits_point_system "Rule that calculates the activiy of a person given its habits"
