@@ -99,6 +99,29 @@
     (assert (asked_all))
 )
 
+(deffunction set_objective (?obj)
+    (if (eq 1 ?obj) then (assert (balance)))
+    (if (eq 2 ?obj) then (assert (manteinance)))
+    (if (eq 3 ?obj) then (assert (musclegrowth)))
+    (if (eq 4 ?obj) then (assert (weightloss)))
+)
+
+(deffunction ask_objectives ()
+    (printout t "Quins objectius t'agradaria aconseguir amb la rutina?[Escriu els valors separats per espai]" crlf)
+    (printout t "1. Balance" crlf)
+    (printout t "2. Manteinance" crlf)
+    (printout t "3. MuscleGrowth" crlf)
+    (printout t "4. WeightLoss" crlf)
+    (bind ?objective (read))
+    (set_objective ?objective)
+    (printout t "Algun mes?" crlf)
+    (while (neq no (bind ?objective (read))) do ; name frequency duration \n
+        (set_objective ?objective)
+        (printout t "Algun mes?" crlf)
+    )
+
+)
+
 (defrule input_questions "rule that asks questions to the user"
     (user_created)
     ?user <- (object (is-a Person))
@@ -113,8 +136,8 @@
     (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial minima:"))
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial máxima:"))
     (send ?user put-bpm                (ask "Introdueix beats per minute:"))
-    (send ?user put-bmi                (/ ?weight (* ?height ?height))) ; abstract attribue
-    (bind ?objectives                  (ask "Quins objectius t'agradaria aconseguir amb la rutina?[Balance/Manteinance/MuscleGrowth/WeightLoss/]"))
+    (send ?user put-bmi                (/ ?weight (* ?height ?height))) ; abstract attribute
+    (ask_objectives)
     (assert (asked_basic_questions))
 )
 

@@ -18,7 +18,7 @@
     (if (>= 24.9 ?bmi) then
         (assert (normal_bmi))
      else (
-         if (< 30 ?bmi) then (assert (overweight))
+         if (>= 30 ?bmi) then (assert (overweight))
             else (assert (obese))
          )
     )
