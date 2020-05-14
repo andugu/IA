@@ -10,6 +10,28 @@
     (export ?ALL)
 )
 
+;; AUXILIAR FUNCTIONS
+
+
+(deffunction set_date (?array ?pos ?day)
+    (bind ?size (length$ ?array))
+    (bind ?duration 0)
+    (while (> ?duration 30 )
+        (bind ?it (+ 1 (mod ?pos ?size)))
+        (bind ?exercice (nth$ ?it ?array))
+        ; calculate exercice duration based on the activity
+        (bind ?currentDuration (send ?exercice get-duration))
+        (bind ?duration (+ ?currentDuration ?duration))
+        (send ?exercice set-day ?day)
+        ; increment loop control variables
+        (bind ?duration (+ ?currentDuration ?duration))
+        (bind ?pos (+ 1 ?pos))
+    )
+    ?pos ; return new pos
+)
+
+;; RULES
+
 (defrule max_program_days "States the total days of the program"
     (user_created)
     ?user <- (object (is-a Person))
@@ -31,7 +53,7 @@
     (assert (musclegrowth_pos 1))
 )
 
-(defrule add_balance_exercices "If there are bodybalance exercices add them"
+(defrule add_balance_exercices "If there are bodybalance exercices set their date"
     (bodybalance)
     (max_days ?max)
     (day ?d)
@@ -42,65 +64,79 @@
     ; be able to enter this rule again
     (retract bodybalance)
     (assert bodybalance)
-
-
-
+    ; get body balance exercices
+    (bind ?array (find-all-instances ((?e PersonalExercice)) (eq bodybalance ?e:exercice_type)))
+    ; set the date of the exercices
+    (retract bodybalance_pos)
+    (assert (bodybalance_pos (set_date ?array ?pos ?d)))
     ; increase days
-    
+    (retract day ?d)
+    (assert day (+ 1 ?d))
 )
 
-(defrule define_days "Define days for each personal exercice"
-    (user_created)
-    (day 4)
-    ?user <- (object (is-a Person))
+(defrule add_manteinance_exercices "If there are bodybalance exercices set their date"
+    (manteinance)
+    (max_days ?max)
+    (day ?d)
+    (test (> ?d ?max)) ; only enter if we are missing days
+    (manteinance_pos ?pos) ; save current exercice
     =>
-
-    ; get exercices into different lists
-    (bind ?bodybalance (find-all-instances ((?e PersonalExercice)) (eq bodybalance ?e:exercice_type)))
-    (bind ?weightloss (find-all-instances ((?e PersonalExercice)) (eq weightloss ?e:exercice_type)))
-    (bind ?manteinance (find-all-instances ((?e PersonalExercice)) (eq manteinance ?e:exercice_type)))
-    (bind ?musclegrowth (find-all-instances ((?e PersonalExercice)) (eq musclegrowth ?e:exercice_type)))
-    ; saves the instances of exercices sequentially
-    (bind ?exercices (create$ ))
-    ; for each exercice type, we save the lengths
-    (bind ?sizes (create$ (length$ ?bodybalance)
-                          (length$ ?weightloss)
-                          (length$ ?manteinance)
-                          (length$ ?musclegrowth)))
-    ; for each exercice type we save its position
-    ; this way we avoid repeating exercices as much as
-    ; possible, we want them to be varied
-    (bind ?iterators (create$ 0 0 0 0))
-    ; add exercices to array, reversed, because they are
-    ; added at the beginning
-    (bind ?exercices (insert$ ?exercices 1 ?weightloss))
-    (bind ?exercices (insert$ ?exercices 1 ?musclegrowth))
-    (bind ?exercices (insert$ ?exercices 1 ?manteinance))
-    (bind ?exercices (insert$ ?exercices 1 ?bodybalance))
-    (printout t ?exercices crlf) ; DEBUG
-    ; for each day we assign exercices compatible with that day
-    ; each day only a specific type of exercice can be done
-    (loop-for-count (?i 1 ?max_days) do
-        (printout t "Current day: " ?i crlf)
-        ; first we select the type of exercice
-        (bind ?current_type (+ 1 (mod ?i 4)))
-        ; initialize day duration
-        (bind ?duration 0)
-        ; while the minimum time of 30 minuts is not met, we
-        ; continue to add exercices
-        (while (> ?duration 30 )
-            (bind ?minDuration (send ?exercice get-min_exercice_duration))
-            (bind ?maxDuration (send ?exercice get-max_exercice_duration))
-            (if (eq ?activity low) then (bind ?currentDuration ?minDuration))
-            (if (eq ?activity medium) then (bind ?currentDuration (/ (+ ?minDuration ?maxDuration) 2)))
-            (if (eq ?activity high) then (bind ?currentDuration ?maxDuration))
-        )
-        (printout t "Current exercices" (nth$ ?pos ?exercices) crlf)
-        (send (nth$ ?pos ?exercices) put-day ?i)
-
-    )
-
+    ; retract and assert to
+    ; be able to enter this rule again
+    (retract manteinance)
+    (assert manteinance)
+    ; get body balance exercices
+    (bind ?array (find-all-instances ((?e PersonalExercice)) (eq manteinance ?e:exercice_type)))
+    ; set the date of the exercices
+    (retract manteinance_pos)
+    (assert (manteinance_pos (set_date ?array ?pos ?d)))
+    ; increase days
+    (retract day ?d)
+    (assert day (+ 1 ?d))
 )
+
+(defrule add_musclegrowth_exercices "If there are bodybalance exercices set their date"
+    (musclegrowth)
+    (max_days ?max)
+    (day ?d)
+    (test (> ?d ?max)) ; only enter if we are missing days
+    (musclegrowth_pos ?pos) ; save current exercice
+    =>
+    ; retract and assert to
+    ; be able to enter this rule again
+    (retract musclegrowth)
+    (assert musclegrowth)
+    ; get body balance exercices
+    (bind ?array (find-all-instances ((?e PersonalExercice)) (eq musclegrowth ?e:exercice_type)))
+    ; set the date of the exercices
+    (retract musclegrowth_pos)
+    (assert (musclegrowth_pos (set_date ?array ?pos ?d)))
+    ; increase days
+    (retract day ?d)
+    (assert day (+ 1 ?d))
+)
+
+(defrule add_weightloss_exercices "If there are bodybalance exercices set their date"
+    (weightloss)
+    (max_days ?max)
+    (day ?d)
+    (test (> ?d ?max)) ; only enter if we are missing days
+    (weightloss_pos ?pos) ; save current exercice
+    =>
+    ; retract and assert to
+    ; be able to enter this rule again
+    (retract weightloss)
+    (assert weightloss)
+    ; get body balance exercices
+    (bind ?array (find-all-instances ((?e PersonalExercice)) (eq weightloss ?e:exercice_type)))
+    ; set the date of the exercices
+    (retract weightloss_pos)
+    (assert (weightloss_pos (set_date ?array ?pos ?d)))
+    ; increase days
+    (retract day ?d)
+    (assert day (+ 1 ?d))
+)
+
 
 ;; MOVE TO NEXT MODULE
 (defrule end_solver_module
