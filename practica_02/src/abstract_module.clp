@@ -147,11 +147,18 @@
     (assert (abstracted))
 )
 
-;(defrule mal_esquena ""
-;    (mal_esquena)
-;    =>
-;    (find-instances exercies que tengan probnlema espalda() )
-;)
+(defrule filter_diets "Rule that filters the diets of the user"
+    ?problem <- (object (is-a Diet))
+    =>
+
+)
+
+(defrule filter_physical "Rule that filters the physical problems of the user"
+    ?problem <- (object (is-a Physical))
+    =>
+
+)
+
 
 
 (defrule habits_point_system "Rule that calculates the activiy of a person given its habits"
