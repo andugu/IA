@@ -61,6 +61,12 @@
     (ask_habit ?user medium "Tens habits de activitat mitjana?[si/no] (e.g. Sortir a passejar, fer estiraments, fregar)")
     (ask_habit ?user high "Tens habits de alta activitat?[si/no] (e.g. Anar a corra, natació, tenis)")
 )
+(defrule problems_questions "rule that asks if the user has a certain condition or problem"
+    (asked_basic_questions)
+    ?user <- (object (is-a Person))
+    =>
+    (printout t "PROBLEMS QUESTIONS::TODO" crlf)
+)
 
 (deffunction set_objectives (?obj)
     (if (member 1 ?obj) then (assert (balance)))

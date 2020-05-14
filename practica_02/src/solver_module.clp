@@ -33,10 +33,10 @@
     (if (neq 0 (length$ ?musclegrowth)) then (bind ?exercices (insert$ ?exercices 1 ?musclegrowth)))
     (printout t ?exercices crlf)
     (loop-for-count (?i 1 ?max_days) do
+        (printout t "Current day: " ?i crlf)
         (bind ?pos (+ 1 (mod ?i (length$ ?exercices))))
-        (progn$ (?e (nth$ ?pos ?exercices))
-            (send ?e put-day ?i)
-        )
+        (printout t "Current exercices" (nth$ ?pos ?exercices) crlf)
+        (send (nth$ ?pos ?exercices) put-day ?i)
 
     )
 
