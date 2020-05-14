@@ -56,16 +56,13 @@
 
 
 (defrule add_balance_exercices "If there are bodybalance exercices set their date"
-    ?fact_type <- (balance)
+    (balance)
     (max_days ?max)
     ?fact_day <- (day ?d)
     (test (<= ?d ?max)) ; only enter if we are missing days
     ?fact_pos <- (bodybalance_pos ?pos) ; save current exercice
     =>
-    ; retract and assert to
-    ; be able to enter this rule again
-    (retract ?fact_type)
-    (assert (balance))
+    (printout t "Entering add balance rule" crlf)
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq bodybalance ?e:exercice_type)))
     ; set the date of the exercices
@@ -77,16 +74,12 @@
 )
 
 (defrule add_manteinance_exercices "If there are bodybalance exercices set their date"
-    ?fact_type <- (manteinance)
-    ?fact_day <- (max_days ?max)
-    (day ?d)
+    (manteinance)
+    (max_days ?max)
+    ?fact_day <- (day ?d)
     (test (<= ?d ?max)) ; only enter if we are missing days
     ?fact_pos <- (manteinance_pos ?pos) ; save current exercice
     =>
-    ; retract and assert to
-    ; be able to enter this rule again
-    (retract ?fact_type)
-    (assert (manteinance))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq manteinance ?e:exercice_type)))
     ; set the date of the exercices
@@ -98,16 +91,12 @@
 )
 
 (defrule add_musclegrowth_exercices "If there are bodybalance exercices set their date"
-    ?fact_type <- (musclegrowth)
-    ?fact_day <- (max_days ?max)
-    (day ?d)
+    (musclegrowth)
+    (max_days ?max)
+    ?fact_day <- (day ?d)
     (test (<= ?d ?max)) ; only enter if we are missing days
     ?fact_pos <- (musclegrowth_pos ?pos) ; save current exercice
     =>
-    ; retract and assert to
-    ; be able to enter this rule again
-    (retract ?fact_type)
-    (assert (musclegrowth))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq musclegrowth ?e:exercice_type)))
     ; set the date of the exercices
@@ -119,16 +108,12 @@
 )
 
 (defrule add_weightloss_exercices "If there are bodybalance exercices set their date"
-    ?fact_type <- (weightloss)
-    ?fact_day <- (max_days ?max)
-    (day ?d)
+    (weightloss)
+    (max_days ?max)
+    ?fact_day <- (day ?d)
     (test (<= ?d ?max)) ; only enter if we are missing days
     ?fact_pos <- (weightloss_pos ?pos) ; save current exercice
     =>
-    ; retract and assert to
-    ; be able to enter this rule again
-    (retract ?fact_type)
-    (assert (weightloss))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq weightloss ?e:exercice_type)))
     ; set the date of the exercices
