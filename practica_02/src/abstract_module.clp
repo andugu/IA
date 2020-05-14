@@ -16,9 +16,11 @@
 (deffunction get_activity_duration (?exercice ?activity)
     (bind ?minDuration (send ?exercice get-min_exercice_duration))
     (bind ?maxDuration (send ?exercice get-max_exercice_duration))
-    (if (eq ?activity low) then ?minDuration)
-    (if (eq ?activity medium) then (/ (+ ?minDuration ?maxDuration) 2))
-    (if (eq ?activity high) then  ?maxDuration)
+    (bind ?d 0)
+    (if (eq ?activity low) then (bind ?d ?minDuration))
+    (if (eq ?activity medium) then (bind ?d (/ (+ ?minDuration ?maxDuration) 2)))
+    (if (eq ?activity high) then  (bind ?d ?maxDuration))
+    ?d 
 )
 
 ; RULE DEFINITION
