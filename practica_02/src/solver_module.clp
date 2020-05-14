@@ -53,87 +53,89 @@
     (assert (musclegrowth_pos 1))
 )
 
+
+
 (defrule add_balance_exercices "If there are bodybalance exercices set their date"
-    (bodybalance)
+    ?fact_type <- (balance)
     (max_days ?max)
-    (day ?d)
-    (test (> ?d ?max)) ; only enter if we are missing days
-    (bodybalance_pos ?pos) ; save current exercice
+    ?fact_day <- (day ?d)
+    (test (<= ?d ?max)) ; only enter if we are missing days
+    ?fact_pos <- (bodybalance_pos ?pos) ; save current exercice
     =>
     ; retract and assert to
     ; be able to enter this rule again
-    (retract bodybalance)
-    (assert (bodybalance))
+    (retract ?fact_type)
+    (assert (balance))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq bodybalance ?e:exercice_type)))
     ; set the date of the exercices
-    (retract bodybalance_pos)
+    (retract ?fact_pos)
     (assert (bodybalance_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day)
+    (retract ?fact_day)
     (assert (day (+ 1 ?d)))
 )
 
 (defrule add_manteinance_exercices "If there are bodybalance exercices set their date"
-    (manteinance)
-    (max_days ?max)
+    ?fact_type <- (manteinance)
+    ?fact_day <- (max_days ?max)
     (day ?d)
-    (test (> ?d ?max)) ; only enter if we are missing days
-    (manteinance_pos ?pos) ; save current exercice
+    (test (<= ?d ?max)) ; only enter if we are missing days
+    ?fact_pos <- (manteinance_pos ?pos) ; save current exercice
     =>
     ; retract and assert to
     ; be able to enter this rule again
-    (retract manteinance)
+    (retract ?fact_type)
     (assert (manteinance))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq manteinance ?e:exercice_type)))
     ; set the date of the exercices
-    (retract manteinance_pos)
+    (retract ?fact_pos)
     (assert (manteinance_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day )
+    (retract ?fact_day )
     (assert (day (+ 1 ?d)))
 )
 
 (defrule add_musclegrowth_exercices "If there are bodybalance exercices set their date"
-    (musclegrowth)
-    (max_days ?max)
+    ?fact_type <- (musclegrowth)
+    ?fact_day <- (max_days ?max)
     (day ?d)
-    (test (> ?d ?max)) ; only enter if we are missing days
-    (musclegrowth_pos ?pos) ; save current exercice
+    (test (<= ?d ?max)) ; only enter if we are missing days
+    ?fact_pos <- (musclegrowth_pos ?pos) ; save current exercice
     =>
     ; retract and assert to
     ; be able to enter this rule again
-    (retract musclegrowth)
+    (retract ?fact_type)
     (assert (musclegrowth))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq musclegrowth ?e:exercice_type)))
     ; set the date of the exercices
-    (retract musclegrowth_pos)
+    (retract ?fact_pos)
     (assert (musclegrowth_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day)
+    (retract ?fact_day)
     (assert (day (+ 1 ?d)))
 )
 
 (defrule add_weightloss_exercices "If there are bodybalance exercices set their date"
-    (weightloss)
-    (max_days ?max)
+    ?fact_type <- (weightloss)
+    ?fact_day <- (max_days ?max)
     (day ?d)
-    (test (> ?d ?max)) ; only enter if we are missing days
-    (weightloss_pos ?pos) ; save current exercice
+    (test (<= ?d ?max)) ; only enter if we are missing days
+    ?fact_pos <- (weightloss_pos ?pos) ; save current exercice
     =>
     ; retract and assert to
     ; be able to enter this rule again
-    (retract weightloss)
+    (retract ?fact_type)
     (assert (weightloss))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq weightloss ?e:exercice_type)))
     ; set the date of the exercices
-    (retract weightloss_pos)
+    (retract ?fact_pos)
     (assert (weightloss_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day)
+    (retract ?fact_day)
     (assert (day (+ 1 ?d)))
 )
 
@@ -141,6 +143,9 @@
 ;; MOVE TO NEXT MODULE
 (defrule end_solver_module
     (user_created)
+    (max_days ?max)
+    (day ?d)
+    (test (> ?d ?max))
     =>
     (printout t "Calculo de la solución completada" crlf)
     (focus output_module)
