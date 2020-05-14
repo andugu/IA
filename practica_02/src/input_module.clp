@@ -62,11 +62,11 @@
     (ask_habit ?user high "Tens habits de alta activitat?[si/no] (e.g. Anar a corra, natació, tenis)")
 )
 
-(deffunction set_objective (?obj)
-    (if (eq 1 ?obj) then (assert (balance)))
-    (if (eq 2 ?obj) then (assert (manteinance)))
-    (if (eq 3 ?obj) then (assert (musclegrowth)))
-    (if (eq 4 ?obj) then (assert (weightloss)))
+(deffunction set_objectives (?obj)
+    (if (member 1 ?obj) then (assert (balance)))
+    (if (member 2 ?obj) then (assert (manteinance)))
+    (if (member 3 ?obj) then (assert (musclegrowth)))
+    (if (member 4 ?obj) then (assert (weightloss)))
 )
 
 (deffunction ask_objectives ()
@@ -76,7 +76,7 @@
     (printout t "3. MuscleGrowth" crlf)
     (printout t "4. WeightLoss" crlf)
     (bind ?objectives (ask_list))
-    (progn$ (?o ?objectives) (set_objective ?o))
+    (set_objectives ?objectives)
 
 )
 
