@@ -37,6 +37,11 @@
     ; (send ?user put-habits (all-instances HABIT))
 )
 
+(deffunction ask_list ()
+    (bind ?answer (readline))
+    (str-explode ?answer); return a list of values
+)
+
 ;; START INPUT RULE DEFINITION
 
 (defrule create_user "rule that creates a user when the system start"
@@ -65,15 +70,13 @@
 )
 
 (deffunction ask_objectives ()
-    (printout t "Quins objectius t'agradaria aconseguir amb la rutina?[Escriu un únic nombre de objectiu]" crlf)
+    (printout t "Quins objectius t'agradaria aconseguir amb la rutina?[Escriu multiples valors, com a minim 1]" crlf)
     (printout t "1. Balance" crlf)
     (printout t "2. Manteinance" crlf)
     (printout t "3. MuscleGrowth" crlf)
     (printout t "4. WeightLoss" crlf)
-    (while (neq no (bind ?objective (read))) do ; name frequency duration \n
-        (set_objective ?objective)
-        (printout t "Algun més?[nombre/no]" crlf)
-    )
+    (bind ?objectives (ask_list))
+    (progn$ (?o ?objectives) (set_objective ?o))
 
 )
 

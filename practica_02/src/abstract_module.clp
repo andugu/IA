@@ -176,5 +176,5 @@
     (user_created)
     =>
     (printout t "Abstracción de datos completada" crlf)
-    (focus abstract_module)
+    (focus solver_module)
 )
