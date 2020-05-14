@@ -8,6 +8,12 @@
     (export ?ALL)
 )
 
+;; TEMPLATES
+
+(deftemplate objectives
+    (multislot types)
+)
+
 ;; AUXILIAR FUNCTION DEFINITIONS
 
 ;; Asks a question to the user
@@ -106,6 +112,7 @@
 
 )
 
+
 (defrule input_questions "rule that asks questions to the user"
     (user_created)
     ?user <- (object (is-a Person))
@@ -118,7 +125,7 @@
     (send ?user put-height             ?height)
     (send ?user put-fatigue            (ask "Ara hauras de fer una prova de esforç. Et sents fatigat?"))
     ; here max blood pressure is the systolic pressure, since medically it is higher
-    ; here min blood pressure is the dyastolic pressure since medically it is lower 
+    ; here min blood pressure is the dyastolic pressure since medically it is lower
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial sistólica[mm Hg]:"))
     (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial diastólica[mm Hg]:"))
     (send ?user put-bpm                (ask "Introdueix beats per minute:"))

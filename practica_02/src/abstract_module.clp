@@ -20,7 +20,7 @@
     (if (eq ?activity low) then (bind ?d ?minDuration))
     (if (eq ?activity medium) then (bind ?d (/ (+ ?minDuration ?maxDuration) 2)))
     (if (eq ?activity high) then  (bind ?d ?maxDuration))
-    ?d 
+    ?d
 )
 
 ; RULE DEFINITION
