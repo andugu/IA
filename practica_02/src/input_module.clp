@@ -117,8 +117,10 @@
     (send ?user put-weight             ?weight)
     (send ?user put-height             ?height)
     (send ?user put-fatigue            (ask "Ara hauras de fer una prova de esforç. Et sents fatigat?"))
-    (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial minima:"))
-    (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial máxima:"))
+    ; here max blood pressure is the systolic pressure, since medically it is higher
+    ; here min blood pressure is the dyastolic pressure since medically it is lower 
+    (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial sistólica[mm Hg]:"))
+    (send ?user put-min_blood_pressure (ask "Introdueix la presió arterial diastólica[mm Hg]:"))
     (send ?user put-bpm                (ask "Introdueix beats per minute:"))
     (send ?user put-bmi                (/ ?weight (* ?height ?height))) ; abstract attribute
     (ask_objectives)

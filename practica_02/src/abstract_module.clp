@@ -23,6 +23,15 @@
 
 ; RULE DEFINITION
 
+(defrule tension_detector "This rule calculates what type of tension the person has"
+    (user_created)
+    ?user <- (object (is-a Person))
+    =>
+    (bind ?min (send ?user get-min_blood_pressure))
+    (bind ?max (send ?user get-max_blood_pressure))
+
+)
+
 (defrule bmi_detector "This rule calcualtes if the person has a normal bmi"
     (user_created)
     ?user <- (object (is-a Person))
