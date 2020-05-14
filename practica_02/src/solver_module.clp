@@ -65,6 +65,10 @@
                           (length$ ?weightloss)
                           (length$ ?manteinance)
                           (length$ ?musclegrowth)))
+    (bind ?offset (create$ (length$ ?bodybalance)))
+    (bind ?offset (insert$ ?offset 2 (nth$ 1 ?offset)))
+    (bind ?offset (insert$ ?offset 3 (nth$ 2 ?offset)))
+    (bind ?offset (insert$ ?offset 4 (nth$ 3 ?offset)))
     ; for each exercice type we save its position
     ; this way we avoid repeating exercices as much as
     ; possible, we want them to be varied
@@ -75,7 +79,6 @@
     (bind ?exercices (insert$ ?exercices 1 ?musclegrowth))
     (bind ?exercices (insert$ ?exercices 1 ?manteinance))
     (bind ?exercices (insert$ ?exercices 1 ?bodybalance))
-    (printout t ?exercices crlf) ; DEBUG
     ; for each day we assign exercices compatible with that day
     ; each day only a specific type of exercice can be done
     (loop-for-count (?i 1 ?max_days) do
@@ -86,19 +89,22 @@
         (bind ?duration 0)
         ; while the minimum time of 30 minuts is not met, we
         ; continue to add exercices
-        (if (neq 0 (nth$ ?current_type ?sizes))
+        (if (neq 0 (nth$ ?current_type ?sizes)) then
+            (printout t ?pos crlf)
             (bind ?pos (nth$ ?current_type ?iterators))
-            (while (> ?duration 30 )
+            (bind ?off (nth$ ?current_type ?offset ))
+            (while (<= ?duration 30 )
+
+                (bind ?exercice (nth$ (+ ?pos ?off) ?exercices))
                 (bind ?current_duration (send ?exercice get-duration))
-                (send (nth$ ?pos ?exercices) put-day ?i)
-                ; update loop control 
-                (bind (+ (?current_duration ?duration)))
-                (bind (+ 1 ?pos))
+                (send ?exercice put-day ?i)
+                ; update loop control
+                (bind ?duration (+ ?current_duration ?duration)))
+                ;(bind ?pos (+ 1 ?pos))
             )
-
+            (replace$ ?iterators ?current_type ?current_type ?pos)
         )
-
-
+    (assert (day (+ 1 ?max_days)))
 )
 
 
