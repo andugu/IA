@@ -13,5 +13,5 @@
     (printout t "==============================================" crlf)
     (printout t crlf)
     (assert (system_start)) ; tell the system that it needs to start
-    (focus io_module)
+    (focus input_module)
 )

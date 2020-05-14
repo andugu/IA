@@ -7,7 +7,7 @@
 
 (defmodule abstract_module
     (import MAIN ?ALL)
-    (import io_module ?ALL)
+    (import input_module ?ALL)
     (export ?ALL)
 )
 

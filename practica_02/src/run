@@ -16,9 +16,10 @@
 (load ../ont/clases.pont) ;
 (load-instances ../ont/instancias.pins)
 (load main_module.clp)
-(load io_module.clp) ;
+(load input_module.clp) ;
 (load abstract_module.clp) ;
 (load solver_module.clp)
+(load output_module.clp)
 
 ;;**************************
 ;;* EXECUTE PROGRAM        *

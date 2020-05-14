@@ -5,13 +5,13 @@
 
 (defmodule solver_module
     (import MAIN ?ALL)
-    (import io_module ?ALL)
+    (import input_module ?ALL)
     (import abstract_module ?ALL)
     (export ?ALL)
 )
 
 (defrule define_days "Define days for each personal exercice"
-    (abstracted)
+    (user_created)
     ?user <- (object (is-a Person))
     =>
     ; assign max days based on activity level
@@ -42,7 +42,6 @@
         )
 
     )
-    (assert (solution_calculated))
 
 )
 
@@ -51,6 +50,5 @@
     (user_created)
     =>
     (printout t "Calculo de la solución completada" crlf)
-    (assert (end))
-    (focus io_module)
+    (focus output_module)
 )
