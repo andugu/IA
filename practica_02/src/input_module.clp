@@ -61,13 +61,33 @@
     (ask_habit ?user medium "Tens habits de activitat mitjana?[si/no] (e.g. Sortir a passejar, fer estiraments, fregar)")
     (ask_habit ?user high "Tens habits de alta activitat?[si/no] (e.g. Anar a corra, natació, tenis)")
 )
-(defrule problems_questions "rule that asks if the user has a certain condition or problem"
+
+; here we separate diet questions between physcal because
+; they cause different relationships for the person
+; and the exercice they are doing
+(defrule diet_questions "rule that asks if the user has a certain diet problem"
     (asked_basic_questions)
     ?user <- (object (is-a Person))
+    ?problem <- (object (is-a Diet)) ;; MISSING REMOVE OBESITY FROM A PROBLEM => EAISER FORM ONTOLOGY
     =>
-    (printout t "PROBLEMS QUESTIONS::TODO" crlf)
+    (bind ?name (send ?problem get-instance_name))
+    (bind ?answer (ask (str-cat "Tens " ?name)))
+    (if (eq si ?answer) then (printout t "OK" crlf)
+    else (printout t "KO" crlf))
 )
 
+(defrule physical_questions "rule that asks if the user has a certain physical problem"
+    (asked_basic_questions)
+    ?user <- (object (is-a Person))
+    ?problem <- (object (is-a Physical))
+    =>
+    (bind ?name (send ?problem get-instance_name))
+    (bind ?answer (ask (str-cat "Tens " ?name)))
+    (if (eq si ?answer) then (printout t "OK" crlf)
+    else (printout t "KO" crlf))
+)
+
+;
 (deffunction set_objectives (?obj)
     (if (member 1 ?obj) then (assert (balance)))
     (if (member 2 ?obj) then (assert (manteinance)))
