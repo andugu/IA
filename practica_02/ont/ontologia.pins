@@ -1,4 +1,4 @@
-; Fri May 15 00:35:12 CEST 2020
+; Fri May 15 00:54:39 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -318,6 +318,101 @@
 	(repetitions_high 15.0)
 	(repetitions_low 5)
 	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class20019] of  WeightLoss
+
+	(body_parts Espalda Abdominales)
+	(calories_per_time_hard 200.0)
+	(calories_per_time_low 50.0)
+	(calories_per_time_medium 125.0)
+	(harms [ontologia_Class12])
+	(instance_name "Hiperextensión de lumbares")
+	(max_exercice_duration 5.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class20020] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(harms [ontologia_Class12])
+	(instance_name "Elevación de piernas")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class20021] of  WeightLoss
+
+	(body_parts Abdominales Gluteos Espalda)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(harms [ontologia_Class12])
+	(instance_name "Abdominales con las rodillas en el aire")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class20022] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda)
+	(instance_name "Estiramientos de espalda (Gato)")
+	(max_exercice_duration 5.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class20023] of  MuscleGrowth
+
+	(body_parts Pectoral Piernas Espalda Hombros)
+	(harms [ontologia_Class12])
+	(instance_name "Remo horizontal con barra")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class20024] of  MuscleGrowth
+
+	(body_parts Pectoral Espalda Hombros Gluteos Brazos)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class12]
+		[ontologia_Class10002])
+	(instance_name "Deadlift")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 15.0)
+	(sets 4))
+
+([ontologia_Class20025] of  MuscleGrowth
+
+	(benefits [ontologia_Class12])
+	(body_parts Hombros Brazos Pectoral)
+	(harms
+		[ontologia_Class20]
+		[ontologia_Class13])
+	(instance_name "Press militar")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 2.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 12.0)
+	(sets 5))
+
+([ontologia_Class20026] of  MuscleGrowth
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda Abdominales)
+	(instance_name "Elevar espalda (Superman)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0)
+	(repetitions_high 15.0)
+	(repetitions_low 4)
+	(repetitions_medium 8.0)
 	(sets 4))
 
 ([ontologia_Class21] of  WeightLoss
