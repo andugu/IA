@@ -49,13 +49,14 @@
 ; output solution module
 (defrule print_exercices
     (user_created)
+    (max_days ?max)
     =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice)) TRUE))
     (make-instance program of Program
         (exercices personal_exercices)
     )
 
-    (loop-for-count (?day 1 7) do
+    (loop-for-count (?day 1 ?max) do
         (printout t "============================================" crlf)
         (printout t "============================================" crlf)
         (printout t "DIA:" ?day crlf)
@@ -65,7 +66,7 @@
             (bind ?total_time (+ ?total_time (send ?e get-duration)))
         )
         (printout t "Duració total del dia " ?total_time " minutos" crlf)
-        (printout t "En aquest dia es treballara el BodyBalance" crlf)
+        (printout t "En aquest dia es treballara el " crlf)
         (printout t "============================================" crlf)
         (printout t "============================================" crlf)
         (progn$ (?e ?personal_exercices)

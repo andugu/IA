@@ -16,13 +16,16 @@
 (deffunction set_date (?array ?pos ?day)
     (bind ?size (length$ ?array))
     (bind ?duration 0)
-    (while (> ?duration 30 )
+    (printout t "Day: " ?day crlf)
+    (printout t "Possible: " ?array crlf)
+    (while (<= ?duration 30 )
         (bind ?it (+ 1 (mod ?pos ?size)))
         (bind ?exercice (nth$ ?it ?array))
+        (printout t "Current: " ?exercice crlf)
         ; calculate exercice duration based on the activity
         (bind ?currentDuration (send ?exercice get-duration))
         (bind ?duration (+ ?currentDuration ?duration))
-        (send ?exercice set-day ?day)
+        (send ?exercice put-day ?day)
         ; increment loop control variables
         (bind ?duration (+ ?currentDuration ?duration))
         (bind ?pos (+ 1 ?pos))
