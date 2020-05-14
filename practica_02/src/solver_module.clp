@@ -63,15 +63,15 @@
     ; retract and assert to
     ; be able to enter this rule again
     (retract bodybalance)
-    (assert bodybalance)
+    (assert (bodybalance))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq bodybalance ?e:exercice_type)))
     ; set the date of the exercices
     (retract bodybalance_pos)
     (assert (bodybalance_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day ?d)
-    (assert day (+ 1 ?d))
+    (retract day)
+    (assert (day (+ 1 ?d)))
 )
 
 (defrule add_manteinance_exercices "If there are bodybalance exercices set their date"
@@ -84,15 +84,15 @@
     ; retract and assert to
     ; be able to enter this rule again
     (retract manteinance)
-    (assert manteinance)
+    (assert (manteinance))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq manteinance ?e:exercice_type)))
     ; set the date of the exercices
     (retract manteinance_pos)
     (assert (manteinance_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day ?d)
-    (assert day (+ 1 ?d))
+    (retract day )
+    (assert (day (+ 1 ?d)))
 )
 
 (defrule add_musclegrowth_exercices "If there are bodybalance exercices set their date"
@@ -105,15 +105,15 @@
     ; retract and assert to
     ; be able to enter this rule again
     (retract musclegrowth)
-    (assert musclegrowth)
+    (assert (musclegrowth))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq musclegrowth ?e:exercice_type)))
     ; set the date of the exercices
     (retract musclegrowth_pos)
     (assert (musclegrowth_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day ?d)
-    (assert day (+ 1 ?d))
+    (retract day)
+    (assert (day (+ 1 ?d)))
 )
 
 (defrule add_weightloss_exercices "If there are bodybalance exercices set their date"
@@ -126,15 +126,15 @@
     ; retract and assert to
     ; be able to enter this rule again
     (retract weightloss)
-    (assert weightloss)
+    (assert (weightloss))
     ; get body balance exercices
     (bind ?array (find-all-instances ((?e PersonalExercice)) (eq weightloss ?e:exercice_type)))
     ; set the date of the exercices
     (retract weightloss_pos)
     (assert (weightloss_pos (set_date ?array ?pos ?d)))
     ; increase days
-    (retract day ?d)
-    (assert day (+ 1 ?d))
+    (retract day)
+    (assert (day (+ 1 ?d)))
 )
 
 
