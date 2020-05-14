@@ -67,25 +67,19 @@
 
 ;; START IO RULE DEFINITION
 
-(defrule init "initial rule"
-    (initial-fact); start on program run
-    =>
-    (printout t crlf)
-    (printout t "==============================================" crlf)
-    (printout t "   Coaching Potato Expert Routine Generator   " crlf)
-    (printout t "==============================================" crlf)
-    (printout t crlf)
-    (assert (system_start)) ; tell the system that it needs to start
+
+(defmodule io_module
+    (import MAIN ?ALL)
+    (export ?ALL)
 )
+
 
 (defrule create_user "rule that creates a user when the system start"
     (system_start)
     =>
-    (seed 1556)
     (make-instance user of Person
-        (activity medium)
+        (activity medium) ; defualt activity
     )
-
     (assert (user_created))
 )
 
@@ -96,7 +90,6 @@
     (ask_habit ?user low "Tens habits sedentaris?[si/no] (e.g. Veure televisió, ordinador, seure al sofa, etc.)")
     (ask_habit ?user medium "Tens habits de activitat mitjana?[si/no] (e.g. Sortir a passejar, fer estiraments, fregar)")
     (ask_habit ?user high "Tens habits de alta activitat?[si/no] (e.g. Anar a corra, natació, tenis)")
-    (assert (asked_all))
 )
 
 (deffunction set_objective (?obj)
@@ -141,7 +134,7 @@
 
 ; output solution module
 (defrule print_exercices
-    (solution_calculated)
+    (end)
     =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice)) TRUE))
     (make-instance program of Program
@@ -166,4 +159,13 @@
         )
 
     )
+)
+
+
+;; MOVE TO NEXT MODULE
+(defrule end_input_module
+    (user_created)
+    =>
+    (printout t "Lectura de datos de entrada completada" crlf)
+    (focus abstract_module)
 )

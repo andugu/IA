@@ -3,7 +3,12 @@
 ;;**************************
 
 
-
+(defmodule solver_module
+    (import MAIN ?ALL)
+    (import io_module ?ALL)
+    (import abstract_module ?ALL)
+    (export ?ALL)
+)
 
 (defrule define_days "Define days for each personal exercice"
     (abstracted)
@@ -39,4 +44,13 @@
     )
     (assert (solution_calculated))
 
+)
+
+;; MOVE TO NEXT MODULE
+(defrule end_solver_module
+    (user_created)
+    =>
+    (printout t "Calculo de la solución completada" crlf)
+    (assert (end))
+    (focus io_module)
 )

@@ -5,6 +5,12 @@
 ;;***************************************
 
 
+(defmodule abstract_module
+    (import MAIN ?ALL)
+    (import io_module ?ALL)
+    (export ?ALL)
+)
+
 ; AUXILIAR FUNCTIONS
 
 (deffunction get_activity_duration (?exercice ?activity)
@@ -18,7 +24,7 @@
 ; RULE DEFINITION
 
 (defrule bmi_detector "This rule calcualtes if the person has a normal bmi"
-    (asked_basic_questions)
+    (user_created)
     ?user <- (object (is-a Person))
     =>
     (bind ?bmi (send ?user get-bmi))
@@ -138,7 +144,7 @@
 
 
 (defrule habits_point_system "Rule that calculates the activiy of a person given its habits"
-    (asked_all)
+    (user_created)
     ?user <- (object (is-a Person))
     (test (neq 0 (length$ (send ?user get-habits))))
     =>
@@ -162,4 +168,13 @@
     (if (eq ?sum 0) then (send ?user put-activity medium))
     (if (eq ?sum 1) then (send ?user put-activity high))
 
+)
+
+
+;; MOVE TO NEXT MODULE
+(defrule end_abstract_module
+    (user_created)
+    =>
+    (printout t "Abstracción de datos completada" crlf)
+    (focus abstract_module)
 )
