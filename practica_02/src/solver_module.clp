@@ -24,9 +24,30 @@
     (if (eq ?activity high) then (assert (max_days 7)))
     ; set initial day
     (assert (day 1))
+    ; set initial exercice for the array of exercices
+    (assert (bodybalance_pos 1))
+    (assert (weightloss_pos 1))
+    (assert (manteinance_pos 1))
+    (assert (musclegrowth_pos 1))
 )
 
-(defrule )
+(defrule add_balance_exercices "If there are bodybalance exercices add them"
+    (bodybalance)
+    (max_days ?max)
+    (day ?d)
+    (test (> ?d ?max)) ; only enter if we are missing days
+    (bodybalance_pos ?pos) ; save current exercice
+    =>
+    ; retract and assert to
+    ; be able to enter this rule again
+    (retract bodybalance)
+    (assert bodybalance)
+
+
+
+    ; increase days
+    
+)
 
 (defrule define_days "Define days for each personal exercice"
     (user_created)
