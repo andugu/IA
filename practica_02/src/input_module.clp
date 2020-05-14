@@ -68,30 +68,17 @@
     (ask_habit ?user high "Tens habits de alta activitat?[si/no] (e.g. Anar a corra, natació, tenis)")
 )
 
-; here we separate diet questions between physcal because
-; they cause different relationships for the person
-; and the exercice they are doing
-(defrule diet_questions "rule that asks if the user has a certain diet problem"
+(defrule problems_questions "rule that asks if the user has a certain condition or problem"
     (asked_basic_questions)
     ?user <- (object (is-a Person))
-    ?problem <- (object (is-a Diet)) ;; MISSING REMOVE OBESITY FROM A PROBLEM => EAISER FORM ONTOLOGY
+    ?problem <- (object (is-a Problem)) ;; MISSING REMOVE OBESITY FROM A PROBLEM => EAISER FORM ONTOLOGY
     =>
     (bind ?name (send ?problem get-instance_name))
     (bind ?answer (ask (str-cat "Tens " ?name)))
-    (if (eq si ?answer) then (printout t "OK" crlf)
-    else (printout t "KO" crlf))
+    (if (eq si ?answer) then (send ?user put-problems (send ?user get-problems) ?problem ))
+    (printout t (send ?user get-problems) crlf)
 )
 
-(defrule physical_questions "rule that asks if the user has a certain physical problem"
-    (asked_basic_questions)
-    ?user <- (object (is-a Person))
-    ?problem <- (object (is-a Physical))
-    =>
-    (bind ?name (send ?problem get-instance_name))
-    (bind ?answer (ask (str-cat "Tens " ?name)))
-    (if (eq si ?answer) then (printout t "OK" crlf)
-    else (printout t "KO" crlf))
-)
 
 ;
 (deffunction set_objectives (?obj)
