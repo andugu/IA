@@ -75,8 +75,10 @@
     =>
     (bind ?name (send ?problem get-instance_name))
     (bind ?answer (ask (str-cat "Tens " ?name)))
-    (if (eq si ?answer) then (send ?user put-problems (send ?user get-problems) ?problem ))
-    (printout t (send ?user get-problems) crlf)
+    (if (eq si ?answer) then
+        (send ?user put-problems (send ?user get-problems) ?problem )
+        (assert (problem ?name))
+    )
 )
 
 

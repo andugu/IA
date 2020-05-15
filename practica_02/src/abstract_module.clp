@@ -23,6 +23,16 @@
     ?d
 )
 
+(deffunction same_problem (?p ?array)
+    (bind ?name (send ?p get-instance_name))
+    (bind ?return FALSE)
+    (progn$ (?e ?array)
+        (bind ?cmp_name (send ?e get-instance_name))
+        (if (eq ?name ?cmp_name) then (bind ?return TRUE))
+    )
+    ?return 
+)
+
 ; RULE DEFINITION
 
 (defrule tension_detector "This rule calculates what type of tension the person has"
@@ -150,14 +160,18 @@
 (defrule filter_diets "Rule that filters the diets of the user"
     ?problem <- (object (is-a Diet))
     =>
-
 )
+
 
 (defrule filter_physical "Rule that filters the physical problems of the user"
+    (problem ?name)
+    ?user <- (object (is-a Person))
     ?problem <- (object (is-a Physical))
+    (test (same_problem ?problem (send ?user get-problems)))
     =>
-
+    (printout t "HOLAAAAAAASAAA" crlf)
 )
+
 
 
 
