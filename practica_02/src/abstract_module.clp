@@ -137,10 +137,12 @@
 
 
 (defrule filter_physical "Rule that filters the physical problems of the user"
+    (abstracted)
     (problem ?name)
     ?user <- (object (is-a User))
     ?problem <- (object (is-a Physical))
     (test (member ?problem (send ?user get-problems)))
+    ?exercice <- (object (is-a PersonalExercice))
     =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
     (loop-for-count (?i 1 (length$ ?personal_exercices))
@@ -151,6 +153,7 @@
         (bind ?base (send ?current get-base_exercice))
         (bind ?harms (send ?base get-harms))
         (if (member ?problem ?harms) then
+            (printout t "DELETING " ?name crlf)
             (delete-member$ ?personal_exercices ?current)
         )
 
