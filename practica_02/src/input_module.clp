@@ -10,10 +10,6 @@
 
 ;; TEMPLATES
 
-(deftemplate objectives
-    (multislot types)
-)
-
 ;; AUXILIAR FUNCTION DEFINITIONS
 
 ;; Asks a question to the user
@@ -48,6 +44,15 @@
     (str-explode ?answer); return a list of values
 )
 
+(deffunction not_abstract_problem (?problem)
+    (bind ?return TRUE)
+    (bind ?name (send ?problem get-instance_name))
+    (if (eq ?name "Obesidad") then (bind ?return FALSE))
+    (if (eq ?name "Sobrepeso") then (bind ?return FALSE))
+    (if (eq ?name "Hipertension") then (bind ?return FALSE))
+    ?return
+)
+
 ;; START INPUT RULE DEFINITION
 
 (defrule create_user "rule that creates a user when the system start"
@@ -72,6 +77,7 @@
     (asked_basic_questions)
     ?user <- (object (is-a User))
     ?problem <- (object (is-a Problem)) ;; MISSING REMOVE OBESITY FROM A PROBLEM => EAISER FORM ONTOLOGY
+    (test (not_abstract_problem ?problem))
     =>
     (bind ?name (send ?problem get-instance_name))
     (bind ?answer (ask (str-cat "Tens " ?name)))
