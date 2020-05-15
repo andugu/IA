@@ -143,7 +143,7 @@
 
 (defrule filter_diets "Rule that filters the diets of the user"
     (abstracted)
-    (problem ?name)
+    (benefits ?name)
     ?user <- (object (is-a User))
     ?problem <- (object (is-a Diet))
     (test (member ?problem (send ?user get-problems)))
