@@ -1,4 +1,4 @@
-; Fri May 15 00:54:39 CEST 2020
+; Fri May 15 13:08:13 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontologia_ProjectKB_Class30160]
-		[ontologia_ProjectKB_Class30161]
-		[ontologia_ProjectKB_Class30162]
-		[ontologia_ProjectKB_Class30163]
-		[ontologia_ProjectKB_Class30164]
-		[ontologia_ProjectKB_Class30165]
-		[ontologia_ProjectKB_Class30166]
-		[ontologia_ProjectKB_Class30167]))
+		[ontologia_ProjectKB_Class10004]
+		[ontologia_ProjectKB_Class10005]
+		[ontologia_ProjectKB_Class10006]
+		[ontologia_ProjectKB_Class10007]
+		[ontologia_ProjectKB_Class10008]
+		[ontologia_ProjectKB_Class10009]
+		[ontologia_ProjectKB_Class10010]
+		[ontologia_ProjectKB_Class10011]))
 
 ([CLSES_TAB] of  Widget
 
@@ -71,7 +71,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_022909_Class3] of  Map
+([KB_311802_Class3] of  Map
 )
 
 ([KB_758705_Class0] of  String
@@ -82,9 +82,9 @@
 ([KB_758705_Class1] of  Map
 
 	(entries
-		[ontologia_ProjectKB_Class30168]
-		[ontologia_ProjectKB_Class30169]
-		[ontologia_ProjectKB_Class30170]))
+		[ontologia_ProjectKB_Class10012]
+		[ontologia_ProjectKB_Class10013]
+		[ontologia_ProjectKB_Class10014]))
 
 ([KB_758705_Class100] of  String
 
@@ -192,6 +192,67 @@
 ([ontologia_ProjectKB_Class10] of  Property_List
 )
 
+([ontologia_ProjectKB_Class10004] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ontologia_ProjectKB_Class10005] of  String
+
+	(name "Physical")
+	(string_value "instance_name"))
+
+([ontologia_ProjectKB_Class10006] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ontologia_ProjectKB_Class10007] of  String
+
+	(name "Exercice")
+	(string_value "instance_name"))
+
+([ontologia_ProjectKB_Class10008] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ontologia_ProjectKB_Class10009] of  String
+
+	(name "Habit")
+	(string_value "instance_name"))
+
+([ontologia_ProjectKB_Class10010] of  String
+
+	(name "User")
+	(string_value "instance_name"))
+
+([ontologia_ProjectKB_Class10011] of  String
+
+	(name "Diet")
+	(string_value "instance_name"))
+
+([ontologia_ProjectKB_Class10012] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([ontologia_ProjectKB_Class10013] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([ontologia_ProjectKB_Class10014] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
 ([ontologia_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query"))
@@ -285,138 +346,6 @@
 
 ([ontologia_ProjectKB_Class20] of  Property_List
 )
-
-([ontologia_ProjectKB_Class20023] of  Widget
-
-	(is_hidden FALSE)
-	(name "Manteinance")
-	(property_list [ontologia_ProjectKB_Class20024])
-	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
-
-([ontologia_ProjectKB_Class20024] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class20025]
-		[ontologia_ProjectKB_Class20026]
-		[ontologia_ProjectKB_Class20028]
-		[ontologia_ProjectKB_Class20030]
-		[ontologia_ProjectKB_Class20032]
-		[ontologia_ProjectKB_Class20034]
-		[ontologia_ProjectKB_Class20038]))
-
-([ontologia_ProjectKB_Class20025] of  Property_List
-
-	(name "layout properties"))
-
-([ontologia_ProjectKB_Class20026] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "max_exercice_duration")
-	(property_list [ontologia_ProjectKB_Class20027])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 0)
-	(y 60))
-
-([ontologia_ProjectKB_Class20027] of  Property_List
-)
-
-([ontologia_ProjectKB_Class20028] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "min_exercice_duration")
-	(property_list [ontologia_ProjectKB_Class20029])
-	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
-	(width 100)
-	(x 100)
-	(y 60))
-
-([ontologia_ProjectKB_Class20029] of  Property_List
-)
-
-([ontologia_ProjectKB_Class20030] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "body_parts")
-	(property_list [ontologia_ProjectKB_Class20031])
-	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
-	(width 200)
-	(x 0)
-	(y 120))
-
-([ontologia_ProjectKB_Class20031] of  Property_List
-)
-
-([ontologia_ProjectKB_Class20032] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "instance_name")
-	(property_list [ontologia_ProjectKB_Class20033])
-	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([ontologia_ProjectKB_Class20033] of  Property_List
-)
-
-([ontologia_ProjectKB_Class20034] of  Widget
-
-	(height 240)
-	(is_hidden FALSE)
-	(name "benefits")
-	(property_list [ontologia_ProjectKB_Class20035])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 200)
-	(y 0))
-
-([ontologia_ProjectKB_Class20035] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class20036]
-		[ontologia_ProjectKB_Class20037]))
-
-([ontologia_ProjectKB_Class20036] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class20037] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
-([ontologia_ProjectKB_Class20038] of  Widget
-
-	(height 240)
-	(is_hidden FALSE)
-	(name "harms")
-	(property_list [ontologia_ProjectKB_Class20039])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
-	(width 200)
-	(x 400)
-	(y 0))
-
-([ontologia_ProjectKB_Class20039] of  Property_List
-
-	(properties
-		[ontologia_ProjectKB_Class20040]
-		[ontologia_ProjectKB_Class20041]))
-
-([ontologia_ProjectKB_Class20040] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([ontologia_ProjectKB_Class20041] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
 
 ([ontologia_ProjectKB_Class20059] of  Widget
 
@@ -618,67 +547,6 @@
 
 ([ontologia_ProjectKB_Class30] of  Property_List
 )
-
-([ontologia_ProjectKB_Class30160] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([ontologia_ProjectKB_Class30161] of  String
-
-	(name "Physical")
-	(string_value "instance_name"))
-
-([ontologia_ProjectKB_Class30162] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ontologia_ProjectKB_Class30163] of  String
-
-	(name "Exercice")
-	(string_value "instance_name"))
-
-([ontologia_ProjectKB_Class30164] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ontologia_ProjectKB_Class30165] of  String
-
-	(name "Habit")
-	(string_value "instance_name"))
-
-([ontologia_ProjectKB_Class30166] of  String
-
-	(name "User")
-	(string_value "instance_name"))
-
-([ontologia_ProjectKB_Class30167] of  String
-
-	(name "Diet")
-	(string_value "instance_name"))
-
-([ontologia_ProjectKB_Class30168] of  Map_Entry
-
-	(key "suppress_instance_counting")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([ontologia_ProjectKB_Class30169] of  Map_Entry
-
-	(key "add_name_on_instance_form")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
-
-([ontologia_ProjectKB_Class30170] of  Map_Entry
-
-	(key "change_tracking_active")
-	(key_class "java.lang.String")
-	(value "false")
-	(value_class "java.lang.String"))
 
 ([ontologia_ProjectKB_Class31] of  Widget
 
