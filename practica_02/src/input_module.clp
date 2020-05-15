@@ -84,6 +84,7 @@
     (if (eq si ?answer) then
         (send ?user put-problems (send ?user get-problems) ?problem )
         (assert (problem ?name))
+        (assert (benefits ?name))
     )
 )
 
