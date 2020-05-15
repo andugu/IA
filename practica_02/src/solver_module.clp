@@ -12,6 +12,11 @@
 
 ;; AUXILIAR FUNCTIONS
 
+(deffunction get_cycle_exercices (?bonus ?neutral)
+    (bind ?return ?bonus)
+    (if (eq 0 (length$ ?bonus)) then (bind ?return ?neutral))
+    ?return
+)
 
 ;; RULES
 
@@ -35,18 +40,32 @@
 (defrule set_days "Sets a day for each exercice"
     (max_days ?max_days)
     =>
+    (bind ?bonus_exercices (find-all-instances ((?exercice PersonalExercice)) ?exercice:bonus))
+    (bind ?neutral_exercices (find-all-instances ((?exercice PersonalExercice)) (not ?exercice:bonus)))
     (loop-for-count (?day 1 ?max_days) do
         (bind ?duration 0)
-        (bind ?exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
+        (bind ?seen (create$ ))
         (while (> 30 ?duration) do
-            (bind ?rand (+ 1 (mod (random) (length$ ?exercices))))
-            (bind ?exercice (nth$ ?rand ?exercices))
+            ; this returns the set of exercices that is not empty
+            (bind ?exercices (get_cycle_exercices ?bonus_exercices ?neutral_exercices))
+            ; in case both  sets are empty, fill the sets again
+            (if (eq 0 (length$ ?exercices)) then
+                (bind ?bonus_exercices (find-all-instances ((?exercice PersonalExercice)) ?exercice:bonus))
+                (bind ?neutral_exercices (find-all-instances ((?exercice PersonalExercice)) (not ?exercice:bonus)))
+                (bind ?exercices (get_cycle_exercices ?bonus_exercices ?neutral_exercices))
+            )
+            ; select a random exercice and set its day
+            (bind ?exercice (nth$ (+ 1 (mod (random) (length$ ?exercices))) ?exercices))
+            (while (member ?exercice ?seen)
+                (bind ?exercices (delete-member$ ?exercices ?exercice))
+                (bind ?exercice (nth$ (+ 1 (mod (random) (length$ ?exercices))) ?exercices))
+            )
             (send ?exercice put-day ?day (send ?exercice get-day))
             (bind ?currentDuration (send ?exercice get-duration))
             (bind ?duration (+ ?duration ?currentDuration))
+            ; delete already seen instance
             (bind ?exercices (delete-member$ ?exercices ?exercice))
-            (printout t "Exercices: " ?exercice crlf)
-            (printout t "Duration: " ?duration crlf)
+            (bind ?seen (insert$ ?seen 1 ?exercice))
         )
     )
     (assert (day (+ 1 ?max_days)))

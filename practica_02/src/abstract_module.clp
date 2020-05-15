@@ -142,8 +142,27 @@
 )
 
 (defrule filter_diets "Rule that filters the diets of the user"
+    (abstracted)
+    (problem ?name)
+    ?user <- (object (is-a User))
     ?problem <- (object (is-a Diet))
+    (test (member ?problem (send ?user get-problems)))
+    ?exercice <- (object (is-a PersonalExercice))
     =>
+    (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
+    (loop-for-count (?i 1 (length$ ?personal_exercices))
+        ; for each exercice check if it harms the problem
+        ; if it does => then remove it
+        (bind ?current (nth$ ?i ?personal_exercices))
+        (bind ?base (send ?current get-base_exercice))
+        (bind ?benefits (send ?base get-benefits))
+        (if (same_name ?problem ?benefits) then
+            (printout t (send ?base get-instance_name) " beneficia "
+                (send ?problem get-instance_name) crlf)
+            (send ?current put-bonus TRUE)
+        )
+
+    )
 )
 
 
