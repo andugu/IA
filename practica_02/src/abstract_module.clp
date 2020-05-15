@@ -125,7 +125,7 @@
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
-        )    (printout t "HOLAA" crlf)
+        )    
     )
     (assert (abstracted))
 )
@@ -149,7 +149,6 @@
         ; for each exercice check if it harms the problem
         ; if it does => then remove it
         (bind ?current (nth$ ?i ?personal_exercices))
-        (printout t ?current crlf)
         (bind ?base (send ?current get-base_exercice))
         (bind ?harms (send ?base get-harms))
         (if (member ?problem ?harms) then
