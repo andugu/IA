@@ -39,7 +39,6 @@
         (bind ?duration 0)
         (bind ?exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
         (while (> 30 ?duration) do
-            (printout t )
             (bind ?rand (+ 1 (mod (random) (length$ ?exercices))))
             (bind ?exercice (nth$ ?rand ?exercices))
             (send ?exercice put-day ?day (send ?exercice get-day))

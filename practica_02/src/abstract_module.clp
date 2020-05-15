@@ -163,6 +163,8 @@
         (bind ?base (send ?current get-base_exercice))
         (bind ?harms (send ?base get-harms))
         (if (same_name ?problem ?harms) then
+            (printout t "Es descarta " (send ?base get-instance_name) " por "
+                (send ?problem get-instance_name) crlf)
             (send ?current delete)
         )
 
