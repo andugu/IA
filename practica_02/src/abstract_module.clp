@@ -23,15 +23,6 @@
     ?d
 )
 
-(deffunction same_problem (?p ?array)
-    (bind ?name (send ?p get-instance_name))
-    (bind ?return FALSE)
-    (progn$ (?e ?array)
-        (bind ?cmp_name (send ?e get-instance_name))
-        (if (eq ?name ?cmp_name) then (bind ?return TRUE))
-    )
-    ?return 
-)
 
 ; RULE DEFINITION
 
@@ -152,7 +143,7 @@
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
-        )
+        )    (printout t "HOLAA" crlf)
     )
     (assert (abstracted))
 )
@@ -167,9 +158,20 @@
     (problem ?name)
     ?user <- (object (is-a Person))
     ?problem <- (object (is-a Physical))
-    (test (same_problem ?problem (send ?user get-problems)))
+    (test (member ?problem (send ?user get-problems)))
     =>
-    (printout t "HOLAAAAAAASAAA" crlf)
+    (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
+    (loop-for-count (?i 0 (length$ ?personal_exercices))
+        ; for each exercice check if it harms the problem
+        ; if it does => then remove it
+        (bind ?current (nth$ ?i ?personal_exercices))
+        (bind ?base (send ?current get-base_exercice))
+        (bind ?harms (send ?base get-harms))
+        (if (member ?problem ?harms) then
+            (delete-member$ ?personal_exercices ?current)
+        )
+
+    )
 )
 
 
