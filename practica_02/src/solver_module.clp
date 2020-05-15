@@ -60,7 +60,7 @@
         (while (> 30 ?duration) do
             (bind ?rand (+ 1 (mod (random) (length$ ?exercices))))
             (bind ?exercice (nth$ ?rand ?exercices))
-            (send ?exercice put-day ?day)
+            (send ?exercice put-day ?day (send ?exercice get-day))
             (bind ?currentDuration (send ?exercice get-duration))
             (bind ?duration (+ ?duration ?currentDuration))
         )

@@ -60,7 +60,7 @@
         (printout t "============================================" crlf)
         (printout t "============================================" crlf)
         (printout t "DIA:" ?day crlf)
-        (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))(eq ?day ?exercice:day)))
+        (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))(member ?day ?exercice:day)))
         (bind ?total_time 0)
         (progn$ (?e ?personal_exercices)
             (bind ?total_time (+ ?total_time (send ?e get-duration)))

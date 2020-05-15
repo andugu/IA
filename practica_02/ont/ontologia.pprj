@@ -1,4 +1,4 @@
-; Fri May 15 13:21:53 CEST 2020
+; Fri May 15 13:50:45 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -71,7 +71,7 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_379221_Class3] of  Map
+([KB_515675_Class3] of  Map
 )
 
 ([KB_758705_Class0] of  String
