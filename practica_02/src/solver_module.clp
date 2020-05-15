@@ -54,6 +54,7 @@
     (max_days ?max_days)
     =>
     (bind ?exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
+    (printout t "TOTAL:"  (length$ ?exercices) crlf)
     (loop-for-count (?day 1 ?max_days) do
         (bind ?duration 0)
         (while (> 30 ?duration) do

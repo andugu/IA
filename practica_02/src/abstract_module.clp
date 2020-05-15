@@ -163,7 +163,7 @@
         (bind ?base (send ?current get-base_exercice))
         (bind ?harms (send ?base get-harms))
         (if (same_name ?problem ?harms) then
-            (delete-member$ ?personal_exercices ?current)
+            (send ?current delete)
         )
 
     )
