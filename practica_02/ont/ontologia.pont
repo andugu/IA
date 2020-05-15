@@ -1,0 +1,356 @@
+; Fri May 15 20:10:27 GMT+01:00 2020
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot max_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot harms
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+		(create-accessor read-write))
+	(single-slot bpm
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot min_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_hard
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dificulty
+		(type SYMBOL)
+		(allowed-values low normal hard)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot exercice_type
+		(type SYMBOL)
+		(allowed-values bodybalance manteinance musclegrowth weightloss)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot instance_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot weight
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frequency
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot bmi
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot programa_personal
+		(type INSTANCE)
+;+		(allowed-classes Program)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot benefits
+		(type INSTANCE)
+;+		(allowed-classes Physical)
+		(create-accessor read-write))
+	(single-slot repetitions_low
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_medium
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot daily_exercices
+		(type INSTANCE)
+;+		(allowed-classes PersonalExercice)
+		(create-accessor read-write))
+	(multislot body_parts
+		(type SYMBOL)
+		(allowed-values Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot exercices
+		(type INSTANCE)
+;+		(allowed-classes PersonalExercice)
+		(cardinality 7 7)
+		(create-accessor read-write))
+	(single-slot min_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sets
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_medium
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot fatigue
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot problems
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+		(create-accessor read-write))
+	(single-slot base_exercice
+		(type INSTANCE)
+;+		(allowed-classes Exercice)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_high
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot habits
+		(type INSTANCE)
+;+		(allowed-classes Habit)
+		(create-accessor read-write))
+	(single-slot duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot age
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot height
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot day
+		(type INTEGER)
+		(range 1 8)
+		(default 8)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot calories_per_time_low
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot activity
+		(type SYMBOL)
+		(allowed-values low medium high)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass User
+	(is-a USER)
+	(role concrete)
+	(single-slot programa_personal
+		(type INSTANCE)
+;+		(allowed-classes Program)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot height
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot bpm
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot min_blood_pressure
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot activity
+		(type SYMBOL)
+		(allowed-values low medium high)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot problems
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+		(create-accessor read-write))
+	(single-slot instance_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot habits
+		(type INSTANCE)
+;+		(allowed-classes Habit)
+		(create-accessor read-write))
+	(single-slot weight
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot fatigue
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot bmi
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot age
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Habit
+	(is-a USER)
+	(role concrete)
+	(single-slot instance_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot activity
+		(type SYMBOL)
+		(allowed-values low medium high)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frequency
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Program
+	(is-a USER)
+	(role concrete)
+	(multislot exercices
+		(type INSTANCE)
+;+		(allowed-classes PersonalExercice)
+		(cardinality 7 7)
+		(create-accessor read-write)))
+
+(defclass PersonalExercice
+	(is-a USER)
+	(role concrete)
+	(single-slot base_exercice
+		(type INSTANCE)
+;+		(allowed-classes Exercice)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot day
+		(type INTEGER)
+		(range 1 8)
+		(default 8)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dificulty
+		(type SYMBOL)
+		(allowed-values low normal hard)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot exercice_type
+		(type SYMBOL)
+		(allowed-values bodybalance manteinance musclegrowth weightloss)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Problem
+	(is-a USER)
+	(role concrete)
+	(single-slot instance_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Diet
+	(is-a Problem)
+	(role concrete))
+
+(defclass Physical
+	(is-a Problem)
+	(role concrete))
+
+(defclass Exercice
+	(is-a USER)
+	(role concrete)
+	(single-slot instance_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot min_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot max_exercice_duration
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot harms
+		(type INSTANCE)
+;+		(allowed-classes Problem)
+		(create-accessor read-write))
+	(multislot benefits
+		(type INSTANCE)
+;+		(allowed-classes Physical)
+		(create-accessor read-write))
+	(multislot body_parts
+		(type SYMBOL)
+		(allowed-values Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass WeightLoss
+	(is-a Exercice)
+	(role concrete)
+	(single-slot calories_per_time_low
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_medium
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot calories_per_time_hard
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass MuscleGrowth
+	(is-a Exercice)
+	(role concrete)
+	(single-slot sets
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_high
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_low
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot repetitions_medium
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass BodyBalance
+	(is-a Exercice)
+	(role concrete))
