@@ -1,4 +1,4 @@
-; Fri May 15 13:08:13 CEST 2020
+; Fri May 15 13:21:53 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -68,7 +68,8 @@
 		(create-accessor read-write))
 	(single-slot day
 		(type INTEGER)
-		(range 1 7)
+		(range 1 8)
+		(default 8)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot dificulty
@@ -255,7 +256,8 @@
 		(create-accessor read-write))
 	(single-slot day
 		(type INTEGER)
-		(range 1 7)
+		(range 1 8)
+		(default 8)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot dificulty
