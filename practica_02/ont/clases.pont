@@ -1,4 +1,4 @@
-; Tue May 12 18:52:10 CEST 2020
+; Fri May 15 00:54:35 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -150,7 +150,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass Person
+(defclass User
 	(is-a USER)
 	(role concrete)
 	(single-slot fatigue
@@ -312,10 +312,6 @@
 		(type INSTANCE)
 ;+		(allowed-classes Problem)
 		(create-accessor read-write)))
-
-(defclass Manteinance
-	(is-a Exercice)
-	(role concrete))
 
 (defclass WeightLoss
 	(is-a Exercice)
