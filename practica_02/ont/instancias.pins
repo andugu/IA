@@ -1,14 +1,14 @@
-; Fri May 15 19:33:29 CEST 2020
-;
+; Sat May 16 00:24:26 GMT+01:00 2020
+; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-([MAIN::ontologia_Class0] of  MuscleGrowth
+([ontologia_Class0] of  MuscleGrowth
 
 	(body_parts Piernas Gluteos)
 	(harms
-		[MAIN::ontologia_Class10002]
-		[MAIN::ontologia_Class12])
+		[ontologia_Class10002]
+		[ontologia_Class12])
 	(instance_name "Zancadas")
 	(max_exercice_duration 20.0)
 	(min_exercice_duration 10.0)
@@ -17,10 +17,10 @@
 	(repetitions_medium 10.0)
 	(sets 4))
 
-([MAIN::ontologia_Class1] of  MuscleGrowth
+([ontologia_Class1] of  MuscleGrowth
 
 	(body_parts Pectoral Brazos)
-	(harms [MAIN::ontologia_Class12])
+	(harms [ontologia_Class12])
 	(instance_name "Press inclinado")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
@@ -29,33 +29,33 @@
 	(repetitions_medium 10.0)
 	(sets 4))
 
-([MAIN::ontologia_Class10] of  Diet
+([ontologia_Class10] of  Diet
 
 	(instance_name "Picar entre horas"))
 
-([MAIN::ontologia_Class10000] of  Diet
+([ontologia_Class10000] of  Diet
 
 	(instance_name "Hipertension"))
 
-([MAIN::ontologia_Class10002] of  Physical
+([ontologia_Class10002] of  Physical
 
 	(instance_name "Dolor de rodilla"))
 
-([MAIN::ontologia_Class10004] of  BodyBalance
+([ontologia_Class10004] of  BodyBalance
 
 	(body_parts Espalda Abdominales Piernas)
 	(harms
-		[MAIN::ontologia_Class12]
-		[MAIN::ontologia_Class10002])
+		[ontologia_Class12]
+		[ontologia_Class10002])
 	(instance_name "Saltos de torsion")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0))
 
-([MAIN::ontologia_Class10005] of  WeightLoss
+([ontologia_Class10005] of  WeightLoss
 
 	(benefits
-		[MAIN::ontologia_Class13]
-		[MAIN::ontologia_Class10002])
+		[ontologia_Class13]
+		[ontologia_Class10002])
 	(body_parts Pectoral Brazos Abdominales)
 	(calories_per_time_hard 300.0)
 	(calories_per_time_low 100.0)
@@ -64,18 +64,18 @@
 	(max_exercice_duration 20.0)
 	(min_exercice_duration 10.0))
 
-([MAIN::ontologia_Class10006] of  BodyBalance
+([ontologia_Class10006] of  BodyBalance
 
 	(body_parts Pectoral)
-	(harms [MAIN::ontologia_Class10002])
+	(harms [ontologia_Class10002])
 	(instance_name "Mariposa")
-	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0))
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
 
-([MAIN::ontologia_Class10007] of  MuscleGrowth
+([ontologia_Class10007] of  MuscleGrowth
 
 	(body_parts Gluteos Piernas)
-	(harms [MAIN::ontologia_Class10002])
+	(harms [ontologia_Class10002])
 	(instance_name "Sentadillas con pesas")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0)
@@ -84,47 +84,47 @@
 	(repetitions_medium 10.0)
 	(sets 3))
 
-([MAIN::ontologia_Class11] of  Diet
+([ontologia_Class11] of  Diet
 
 	(instance_name "Diabetico"))
 
-([MAIN::ontologia_Class12] of  Physical
+([ontologia_Class12] of  Physical
 
 	(instance_name "Dolor de espalda"))
 
-([MAIN::ontologia_Class13] of  Physical
+([ontologia_Class13] of  Physical
 
 	(instance_name "Dolor articulaciones"))
 
-([MAIN::ontologia_Class14] of  Physical
+([ontologia_Class14] of  Physical
 
 	(instance_name "Dolor cervicales"))
 
-([MAIN::ontologia_Class16] of  WeightLoss
+([ontologia_Class16] of  WeightLoss
 
 	(benefits
-		[MAIN::ontologia_Class20]
-		[MAIN::ontologia_Class19]
-		[MAIN::ontologia_Class13])
+		[ontologia_Class20]
+		[ontologia_Class19]
+		[ontologia_Class13])
 	(body_parts Piernas Gluteos)
 	(calories_per_time_hard 800.0)
 	(calories_per_time_low 400.0)
 	(calories_per_time_medium 600.0)
-	(harms [MAIN::ontologia_Class9])
+	(harms [ontologia_Class9])
 	(instance_name "Bicicleta estatica activacion")
 	(max_exercice_duration 60.0)
 	(min_exercice_duration 15.0))
 
-([MAIN::ontologia_Class19] of  Physical
+([ontologia_Class19] of  Physical
 
 	(instance_name "Sobrepeso"))
 
-([MAIN::ontologia_Class2] of  MuscleGrowth
+([ontologia_Class2] of  MuscleGrowth
 
 	(body_parts Espalda Hombros)
 	(harms
-		[MAIN::ontologia_Class12]
-		[MAIN::ontologia_Class13])
+		[ontologia_Class12]
+		[ontologia_Class13])
 	(instance_name "Jalon con polea por delante")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0)
@@ -133,27 +133,35 @@
 	(repetitions_medium 10.0)
 	(sets 5))
 
-([MAIN::ontologia_Class20] of  Physical
+([ontologia_Class20] of  Physical
 
 	(instance_name "Obesidad"))
 
-([MAIN::ontologia_Class20001] of  WeightLoss
+([ontologia_Class20000] of  BodyBalance
+
+	(body_parts Espalda Piernas Gluteos)
+	(harms [ontologia_Class12])
+	(instance_name "Tocarse los tobillos de pie")
+	(max_exercice_duration 2.0)
+	(min_exercice_duration 0.3))
+
+([ontologia_Class20001] of  WeightLoss
 
 	(body_parts Gluteos Piernas)
 	(calories_per_time_hard 300.0)
 	(calories_per_time_low 100.0)
 	(calories_per_time_medium 200.0)
-	(harms [MAIN::ontologia_Class10002])
+	(harms [ontologia_Class10002])
 	(instance_name "Sentadillas")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0))
 
-([MAIN::ontologia_Class20002] of  MuscleGrowth
+([ontologia_Class20002] of  MuscleGrowth
 
 	(body_parts Pectoral Hombros Brazos)
 	(harms
-		[MAIN::ontologia_Class13]
-		[MAIN::ontologia_Class20])
+		[ontologia_Class13]
+		[ontologia_Class20])
 	(instance_name "Flexiones")
 	(max_exercice_duration 7.0)
 	(min_exercice_duration 3.0)
@@ -162,12 +170,12 @@
 	(repetitions_medium 10.0)
 	(sets 4))
 
-([MAIN::ontologia_Class20003] of  MuscleGrowth
+([ontologia_Class20003] of  MuscleGrowth
 
 	(body_parts Abdominales)
 	(harms
-		[MAIN::ontologia_Class12]
-		[MAIN::ontologia_Class14])
+		[ontologia_Class12]
+		[ontologia_Class14])
 	(instance_name "Abdominales")
 	(max_exercice_duration 7.0)
 	(min_exercice_duration 3.0)
@@ -176,68 +184,68 @@
 	(repetitions_medium 10.0)
 	(sets 4))
 
-([MAIN::ontologia_Class20004] of  WeightLoss
+([ontologia_Class20004] of  WeightLoss
 
 	(body_parts Espalda Abdominales Brazos Hombros)
 	(calories_per_time_hard 100.0)
 	(calories_per_time_low 25.0)
 	(calories_per_time_medium 50.0)
 	(harms
-		[MAIN::ontologia_Class20]
-		[MAIN::ontologia_Class13])
+		[ontologia_Class20]
+		[ontologia_Class13])
 	(instance_name "Plancha")
 	(max_exercice_duration 5.0)
 	(min_exercice_duration 1.0))
 
-([MAIN::ontologia_Class20005] of  BodyBalance
+([ontologia_Class20005] of  BodyBalance
 
 	(body_parts Espalda)
-	(harms [MAIN::ontologia_Class12])
-	(instance_name "Torsión de espalda")
+	(harms [ontologia_Class12])
+	(instance_name "Torsión de espalda hacia delante")
 	(max_exercice_duration 4.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20006] of  BodyBalance
+([ontologia_Class20006] of  BodyBalance
 
-	(benefits [MAIN::ontologia_Class12])
+	(benefits [ontologia_Class12])
 	(body_parts Espalda Abdominales Brazos)
-	(harms [MAIN::ontologia_Class20])
+	(harms [ontologia_Class20])
 	(instance_name "El puente")
 	(max_exercice_duration 5.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20007] of  BodyBalance
+([ontologia_Class20007] of  BodyBalance
 
 	(body_parts Gluteos)
-	(instance_name "Estiramientos de gluteos")
+	(instance_name "Estiramientos de gluteos (pierna al pecho)")
 	(max_exercice_duration 3.0)
-	(min_exercice_duration 1.0))
+	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20008] of  BodyBalance
+([ontologia_Class20008] of  BodyBalance
 
+	(benefits [ontologia_Class10002])
 	(body_parts Piernas)
-	(harms [MAIN::ontologia_Class10002])
 	(instance_name "Estiramientos de cuádriceps")
 	(max_exercice_duration 3.0)
 	(min_exercice_duration 1.0))
 
-([MAIN::ontologia_Class20009] of  BodyBalance
+([ontologia_Class20009] of  BodyBalance
 
+	(benefits [ontologia_Class12])
 	(body_parts Espalda Abdominales)
-	(harms [MAIN::ontologia_Class12])
 	(instance_name "Estiramientos de abdomen")
 	(max_exercice_duration 3.0)
-	(min_exercice_duration 1.0))
+	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20011] of  BodyBalance
+([ontologia_Class20011] of  BodyBalance
 
-	(benefits [MAIN::ontologia_Class10002])
+	(benefits [ontologia_Class10002])
 	(body_parts Piernas)
 	(instance_name "Estiramientos de pierna sobre una barra")
 	(max_exercice_duration 3.0)
-	(min_exercice_duration 1.0))
+	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20012] of  WeightLoss
+([ontologia_Class20012] of  WeightLoss
 
 	(body_parts Piernas Abdominales Gluteos)
 	(calories_per_time_hard 350.0)
@@ -247,13 +255,12 @@
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 4.0))
 
-([MAIN::ontologia_Class20013] of  MuscleGrowth
+([ontologia_Class20013] of  MuscleGrowth
 
 	(benefits
-		[MAIN::ontologia_Class13]
-		[MAIN::ontologia_Class12])
+		[ontologia_Class13]
+		[ontologia_Class12])
 	(body_parts Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
-	(harms [MAIN::ontologia_Class20])
 	(instance_name "Piscina de brazadas")
 	(max_exercice_duration 30.0)
 	(min_exercice_duration 10.0)
@@ -262,56 +269,56 @@
 	(repetitions_medium 5.0)
 	(sets 4))
 
-([MAIN::ontologia_Class20014] of  WeightLoss
+([ontologia_Class20014] of  WeightLoss
 
 	(body_parts Piernas Pectoral Abdominales Brazos)
 	(calories_per_time_hard 800.0)
 	(calories_per_time_low 200.0)
 	(calories_per_time_medium 400.0)
 	(harms
-		[MAIN::ontologia_Class10002]
-		[MAIN::ontologia_Class12])
+		[ontologia_Class10002]
+		[ontologia_Class12])
 	(instance_name "Burpees")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20015] of  WeightLoss
+([ontologia_Class20015] of  WeightLoss
 
 	(body_parts Piernas Gluteos)
 	(calories_per_time_hard 700.0)
 	(calories_per_time_low 150.0)
 	(calories_per_time_medium 400.0)
-	(harms [MAIN::ontologia_Class10002])
+	(harms [ontologia_Class10002])
 	(instance_name "Salto con sentadilla")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20016] of  WeightLoss
+([ontologia_Class20016] of  WeightLoss
 
 	(body_parts Espalda Abdominales Gluteos)
 	(calories_per_time_hard 500.0)
 	(calories_per_time_low 100.0)
 	(calories_per_time_medium 300.0)
-	(harms [MAIN::ontologia_Class12])
+	(harms [ontologia_Class12])
 	(instance_name "Puente de gluteos")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20017] of  WeightLoss
+([ontologia_Class20017] of  WeightLoss
 
 	(body_parts Piernas Pectoral Gluteos Abdominales)
 	(calories_per_time_hard 800.0)
 	(calories_per_time_low 200.0)
 	(calories_per_time_medium 500.0)
-	(harms [MAIN::ontologia_Class10002])
+	(harms [ontologia_Class10002])
 	(instance_name "Climbers")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20018] of  MuscleGrowth
+([ontologia_Class20018] of  MuscleGrowth
 
 	(body_parts Piernas)
-	(harms [MAIN::ontologia_Class20])
+	(harms [ontologia_Class20])
 	(instance_name "Puntillas")
 	(max_exercice_duration 8.0)
 	(min_exercice_duration 1.0)
@@ -320,51 +327,50 @@
 	(repetitions_medium 10.0)
 	(sets 4))
 
-([MAIN::ontologia_Class20019] of  WeightLoss
+([ontologia_Class20019] of  WeightLoss
 
 	(body_parts Espalda Abdominales)
 	(calories_per_time_hard 200.0)
 	(calories_per_time_low 50.0)
 	(calories_per_time_medium 125.0)
-	(harms [MAIN::ontologia_Class12])
+	(harms [ontologia_Class12])
 	(instance_name "Hiperextensión de lumbares")
 	(max_exercice_duration 5.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20020] of  WeightLoss
+([ontologia_Class20020] of  WeightLoss
 
 	(body_parts Piernas Gluteos Espalda Abdominales)
 	(calories_per_time_hard 600.0)
 	(calories_per_time_low 200.0)
 	(calories_per_time_medium 400.0)
-	(harms [MAIN::ontologia_Class12])
-	(instance_name "Elevación de piernas")
+	(instance_name "Elevación de piernas hasta la cintura")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 3.0))
 
-([MAIN::ontologia_Class20021] of  WeightLoss
+([ontologia_Class20021] of  WeightLoss
 
 	(body_parts Abdominales Gluteos Espalda)
 	(calories_per_time_hard 800.0)
 	(calories_per_time_low 200.0)
 	(calories_per_time_medium 400.0)
-	(harms [MAIN::ontologia_Class12])
+	(harms [ontologia_Class12])
 	(instance_name "Abdominales con las rodillas en el aire")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 3.0))
 
-([MAIN::ontologia_Class20022] of  BodyBalance
+([ontologia_Class20022] of  BodyBalance
 
-	(benefits [MAIN::ontologia_Class12])
+	(benefits [ontologia_Class12])
 	(body_parts Espalda)
-	(instance_name "Estiramientos de espalda (Gato)")
+	(instance_name "Estiramientos de espalda (posición del gato)")
 	(max_exercice_duration 5.0)
 	(min_exercice_duration 2.0))
 
-([MAIN::ontologia_Class20023] of  MuscleGrowth
+([ontologia_Class20023] of  MuscleGrowth
 
 	(body_parts Pectoral Piernas Espalda Hombros)
-	(harms [MAIN::ontologia_Class12])
+	(harms [ontologia_Class12])
 	(instance_name "Remo horizontal con barra")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 3.0)
@@ -373,13 +379,13 @@
 	(repetitions_medium 10.0)
 	(sets 4))
 
-([MAIN::ontologia_Class20024] of  MuscleGrowth
+([ontologia_Class20024] of  MuscleGrowth
 
 	(body_parts Pectoral Espalda Hombros Gluteos Brazos)
 	(harms
-		[MAIN::ontologia_Class13]
-		[MAIN::ontologia_Class12]
-		[MAIN::ontologia_Class10002])
+		[ontologia_Class13]
+		[ontologia_Class12]
+		[ontologia_Class10002])
 	(instance_name "Deadlift")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 5.0)
@@ -388,13 +394,13 @@
 	(repetitions_medium 15.0)
 	(sets 4))
 
-([MAIN::ontologia_Class20025] of  MuscleGrowth
+([ontologia_Class20025] of  MuscleGrowth
 
-	(benefits [MAIN::ontologia_Class12])
+	(benefits [ontologia_Class12])
 	(body_parts Hombros Brazos Pectoral)
 	(harms
-		[MAIN::ontologia_Class20]
-		[MAIN::ontologia_Class13])
+		[ontologia_Class20]
+		[ontologia_Class13])
 	(instance_name "Press militar")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 2.0)
@@ -403,9 +409,9 @@
 	(repetitions_medium 12.0)
 	(sets 5))
 
-([MAIN::ontologia_Class20026] of  MuscleGrowth
+([ontologia_Class20026] of  MuscleGrowth
 
-	(benefits [MAIN::ontologia_Class12])
+	(benefits [ontologia_Class12])
 	(body_parts Espalda Abdominales)
 	(instance_name "Elevar espalda (Superman)")
 	(max_exercice_duration 10.0)
@@ -415,27 +421,27 @@
 	(repetitions_medium 8.0)
 	(sets 4))
 
-([MAIN::ontologia_Class21] of  WeightLoss
+([ontologia_Class21] of  WeightLoss
 
 	(benefits
-		[MAIN::ontologia_Class20]
-		[MAIN::ontologia_Class19])
+		[ontologia_Class20]
+		[ontologia_Class19])
 	(body_parts Piernas Gluteos)
 	(calories_per_time_hard 800.0)
 	(calories_per_time_low 400.0)
 	(calories_per_time_medium 600.0)
 	(harms
-		[MAIN::ontologia_Class13]
-		[MAIN::ontologia_Class9])
+		[ontologia_Class13]
+		[ontologia_Class9])
 	(instance_name "Cinta activacion")
 	(max_exercice_duration 60.0)
 	(min_exercice_duration 30.0))
 
-([MAIN::ontologia_Class23] of  MuscleGrowth
+([ontologia_Class23] of  MuscleGrowth
 
 	(body_parts Pectoral Brazos)
-	(harms [MAIN::ontologia_Class13])
-	(instance_name "Press banca")
+	(harms [ontologia_Class13])
+	(instance_name "Press banca con una única pesa doble")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0)
 	(repetitions_high 15.0)
@@ -443,20 +449,562 @@
 	(repetitions_medium 10.0)
 	(sets 3))
 
-([MAIN::ontologia_Class3] of  BodyBalance
+([ontologia_Class3] of  BodyBalance
 
 	(body_parts Piernas Espalda)
-	(harms [MAIN::ontologia_Class10002])
+	(harms [ontologia_Class10002])
 	(instance_name "Equilibrio sobre una pierna")
 	(max_exercice_duration 5.0)
 	(min_exercice_duration 3.0))
 
-([MAIN::ontologia_Class34] of  WeightLoss
+([ontologia_Class30000] of  MuscleGrowth
+
+	(body_parts Brazos Pectoral Hombros)
+	(instance_name "Jap Cross Hook Upper-Hook Combination - Bodycombat")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 7.0)
+	(repetitions_high 60.0)
+	(repetitions_low 15)
+	(repetitions_medium 30.0)
+	(sets 4))
+
+([ontologia_Class30001] of  BodyBalance
+
+	(body_parts Piernas Espalda Gluteos)
+	(harms [ontologia_Class10002])
+	(instance_name "Estiramiento piriforme")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 0.5))
+
+([ontologia_Class30002] of  BodyBalance
+
+	(body_parts Piernas Gluteos Espalda)
+	(harms [ontologia_Class10002])
+	(instance_name "Zancadas")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 1.0))
+
+([ontologia_Class30003] of  BodyBalance
+
+	(body_parts Gluteos Piernas Espalda Abdominales)
+	(harms
+		[ontologia_Class12]
+		[ontologia_Class10002])
+	(instance_name "Zancadas con torsión espinal")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 1.0))
+
+([ontologia_Class30004] of  BodyBalance
+
+	(body_parts Brazos Hombros Hombros)
+	(instance_name "Estiramiento de triceps")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30005] of  BodyBalance
+
+	(body_parts Piernas Brazos Hombros Espalda Gluteos Pectoral Abdominales)
+	(harms [ontologia_Class10002])
+	(instance_name "Estiramientos en la posición de la rana")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 1.0))
+
+([ontologia_Class30006] of  BodyBalance
+
+	(body_parts Hombros Brazos Pectoral)
+	(harms [ontologia_Class13])
+	(instance_name "Estiramientos de hombro sentado")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 1.0))
+
+([ontologia_Class30007] of  BodyBalance
+
+	(body_parts Espalda Abdominales Brazos)
+	(instance_name "Estiramientos doblando el costado")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30008] of  BodyBalance
+
+	(body_parts Gluteos Piernas Espalda)
+	(harms
+		[ontologia_Class12]
+		[ontologia_Class10002])
+	(instance_name "Zancadas con estiramientos de cadera")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 1.0))
+
+([ontologia_Class30009] of  BodyBalance
+
+	(body_parts Pectoral Espalda)
+	(harms [ontologia_Class12])
+	(instance_name "Estiramientos de pectoral estirado en el suelo")
+	(max_exercice_duration 4.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30010] of  BodyBalance
+
+	(benefits [ontologia_Class14])
+	(body_parts Espalda)
+	(instance_name "Estiramientos del cuello (en rotación)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30011] of  BodyBalance
+
+	(benefits [ontologia_Class10002])
+	(body_parts Piernas)
+	(instance_name "Estiramientos de cuádriceps estirado en el suelo")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30012] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda Abdominales)
+	(instance_name "Elevar espalda (Superman)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30013] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Gluteos Espalda)
+	(instance_name "Estiramiento de gluteos (elevación de los gluteos en el suelo)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30014] of  BodyBalance
+
+	(body_parts Piernas Espalda Gluteos)
+	(instance_name "Estiramiento del angel (en el suelo con las piernas en mariposa)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30015] of  BodyBalance
+
+	(body_parts Gluteos)
+	(instance_name "Estiramientos de gluteos (las dos piernas al pecho)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30016] of  BodyBalance
+
+	(benefits [ontologia_Class14])
+	(body_parts Espalda)
+	(instance_name "Estiramientos del cuello (tensión hacia arriba)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30018] of  MuscleGrowth
+
+	(body_parts Gluteos Piernas Espalda)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas con patada als ascender")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 3))
+
+([ontologia_Class30019] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda)
+	(instance_name "Estiramientos de espalda (Posición del camello)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30020] of  BodyBalance
+
+	(body_parts Gluteos Piernas Espalda Piernas)
+	(harms [ontologia_Class12])
+	(instance_name "Plancha lateral")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class30021] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda)
+	(instance_name "Estiramientos de espalda (Posición del pajaro)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30022] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda Pectoral)
+	(instance_name "Estiramientos en posición del Triangulo")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30023] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda Abdominales)
+	(instance_name "Estiramientos en posición del perrito mirando hacia arriba")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30024] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda Abdominales)
+	(instance_name "Estiramientos en posición del perrito mirando hacia abajo")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30025] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda)
+	(instance_name "Estiramientos de espalda hacia atras de pie")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30026] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda Gluteos Piernas)
+	(instance_name "Estiramientos de espalda (Posición del guerrero)")
+	(max_exercice_duration 5.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class30027] of  BodyBalance
 
 	(benefits
-		[MAIN::ontologia_Class20]
-		[MAIN::ontologia_Class19]
-		[MAIN::ontologia_Class13])
+		[ontologia_Class12]
+		[ontologia_Class10002])
+	(body_parts Espalda Piernas Abdominales)
+	(instance_name "Sentadillas terminando en la posición Yogl")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30028] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Espalda)
+	(instance_name "Estiramientos de espalda (Posición del la cabra)")
+	(max_exercice_duration 3.0)
+	(min_exercice_duration 2.0))
+
+([ontologia_Class30029] of  BodyBalance
+
+	(body_parts Piernas Gluteos Espalda)
+	(harms [ontologia_Class10002])
+	(instance_name "Desplazamiento lateral")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class30031] of  MuscleGrowth
+
+	(body_parts Pectoral Espalda Hombros Gluteos Brazos)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class12]
+		[ontologia_Class10002])
+	(instance_name "Deadlift con inclinación de 45º hacia delante (Rumano)")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 15.0)
+	(sets 4))
+
+([ontologia_Class30032] of  MuscleGrowth
+
+	(body_parts Espalda Gluteos Piernas)
+	(harms [ontologia_Class10002])
+	(instance_name "Press de piernas")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class30033] of  MuscleGrowth
+
+	(body_parts Pectoral Hombros Brazos)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class20])
+	(instance_name "Flexiones invertidas")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class30034] of  MuscleGrowth
+
+	(body_parts Pectoral Hombros Brazos)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class20])
+	(instance_name "Flexiones invertidas con soporte e inclinación de 45º")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class30035] of  MuscleGrowth
+
+	(body_parts Brazos Espalda)
+	(instance_name "Levantamiento de pesas con la mano por arriba")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 7.0)
+	(repetitions_high 30.0)
+	(repetitions_low 5)
+	(repetitions_medium 15.0)
+	(sets 4))
+
+([ontologia_Class30036] of  MuscleGrowth
+
+	(body_parts Pectoral Brazos)
+	(harms [ontologia_Class13])
+	(instance_name "Press banca con dos pesas individuales")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 3))
+
+([ontologia_Class30037] of  MuscleGrowth
+
+	(body_parts Pectoral Espalda Hombros Gluteos Brazos)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class12]
+		[ontologia_Class10002])
+	(instance_name "Deadlift con inclinación de 90º hacia delante")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 15.0)
+	(sets 4))
+
+([ontologia_Class30038] of  MuscleGrowth
+
+	(benefits
+		[ontologia_Class13]
+		[ontologia_Class12])
+	(body_parts Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
+	(instance_name "Piscina de espalda")
+	(max_exercice_duration 30.0)
+	(min_exercice_duration 10.0)
+	(repetitions_high 8.0)
+	(repetitions_low 2)
+	(repetitions_medium 5.0)
+	(sets 4))
+
+([ontologia_Class30039] of  MuscleGrowth
+
+	(benefits
+		[ontologia_Class13]
+		[ontologia_Class12])
+	(body_parts Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
+	(instance_name "Piscina estilo mariposa")
+	(max_exercice_duration 30.0)
+	(min_exercice_duration 10.0)
+	(repetitions_high 8.0)
+	(repetitions_low 2)
+	(repetitions_medium 5.0)
+	(sets 4))
+
+([ontologia_Class30040] of  MuscleGrowth
+
+	(benefits
+		[ontologia_Class13]
+		[ontologia_Class12])
+	(body_parts Pectoral Abdominales Espalda Hombros Piernas Brazos Gluteos)
+	(instance_name "Piscina estilo libre")
+	(max_exercice_duration 30.0)
+	(min_exercice_duration 10.0)
+	(repetitions_high 8.0)
+	(repetitions_low 2)
+	(repetitions_medium 5.0)
+	(sets 4))
+
+([ontologia_Class30041] of  MuscleGrowth
+
+	(body_parts Abdominales)
+	(harms
+		[ontologia_Class12]
+		[ontologia_Class14])
+	(instance_name "Abdominales con las piernas verticales en el aire")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class30042] of  MuscleGrowth
+
+	(body_parts Abdominales)
+	(harms
+		[ontologia_Class12]
+		[ontologia_Class14])
+	(instance_name "Abdominales con las piernas dobladas en el aire")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0)
+	(repetitions_high 15.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 4))
+
+([ontologia_Class30043] of  MuscleGrowth
+
+	(body_parts Gluteos Piernas Espalda)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas con pesas i patada als ascender")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 3))
+
+([ontologia_Class30044] of  MuscleGrowth
+
+	(body_parts Piernas Espalda Brazos Gluteos)
+	(harms [ontologia_Class12])
+	(instance_name "Levantamiento olimpico")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 7.0)
+	(repetitions_high 10.0)
+	(repetitions_low 3)
+	(repetitions_medium 4.0)
+	(sets 5))
+
+([ontologia_Class30045] of  MuscleGrowth
+
+	(body_parts Gluteos Piernas)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas búlgara con pesas atrás")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 3))
+
+([ontologia_Class30047] of  MuscleGrowth
+
+	(body_parts Gluteos Piernas)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 3))
+
+([ontologia_Class30048] of  MuscleGrowth
+
+	(body_parts Gluteos Piernas)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas con un pie apoyado a 45º")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 20.0)
+	(repetitions_low 5)
+	(repetitions_medium 10.0)
+	(sets 3))
+
+([ontologia_Class30049] of  MuscleGrowth
+
+	(body_parts Pectoral Hombros Espalda Brazos)
+	(instance_name "Jap Cross Combination - Bodycombat")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 100.0)
+	(repetitions_low 30)
+	(repetitions_medium 60.0))
+
+([ontologia_Class30050] of  MuscleGrowth
+
+	(body_parts Pectoral Hombros Espalda Brazos)
+	(instance_name "Jap Cross Upper-Hook Combination - Bodycombat")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 100.0)
+	(repetitions_low 30)
+	(repetitions_medium 60.0))
+
+([ontologia_Class30051] of  MuscleGrowth
+
+	(body_parts Piernas Brazos Hombros)
+	(harms [ontologia_Class10002])
+	(instance_name "Levantar la rodilla hasta la mano con salto final")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 100.0)
+	(repetitions_low 30)
+	(repetitions_medium 60.0)
+	(sets 4))
+
+([ontologia_Class30052] of  MuscleGrowth
+
+	(body_parts Piernas Brazos Hombros)
+	(instance_name "Levantar la rodilla hasta la mano")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 100.0)
+	(repetitions_low 30)
+	(repetitions_medium 60.0)
+	(sets 4))
+
+([ontologia_Class30053] of  MuscleGrowth
+
+	(body_parts Piernas)
+	(harms [ontologia_Class10002])
+	(instance_name "Patadas frontales (Thunder Kick) con cambio de pierna")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 100.0)
+	(repetitions_low 30)
+	(repetitions_medium 60.0)
+	(sets 4))
+
+([ontologia_Class30054] of  MuscleGrowth
+
+	(body_parts Piernas)
+	(harms [ontologia_Class10002])
+	(instance_name "Patadas laterales de Karate con cambio de pierna")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 100.0)
+	(repetitions_low 30)
+	(repetitions_medium 60.0)
+	(sets 4))
+
+([ontologia_Class30055] of  MuscleGrowth
+
+	(body_parts Piernas)
+	(instance_name "Levantamiento horizontal de pierna")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 5.0)
+	(repetitions_high 60.0)
+	(repetitions_low 20)
+	(repetitions_medium 40.0)
+	(sets 4))
+
+([ontologia_Class34] of  WeightLoss
+
+	(benefits
+		[ontologia_Class20]
+		[ontologia_Class19]
+		[ontologia_Class13])
 	(body_parts Piernas Gluteos)
 	(calories_per_time_hard 300.0)
 	(calories_per_time_low 100.0)
@@ -465,40 +1013,316 @@
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0))
 
-([MAIN::ontologia_Class35] of  WeightLoss
+([ontologia_Class35] of  WeightLoss
 
 	(benefits
-		[MAIN::ontologia_Class20]
-		[MAIN::ontologia_Class19])
+		[ontologia_Class20]
+		[ontologia_Class19])
 	(body_parts Piernas Gluteos)
 	(calories_per_time_hard 400.0)
 	(calories_per_time_low 150.0)
 	(calories_per_time_medium 250.0)
-	(harms [MAIN::ontologia_Class13])
+	(harms [ontologia_Class13])
 	(instance_name "Cinta chill")
 	(max_exercice_duration 15.0)
 	(min_exercice_duration 10.0))
 
-([MAIN::ontologia_Class4] of  BodyBalance
+([ontologia_Class4] of  BodyBalance
 
 	(body_parts Piernas Gluteos Espalda)
-	(harms [MAIN::ontologia_Class10002])
-	(instance_name "Desplazamiento lateral")
-	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0))
+	(harms [ontologia_Class10002])
+	(instance_name "Desplazamiento lateral cruzando las piernas")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
 
-([MAIN::ontologia_Class5] of  BodyBalance
+([ontologia_Class40001] of  MuscleGrowth
 
-	(body_parts Gluteos Piernas Espalda Piernas)
-	(harms [MAIN::ontologia_Class12])
-	(instance_name "Plancha lateral")
-	(max_exercice_duration 20.0)
-	(min_exercice_duration 10.0))
+	(body_parts Pectoral Hombros Brazos)
+	(harms [ontologia_Class13])
+	(instance_name "Double Uppercut & Hook Combination - Bodycombat")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 8.0)
+	(repetitions_high 40.0)
+	(repetitions_low 15)
+	(repetitions_medium 25.0)
+	(sets 4))
 
-([MAIN::ontologia_Class8] of  Diet
+([ontologia_Class40002] of  WeightLoss
+
+	(body_parts Piernas)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 350.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Saltar a la cuerda")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40003] of  WeightLoss
+
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 50.0)
+	(calories_per_time_medium 300.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Salto sobre una pierna (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40004] of  WeightLoss
+
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 50.0)
+	(calories_per_time_medium 300.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Doble salto sobre una pierna (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40005] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con las manos (por delante)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40006] of  WeightLoss
+
+	(body_parts Espalda Piernas Gluteos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 400.0)
+	(calories_per_time_medium 500.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Saltar y agacharse para tocar el tobillo (combinar lados)")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40007] of  WeightLoss
+
+	(body_parts Piernas Gluteos Brazos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Levantar la pierna y juntar las manos debajo de ella (combinando piernas)")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40008] of  WeightLoss
+
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Agacharse y poner los pies en puntillas al levantarse")
+	(max_exercice_duration 8.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40009] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Brazos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 350.0)
+	(instance_name "Juntar manos y pies por atrás de la espalda (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40010] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 250.0)
+	(instance_name "Despalzamientos laterales")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40011] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 250.0)
+	(instance_name "Despalzamientos laterales levantando la pierna exterior al subir")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40012] of  WeightLoss
+
+	(body_parts Piernas Espalda Brazos)
+	(calories_per_time_hard 400.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Agacharse y subir alzando las manos")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40013] of  WeightLoss
+
+	(body_parts Espalda Brazos)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Rotación de cintura estirando las manos")
+	(max_exercice_duration 8.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40014] of  WeightLoss
+
+	(body_parts Espalda Piernas)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Rotación de cintura alzando la pierna exterior")
+	(max_exercice_duration 8.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40016] of  WeightLoss
+
+	(body_parts Piernas)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 350.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Saltar a la cuerda cruzando las piernas")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40018] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con las manos (por el lateral)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40019] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con las manos inclinando la cintura 45º (por delante)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40020] of  WeightLoss
+
+	(body_parts Brazos Espalda Hombros)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Inclinaciones hacia el lateral levantando las manos verticalmente")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40021] of  WeightLoss
+
+	(body_parts Espalda Brazos Gluteos)
+	(calories_per_time_hard 400.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 275.0)
+	(instance_name "Bailar el cha-cha-cha juntando cintura y codos")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40022] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con los codos")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40023] of  WeightLoss
+
+	(body_parts Pectoral Hombros Brazos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 500.0)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class20])
+	(instance_name "Flexiones")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40024] of  WeightLoss
+
+	(body_parts Pectoral Hombros Brazos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 300.0)
+	(calories_per_time_medium 500.0)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class20])
+	(instance_name "Flexiones invertidas")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40025] of  WeightLoss
+
+	(body_parts Gluteos Piernas)
+	(calories_per_time_hard 300.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 200.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas invertidas en la pared")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40026] of  WeightLoss
+
+	(body_parts Abdominales Gluteos Espalda)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(harms [ontologia_Class12])
+	(instance_name "Abdominales")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40027] of  WeightLoss
+
+	(body_parts Gluteos Piernas)
+	(calories_per_time_hard 300.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 200.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas con patada al ascender (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40028] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de gluteos")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class5] of  BodyBalance
+
+	(benefits [ontologia_Class12])
+	(body_parts Gluteos Piernas Espalda Piernas Abdominales)
+	(instance_name "Estiramientos de plancha invertida")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class8] of  Diet
 
 	(instance_name "Consumo de fruta"))
 
-([MAIN::ontologia_Class9] of  Diet
+([ontologia_Class9] of  Diet
 
 	(instance_name "Abuso de sal"))

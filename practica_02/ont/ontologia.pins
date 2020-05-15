@@ -1,4 +1,4 @@
-; Fri May 15 20:18:30 GMT+01:00 2020
+; Sat May 16 00:24:29 GMT+01:00 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -344,8 +344,7 @@
 	(calories_per_time_hard 600.0)
 	(calories_per_time_low 200.0)
 	(calories_per_time_medium 400.0)
-	(harms [ontologia_Class12])
-	(instance_name "Elevación de piernas")
+	(instance_name "Elevación de piernas hasta la cintura")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 3.0))
 
@@ -457,6 +456,17 @@
 	(instance_name "Equilibrio sobre una pierna")
 	(max_exercice_duration 5.0)
 	(min_exercice_duration 3.0))
+
+([ontologia_Class30000] of  MuscleGrowth
+
+	(body_parts Brazos Pectoral Hombros)
+	(instance_name "Jap Cross Hook Upper-Hook Combination - Bodycombat")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 7.0)
+	(repetitions_high 60.0)
+	(repetitions_low 15)
+	(repetitions_medium 30.0)
+	(sets 4))
 
 ([ontologia_Class30001] of  BodyBalance
 
@@ -1024,6 +1034,282 @@
 	(instance_name "Desplazamiento lateral cruzando las piernas")
 	(max_exercice_duration 10.0)
 	(min_exercice_duration 5.0))
+
+([ontologia_Class40001] of  MuscleGrowth
+
+	(body_parts Pectoral Hombros Brazos)
+	(harms [ontologia_Class13])
+	(instance_name "Double Uppercut & Hook Combination - Bodycombat")
+	(max_exercice_duration 15.0)
+	(min_exercice_duration 8.0)
+	(repetitions_high 40.0)
+	(repetitions_low 15)
+	(repetitions_medium 25.0)
+	(sets 4))
+
+([ontologia_Class40002] of  WeightLoss
+
+	(body_parts Piernas)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 350.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Saltar a la cuerda")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40003] of  WeightLoss
+
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 50.0)
+	(calories_per_time_medium 300.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Salto sobre una pierna (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40004] of  WeightLoss
+
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 50.0)
+	(calories_per_time_medium 300.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Doble salto sobre una pierna (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40005] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con las manos (por delante)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40006] of  WeightLoss
+
+	(body_parts Espalda Piernas Gluteos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 400.0)
+	(calories_per_time_medium 500.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Saltar y agacharse para tocar el tobillo (combinar lados)")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40007] of  WeightLoss
+
+	(body_parts Piernas Gluteos Brazos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Levantar la pierna y juntar las manos debajo de ella (combinando piernas)")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40008] of  WeightLoss
+
+	(body_parts Piernas Gluteos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Agacharse y poner los pies en puntillas al levantarse")
+	(max_exercice_duration 8.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40009] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Brazos)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 350.0)
+	(instance_name "Juntar manos y pies por atrás de la espalda (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40010] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 250.0)
+	(instance_name "Despalzamientos laterales")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40011] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 250.0)
+	(instance_name "Despalzamientos laterales levantando la pierna exterior al subir")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40012] of  WeightLoss
+
+	(body_parts Piernas Espalda Brazos)
+	(calories_per_time_hard 400.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Agacharse y subir alzando las manos")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40013] of  WeightLoss
+
+	(body_parts Espalda Brazos)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Rotación de cintura estirando las manos")
+	(max_exercice_duration 8.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40014] of  WeightLoss
+
+	(body_parts Espalda Piernas)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Rotación de cintura alzando la pierna exterior")
+	(max_exercice_duration 8.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40016] of  WeightLoss
+
+	(body_parts Piernas)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 350.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Saltar a la cuerda cruzando las piernas")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40018] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con las manos (por el lateral)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40019] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con las manos inclinando la cintura 45º (por delante)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40020] of  WeightLoss
+
+	(body_parts Brazos Espalda Hombros)
+	(calories_per_time_hard 500.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 300.0)
+	(instance_name "Inclinaciones hacia el lateral levantando las manos verticalmente")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 4.0))
+
+([ontologia_Class40021] of  WeightLoss
+
+	(body_parts Espalda Brazos Gluteos)
+	(calories_per_time_hard 400.0)
+	(calories_per_time_low 150.0)
+	(calories_per_time_medium 275.0)
+	(instance_name "Bailar el cha-cha-cha juntando cintura y codos")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40022] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de piernas y juntar con los codos")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40023] of  WeightLoss
+
+	(body_parts Pectoral Hombros Brazos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 500.0)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class20])
+	(instance_name "Flexiones")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40024] of  WeightLoss
+
+	(body_parts Pectoral Hombros Brazos)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 300.0)
+	(calories_per_time_medium 500.0)
+	(harms
+		[ontologia_Class13]
+		[ontologia_Class20])
+	(instance_name "Flexiones invertidas")
+	(max_exercice_duration 7.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40025] of  WeightLoss
+
+	(body_parts Gluteos Piernas)
+	(calories_per_time_hard 300.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 200.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas invertidas en la pared")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40026] of  WeightLoss
+
+	(body_parts Abdominales Gluteos Espalda)
+	(calories_per_time_hard 800.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(harms [ontologia_Class12])
+	(instance_name "Abdominales")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
+
+([ontologia_Class40027] of  WeightLoss
+
+	(body_parts Gluteos Piernas)
+	(calories_per_time_hard 300.0)
+	(calories_per_time_low 100.0)
+	(calories_per_time_medium 200.0)
+	(harms [ontologia_Class10002])
+	(instance_name "Sentadillas con patada al ascender (combinando piernas)")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 5.0))
+
+([ontologia_Class40028] of  WeightLoss
+
+	(body_parts Piernas Gluteos Espalda Abdominales)
+	(calories_per_time_hard 600.0)
+	(calories_per_time_low 200.0)
+	(calories_per_time_medium 400.0)
+	(instance_name "Elevación de gluteos")
+	(max_exercice_duration 10.0)
+	(min_exercice_duration 3.0))
 
 ([ontologia_Class5] of  BodyBalance
 
