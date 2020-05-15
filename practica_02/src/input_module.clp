@@ -53,15 +53,15 @@
 (defrule create_user "rule that creates a user when the system start"
     (system_start)
     =>
-    (make-instance user of Person
+    (make-instance user of User
         (activity medium) ; defualt activity
     )
     (assert (user_created))
 )
 
-(defrule habit_questions "rule that asks which habit the person has"
+(defrule habit_questions "rule that asks which habit the User has"
     (asked_basic_questions)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (ask_habit ?user low "Tens habits sedentaris?[si/no] (e.g. Veure televisió, ordinador, seure al sofa, etc.)")
     (ask_habit ?user medium "Tens habits de activitat mitjana?[si/no] (e.g. Sortir a passejar, fer estiraments, fregar)")
@@ -70,7 +70,7 @@
 
 (defrule problems_questions "rule that asks if the user has a certain condition or problem"
     (asked_basic_questions)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     ?problem <- (object (is-a Problem)) ;; MISSING REMOVE OBESITY FROM A PROBLEM => EAISER FORM ONTOLOGY
     =>
     (bind ?name (send ?problem get-instance_name))
@@ -85,17 +85,15 @@
 ;
 (deffunction set_objectives (?obj)
     (if (member 1 ?obj) then (assert (balance)))
-    (if (member 2 ?obj) then (assert (manteinance)))
-    (if (member 3 ?obj) then (assert (musclegrowth)))
-    (if (member 4 ?obj) then (assert (weightloss)))
+    (if (member 2 ?obj) then (assert (musclegrowth)))
+    (if (member 3 ?obj) then (assert (weightloss)))
 )
 
 (deffunction ask_objectives ()
     (printout t "Quins objectius t'agradaria aconseguir amb la rutina?[Escriu multiples valors, com a minim 1]" crlf)
     (printout t "1. Balance" crlf)
-    (printout t "2. Manteinance" crlf)
-    (printout t "3. MuscleGrowth" crlf)
-    (printout t "4. WeightLoss" crlf)
+    (printout t "2. MuscleGrowth" crlf)
+    (printout t "3. WeightLoss" crlf)
     (bind ?objectives (ask_list))
     (set_objectives ?objectives)
 
@@ -104,7 +102,7 @@
 
 (defrule input_questions "rule that asks questions to the user"
     (user_created)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (send ?user put-instance_name      (ask "Introdueix el nom:"))
     (send ?user put-age                (ask "Introdueix la edat:"))

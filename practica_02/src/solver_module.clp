@@ -35,7 +35,7 @@
 
 (defrule max_program_days "States the total days of the program"
     (user_created)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     ; assign max days based on activity level
     ; at least 4 days of exercice since we must

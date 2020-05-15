@@ -19,7 +19,7 @@
 )
 
 (defmessage-handler WeightLoss print primary()
-    (bind ?user (find-instance ((?p Person)) TRUE))
+    (bind ?user (find-instance ((?p User)) TRUE))
     (bind ?type (send [user] get-activity))
     (if (eq low ?type) then (printout t "Calorias per minut: " ?self:calories_per_time_low crlf))
     (if (eq medium ?type) then (printout t "Calorias per minut: " ?self:calories_per_time_medium crlf))
@@ -28,7 +28,7 @@
 
 (defmessage-handler MuscleGrowth print primary()
     (printout t "Series: " ?self:sets crlf)
-    (bind ?user (find-instance ((?p Person)) TRUE))
+    (bind ?user (find-instance ((?p User)) TRUE))
     (bind ?type (send [user] get-activity))
     (if (eq low ?type) then (printout t "Repetitions: " ?self:repetitions_low crlf))
     (if (eq medium ?type) then (printout t "Repetitions: " ?self:repetitions_medium crlf))

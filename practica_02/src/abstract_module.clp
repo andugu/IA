@@ -26,18 +26,18 @@
 
 ; RULE DEFINITION
 
-(defrule tension_detector "This rule calculates what type of tension the person has"
+(defrule tension_detector "This rule calculates what type of tension the User has"
     (user_created)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?min (send ?user get-min_blood_pressure))
     (bind ?max (send ?user get-max_blood_pressure))
 
 )
 
-(defrule bmi_detector "This rule calcualtes if the person has a normal bmi"
+(defrule bmi_detector "This rule calcualtes if the User has a normal bmi"
     (user_created)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?bmi (send ?user get-bmi))
     (if (>= 24.9 ?bmi) then
@@ -51,18 +51,18 @@
 )
 
 
-(defrule is_overweight "The person is overwight"
+(defrule is_overweight "The User is overwight"
     (overwight)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?problem (find-instance ((?p Physical)) (eq ?p:instance_name "Sobrepreso")))
     (bind ?last (+ 1 (length$ (send ?user get-problems))))
     (slot-insert$ ?user problems ?last ?problem)
 )
 
-(defrule is_obese "The person is obese"
+(defrule is_obese "The User is obese"
     (obese)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?problem (find-instance ((?p Physical)) (eq ?p:instance_name "Obesidad")))
     (bind ?last (+ 1 (length$ (send ?user get-problems))))
@@ -72,7 +72,7 @@
 
 (defrule balance_rule "Rule to add balance exercices"
     (balance)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?exercices (find-all-instances ((?exercice BodyBalance))TRUE))
     (bind ?activity (send ?user get-activity))
@@ -90,28 +90,10 @@
 
 )
 
-(defrule manteinance_rule "Rule to add manteinance exercices"
-    (manteinance)
-    ?user <- (object (is-a Person))
-    =>
-    (bind ?exercices (find-all-instances ((?exercice Manteinance))TRUE))
-    (bind ?activity (send ?user get-activity))
-
-    (progn$ (?e ?exercices); for loop
-        (bind ?duration (get_activity_duration ?e ?activity))
-        (make-instance (gensym*) of PersonalExercice
-            (exercice_type manteinance)
-            (dificulty ?activity)
-            (base_exercice ?e)
-            (duration ?duration)
-        )
-    )
-    (assert (abstracted))
-)
 
 (defrule musclegrowth_rule "Rule to add musclegrowth exercices"
     (musclegrowth)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?exercices (find-all-instances ((?exercice MuscleGrowth))TRUE))
     (bind ?activity (send ?user get-activity))
@@ -131,7 +113,7 @@
 
 (defrule weightloss_rule "Rule to add weightloss exercices"
     (weightloss)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     =>
     (bind ?exercices (find-all-instances ((?exercice WeightLoss))TRUE))
     (bind ?activity (send ?user get-activity))
@@ -156,7 +138,7 @@
 
 (defrule filter_physical "Rule that filters the physical problems of the user"
     (problem ?name)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     ?problem <- (object (is-a Physical))
     (test (member ?problem (send ?user get-problems)))
     =>
@@ -177,9 +159,9 @@
 
 
 
-(defrule habits_point_system "Rule that calculates the activiy of a person given its habits"
+(defrule habits_point_system "Rule that calculates the activiy of a User given its habits"
     (user_created)
-    ?user <- (object (is-a Person))
+    ?user <- (object (is-a User))
     (test (neq 0 (length$ (send ?user get-habits))))
     =>
     (bind ?habits (send ?user get-habits))
