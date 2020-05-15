@@ -143,10 +143,11 @@
     (test (member ?problem (send ?user get-problems)))
     =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
-    (loop-for-count (?i 0 (length$ ?personal_exercices))
+    (loop-for-count (?i 1 (length$ ?personal_exercices))
         ; for each exercice check if it harms the problem
         ; if it does => then remove it
         (bind ?current (nth$ ?i ?personal_exercices))
+        (printout t ?current crlf)
         (bind ?base (send ?current get-base_exercice))
         (bind ?harms (send ?base get-harms))
         (if (member ?problem ?harms) then
