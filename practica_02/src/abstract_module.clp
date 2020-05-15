@@ -28,7 +28,6 @@
     (bind ?name (send ?element get-instance_name))
     (progn$ (?a ?array)
         (bind ?cmp (send ?a get-instance_name))
-        (printout t ?name "===" ?cmp crlf)
         (if (eq ?name ?cmp) then (bind ?return TRUE))
     )
 
@@ -96,7 +95,6 @@
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
-            (exercice_name (send ?e get-instance_name))
         )
     )
     (assert (abstracted))
@@ -118,7 +116,6 @@
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
-            (exercice_name (send ?e get-instance_name))
         )
     )
     (assert (abstracted))
@@ -139,7 +136,6 @@
             (dificulty ?activity)
             (base_exercice ?e)
             (duration ?duration)
-            (exercice_name (send ?e get-instance_name))
         )
     )
     (assert (abstracted))
@@ -159,19 +155,14 @@
     (test (member ?problem (send ?user get-problems)))
     ?exercice <- (object (is-a PersonalExercice))
     =>
-    (printout t "FILTER" crlf)
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
     (loop-for-count (?i 1 (length$ ?personal_exercices))
         ; for each exercice check if it harms the problem
         ; if it does => then remove it
         (bind ?current (nth$ ?i ?personal_exercices))
-        (printout t "CURRENT: " ?current crlf)
         (bind ?base (send ?current get-base_exercice))
-        (printout t "BASE: " ?base crlf)
         (bind ?harms (send ?base get-harms))
-        (printout t "HARMS: " ?harms crlf)
         (if (same_name ?problem ?harms) then
-            (printout t "DELETING " ?name crlf)
             (delete-member$ ?personal_exercices ?current)
         )
 
