@@ -67,6 +67,10 @@
             (bind ?duration (+ ?duration ?currentDuration))
             ; delete already seen instance
             (bind ?exercices (delete-member$ ?exercices ?exercice))
+            (if (neq 0 (length$ ?bonus_exercices))
+                then (bind ?bonus_exercices (delete-member$ ?bonus_exercices ?exercice))
+                else (bind ?neutral_exercices (delete-member$ ?neutral_exercices ?exercice))
+            )
             (bind ?seen (insert$ ?seen 1 ?exercice))
         )
     )
