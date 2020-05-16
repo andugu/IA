@@ -235,11 +235,23 @@
     (if (eq ?sum -1) then
         (send ?user put-activity low)
     )
-    (if (eq ?sum 0) then (send ?user put-activity medium))
+    (if (eq ?sum 0) then
+        (send ?user put-activity medium)
+    )
     (if (eq ?sum 1) then
         (send ?user put-activity high)
         (if (send ?user get-fatigue) then (send ?user put-activity medium))
         (if (< 65(send ?user get-age)) then (send ?user put-activity medium))
+    )
+    (bind ?act (send ?user get-activity))
+    (if (eq low ?act) then
+        (printout t "Segons l'activitat del usuari s'han programat els exercicis amb una intesitat baixa" crlf)
+    )
+    (if (eq medium ?act) then
+        (printout t "Segons l'activitat del usuari s'han programat els exercicis amb una intesitat mitjana" crlf)
+    )
+    (if (eq high ?act) then
+        (printout t "Segons l'activitat del usuari s'han programat els exercicis amb una intesitat alta" crlf)
     )
 
 )
