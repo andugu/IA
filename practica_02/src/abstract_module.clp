@@ -210,9 +210,16 @@
 
 
 
+(defrule empty_habits "Rule for when there are no habits"
+    (asked_habits)
+    ?user <- (object (is-a User))
+    (test (eq 0 (length$ (send ?user get-habits))))
+    =>
+    (assert (points_calculated))
+)
 
 (defrule habits_point_system "Rule that calculates the activiy of a User given its habits"
-    (user_created)
+    (asked_habits)
     ?user <- (object (is-a User))
     (test (neq 0 (length$ (send ?user get-habits))))
     =>
@@ -243,6 +250,14 @@
         (if (send ?user get-fatigue) then (send ?user put-activity medium))
         (if (< 65(send ?user get-age)) then (send ?user put-activity medium))
     )
+    (assert (points_calculated))
+)
+
+(defrule print_activity
+    (points_calculated)
+    (asked_habits)
+    ?user <- (object (is-a User))
+    =>
     (bind ?act (send ?user get-activity))
     (if (eq low ?act) then
         (printout t "Segons l'activitat del usuari s'han programat els exercicis amb una intesitat baixa" crlf)
@@ -253,7 +268,6 @@
     (if (eq high ?act) then
         (printout t "Segons l'activitat del usuari s'han programat els exercicis amb una intesitat alta" crlf)
     )
-
 )
 
 

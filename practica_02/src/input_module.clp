@@ -21,7 +21,6 @@
 
 (deffunction ask_habit (?user ?type ?question)
     (printout t ?question crlf)
-    (bind ?counter 1)
     (while (neq no (bind ?habitName (read))) do ; name frequency duration \n
         (bind ?habitName (ask "Quina?"))
         (bind ?freq (ask "Quants cops a la setmana?"))
@@ -32,9 +31,8 @@
             (duration ?duration)
             (activity ?type)
         ))
-        (slot-insert$ ?user habits ?counter ?habit)
+        (slot-insert$ ?user habits 1 ?habit)
         (printout t "Fas alguna altra?" crlf)
-        (bind ?counter (+ 1 ?counter))
     )
     ; (send ?user put-habits (all-instances HABIT))
 )
@@ -71,6 +69,7 @@
     (ask_habit ?user low "Tens habits sedentaris?[si/no] (e.g. Veure televisió, ordinador, seure al sofa, etc.)")
     (ask_habit ?user medium "Tens habits de activitat mitjana?[si/no] (e.g. Sortir a passejar, fer estiraments, fregar)")
     (ask_habit ?user high "Tens habits de alta activitat?[si/no] (e.g. Anar a corra, natació, tenis)")
+    (assert (asked_habits))
 )
 
 (defrule problems_questions "rule that asks if the user has a certain condition or problem"
