@@ -43,6 +43,9 @@
     =>
     (bind ?min (send ?user get-min_blood_pressure))
     (bind ?max (send ?user get-max_blood_pressure))
+    ;(bind ?problem (find-instance ((?p Physical)) (eq ?p:instance_name "Obesidad")))
+    ;(bind ?last (+ 1 (length$ (send ?user get-problems))))
+    ;(slot-insert$ ?user problems ?last ?problem)
 
 )
 
@@ -143,11 +146,10 @@
 
 (defrule filter_diets "Rule that filters the diets of the user"
     (abstracted)
-    (benefits ?name)
+    (benefits)
     ?user <- (object (is-a User))
-    ?problem <- (object (is-a Diet))
+    ?problem <- (object (is-a Problem))
     (test (member ?problem (send ?user get-problems)))
-    ?exercice <- (object (is-a PersonalExercice))
     =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
     (loop-for-count (?i 1 (length$ ?personal_exercices))
@@ -168,11 +170,10 @@
 
 (defrule filter_physical "Rule that filters the physical problems of the user"
     (abstracted)
-    (problem ?name)
+    (problem)
     ?user <- (object (is-a User))
     ?problem <- (object (is-a Physical))
     (test (member ?problem (send ?user get-problems)))
-    ?exercice <- (object (is-a PersonalExercice))
     =>
     (bind ?personal_exercices (find-all-instances ((?exercice PersonalExercice))TRUE))
     (loop-for-count (?i 1 (length$ ?personal_exercices))
