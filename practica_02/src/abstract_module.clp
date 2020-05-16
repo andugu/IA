@@ -240,7 +240,7 @@
         (if (< 65(send ?user get-age)) then (send ?user put-activity medium))
     )
 
-)
+) 
 
 
 ;; MOVE TO NEXT MODULE
