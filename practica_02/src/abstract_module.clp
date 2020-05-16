@@ -44,12 +44,12 @@
     (bind ?min (send ?user get-min_blood_pressure)) ; greater 90
     (bind ?max (send ?user get-max_blood_pressure)) ; greater 114
     (if (< 90 ?min) then
-        (printout t "El usuari té la hipertensió" crlf)
+        (printout t "El usuari té hipertensió" crlf)
         (bind ?problem (find-instance ((?p Diet)) (eq ?p:instance_name "Hipertension")))
         (bind ?last (+ 1 (length$ (send ?user get-problems))))
         (slot-insert$ ?user problems ?last ?problem)
     else (if (< 114 ?max) then
-        (printout t "El usuari té la hipertensió" crlf)
+        (printout t "El usuari té hipertensió" crlf)
         (bind ?problem (find-instance ((?p Diet)) (eq ?p:instance_name "Hipertension")))
         (bind ?last (+ 1 (length$ (send ?user get-problems))))
         (slot-insert$ ?user problems ?last ?problem)
