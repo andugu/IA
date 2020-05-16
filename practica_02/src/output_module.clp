@@ -21,9 +21,9 @@
 (defmessage-handler WeightLoss print primary()
     (bind ?user (find-instance ((?p User)) TRUE))
     (bind ?type (send [user] get-activity))
-    (if (eq low ?type) then (printout t "Calorias quemadas: " ?self:calories_per_time_low crlf))
-    (if (eq medium ?type) then (printout t "Calorias quemadas: " ?self:calories_per_time_medium crlf))
-    (if (eq high ?type) then (printout t "Calorias quemadas: " ?self:calories_per_time_hard crlf))
+    (if (eq low ?type) then (printout t "Previsió de calorias cremades: " ?self:calories_per_time_low crlf))
+    (if (eq medium ?type) then (printout t "Previsió de calorias cremades: " ?self:calories_per_time_medium crlf))
+    (if (eq high ?type) then (printout t "Previsió de calorias cremades: " ?self:calories_per_time_hard crlf))
 )
 
 (defmessage-handler MuscleGrowth print primary()
@@ -35,7 +35,21 @@
     (if (eq high ?type) then (printout t "Repetitions: " ?self:repetitions_high crlf))
 )
 
+(defmessage-handler PersonalExercice subclass primary()
+    (send ?self:base_exercice subclass)
+)
 
+(defmessage-handler BodyBalance subclass primary()
+    bodybalance
+)
+
+(defmessage-handler WeightLoss subclass primary()
+    weightloss
+)
+
+(defmessage-handler MuscleGrowth subclass primary()
+    musclegrowth
+)
 
 (defmodule output_module
     (import MAIN ?ALL)
@@ -45,6 +59,21 @@
     (export ?ALL)
 )
 
+(deffunction has_type (?type ?exercices)
+    (bind ?return FALSE)
+    (progn$ (?e ?exercices)
+        (bind ?t (send ?e subclass))
+        (if (eq ?t ?type) then (bind ?return TRUE))
+    )
+    ?return
+)
+
+(deffunction print_types (?exercices)
+    (printout t "Els objectius del dia d'avui son:" crlf)
+    (if (has_type bodybalance ?exercices) then (printout t "Bodybalance" crlf))
+    (if (has_type musclegrowth ?exercices) then (printout t "MuscleGrowth" crlf))
+    (if (has_type weightloss ?exercices) then (printout t "WeightLoss" crlf))
+)
 
 ; output solution module
 (defrule print_exercices
@@ -65,8 +94,8 @@
         (progn$ (?e ?personal_exercices)
             (bind ?total_time (+ ?total_time (send ?e get-duration)))
         )
-        (printout t "Duració total del dia " ?total_time " minutos" crlf)
-        (printout t "En aquest dia es treballara el " crlf)
+        (printout t "S'espera una durada de " ?total_time " minuts al programa d'avui" crlf)
+        (print_types ?personal_exercices)
         (printout t "============================================" crlf)
         (printout t "============================================" crlf)
         (progn$ (?e ?personal_exercices)

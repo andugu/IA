@@ -117,7 +117,8 @@
     (bind ?height                      (ask "Introdueix altura [m]:"))
     (send ?user put-weight             ?weight)
     (send ?user put-height             ?height)
-    (send ?user put-fatigue            (ask "Ara hauras de fer una prova de esforç. Et sents fatigat?"))
+    (printout t "Ara hauras de fer una prova de esforç." crlf)
+    (send ?user put-fatigue            (ask "Corre durant 1 minut sense parar. Et sents fatigat?"))
     ; here max blood pressure is the systolic pressure, since medically it is higher
     ; here min blood pressure is the dyastolic pressure since medically it is lower
     (send ?user put-max_blood_pressure (ask "Introdueix la presió arterial sistólica[mm Hg]:"))
