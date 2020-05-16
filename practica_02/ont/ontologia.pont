@@ -1,4 +1,4 @@
-; Sat May 16 15:28:52 CEST 2020
+; Sat May 16 18:45:18 CEST 2020
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -87,7 +87,7 @@
 		(create-accessor read-write))
 	(single-slot exercice_type
 		(type SYMBOL)
-		(allowed-values bodybalance manteinance musclegrowth weightloss)
+		(allowed-values bodybalance musclegrowth weightloss)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot bonus
@@ -252,7 +252,7 @@
 	(role concrete)
 	(single-slot exercice_type
 		(type SYMBOL)
-		(allowed-values bodybalance manteinance musclegrowth weightloss)
+		(allowed-values bodybalance musclegrowth weightloss)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot bonus

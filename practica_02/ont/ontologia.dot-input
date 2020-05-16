@@ -1,4 +1,4 @@
 digraph "ontologia" {
 
-"Program" [shape=record, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0", label="{Program|{exercices|Instance*|{PersonalExercice}}}"]
+"PersonalExercice" [shape=record, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0", label="{PersonalExercice|{exercice_type|Symbol|{bodybalance|musclegrowth|weightloss}}|{bonus|Boolean}|{base_exercice|Instance|{Exercice}}|{day|Integer*}|{dificulty|Symbol|{low|normal|hard}}|{duration|Float}}"]
 }

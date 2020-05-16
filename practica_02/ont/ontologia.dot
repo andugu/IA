@@ -1,12 +1,15 @@
 digraph ontologia {
-	graph [bb="0,0,244,47"];
+	graph [bb="0,0,243,254"];
 	node [label="\N"];
-	Program	[color="0.0,0.0,0.0",
+	PersonalExercice	[color="0.0,0.0,0.0",
 		fontcolor="0.0,0.0,0.0",
-		height=0.65278,
-		label="{Program|{exercices|Instance*|{PersonalExercice}}}",
-		pos="122,23.5",
-		rects="0,23.5,244,46.5 0,0.5,66,23.5 66,0.5,134,23.5 134,0.5,244,23.5",
+		height=3.5278,
+		label="{PersonalExercice|{exercice_type|Symbol|{bodybalance|musclegrowth|weightloss}}|{bonus|Boolean}|{base_exercice|Instance|{Exercice}}|{\
+day|Integer*}|{dificulty|Symbol|{low|normal|hard}}|{duration|Float}}",
+		pos="121.5,127",
+		rects="0,230.5,243,253.5 0,161.5,91,230.5 91,161.5,150,230.5 150,207.5,243,230.5 150,184.5,243,207.5 150,161.5,243,184.5 0,138.5,115,161.5 \
+115,138.5,243,161.5 0,115.5,100,138.5 100,115.5,171,138.5 171,115.5,243,138.5 0,92.5,108,115.5 108,92.5,243,115.5 0,23.5,83,92.5 \
+83,23.5,165,92.5 165,69.5,243,92.5 165,46.5,243,69.5 165,23.5,243,46.5 0,0.5,130,23.5 130,0.5,243,23.5",
 		shape=record,
-		width=3.3889];
+		width=3.375];
 }
