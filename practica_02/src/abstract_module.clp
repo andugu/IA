@@ -81,7 +81,7 @@
 )
 
 (defrule is_overweight "The User is overwight"
-    (overwight)
+    (overweight)
     ?user <- (object (is-a User))
     =>
     (printout t "El usuari té sobrepres" crlf)
