@@ -29,7 +29,7 @@
     ; be sure that all objectives are met
     ; worst case, the user requests the four objectives
     (bind ?activity (send ?user get-activity))
-    (if (eq ?activity low) then (assert (max_days 4)))
+    (if (eq ?activity low) then (assert (max_days 3)))
     (if (eq ?activity medium) then (assert (max_days 5)))
     (if (eq ?activity high) then (assert (max_days 7)))
 
@@ -66,7 +66,7 @@
             (bind ?currentDuration (send ?exercice get-duration))
             (bind ?duration (+ ?duration ?currentDuration))
             ; delete already seen instance
-            (bind ?exercices (delete-member$ ?exercices ?exercice)) 
+            (bind ?exercices (delete-member$ ?exercices ?exercice))
             (if (neq 0 (length$ ?bonus_exercices))
                 then (bind ?bonus_exercices (delete-member$ ?bonus_exercices ?exercice))
                 else (bind ?neutral_exercices (delete-member$ ?neutral_exercices ?exercice))
