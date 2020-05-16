@@ -232,7 +232,9 @@
     )
     (bind ?sum (/ ?sum ?time))
     (bind ?sum (round ?sum)) ; TODO -> round of medium has a bigger interval
-    (if (eq ?sum -1) then (send ?user put-activity low))
+    (if (eq ?sum -1) then
+        (send ?user put-activity low)
+    )
     (if (eq ?sum 0) then (send ?user put-activity medium))
     (if (eq ?sum 1) then
         (send ?user put-activity high)
@@ -240,7 +242,7 @@
         (if (< 65(send ?user get-age)) then (send ?user put-activity medium))
     )
 
-) 
+)
 
 
 ;; MOVE TO NEXT MODULE

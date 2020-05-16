@@ -39,6 +39,10 @@
     (send ?self:base_exercice subclass)
 )
 
+(defmessage-handler PersonalExercice bodyparts primary()
+    (send ?self:base_exercice get-body_parts)
+)
+
 (defmessage-handler BodyBalance subclass primary()
     bodybalance
 )
@@ -68,11 +72,34 @@
     ?return
 )
 
+(deffunction has_body_part (?type ?exercices)
+    (bind ?return FALSE)
+    (progn$ (?e ?exercices)
+        (bind ?parts (send ?e bodyparts))
+        (progn$ (?b ?parts)
+            (if (eq ?b ?type) then (bind ?return TRUE))
+        )
+    )
+    ?return
+)
+
 (deffunction print_types (?exercices)
     (printout t "Els objectius del dia d'avui son:" crlf)
     (if (has_type bodybalance ?exercices) then (printout t "Bodybalance" crlf))
     (if (has_type musclegrowth ?exercices) then (printout t "MuscleGrowth" crlf))
     (if (has_type weightloss ?exercices) then (printout t "WeightLoss" crlf))
+)
+
+(deffunction print_bodyparts (?exercices)
+    (printout t "En aquest dia es treballaran les seguents parts del cos:" crlf)
+    (if (has_body_part Pectoral ?exercices) then (printout t "Pectoral" crlf))
+    (if (has_body_part Abdominales ?exercices) then (printout t "Abdominales" crlf))
+    (if (has_body_part Espalda ?exercices) then (printout t "Espalda" crlf))
+    (if (has_body_part Hombros ?exercices) then (printout t "Hombros" crlf))
+    (if (has_body_part Piernas ?exercices) then (printout t "Piernas" crlf))
+    (if (has_body_part Brazos ?exercices) then (printout t "Brazos" crlf))
+    (if (has_body_part Gluteos ?exercices) then (printout t "Gluteos" crlf))
+
 )
 
 ; output solution module
