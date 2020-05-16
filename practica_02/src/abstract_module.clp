@@ -64,11 +64,17 @@
 
 )
 
+(defrule is_normal "The user has a normal bmi"
+    (normal_bmi)
+    =>
+    (printout t "El usuari té un index de masa corporal normal" crlf)
+)
 
 (defrule is_overweight "The User is overwight"
     (overwight)
     ?user <- (object (is-a User))
     =>
+    (printout t "El usuari té sobrepres" crlf)
     (bind ?problem (find-instance ((?p Physical)) (eq ?p:instance_name "Sobrepreso")))
     (bind ?last (+ 1 (length$ (send ?user get-problems))))
     (slot-insert$ ?user problems ?last ?problem)
@@ -78,6 +84,7 @@
     (obese)
     ?user <- (object (is-a User))
     =>
+    (printout t "El usuari té obesitat" crlf)
     (bind ?problem (find-instance ((?p Physical)) (eq ?p:instance_name "Obesidad")))
     (bind ?last (+ 1 (length$ (send ?user get-problems))))
     (slot-insert$ ?user problems ?last ?problem)
@@ -144,7 +151,7 @@
     (assert (abstracted))
 )
 
-(defrule filter_diets "Rule that filters the diets of the user"
+(defrule filter_problems "Rule that filters the problems that benefit the user"
     (abstracted)
     (benefits)
     ?user <- (object (is-a User))

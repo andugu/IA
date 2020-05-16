@@ -41,7 +41,9 @@
     (max_days ?max_days)
     =>
     (bind ?bonus_exercices (find-all-instances ((?exercice PersonalExercice)) ?exercice:bonus))
+    (printout t "Se han encontrado un total de " (length$ ?bonus_exercices) " ejercicios con recomendacion alta" crlf)
     (bind ?neutral_exercices (find-all-instances ((?exercice PersonalExercice)) (not ?exercice:bonus)))
+    (printout t "Se han encontrado un total de " (length$ ?neutral_exercices) " ejercicios con recomendacion neutral" crlf)
     (loop-for-count (?day 1 ?max_days) do
         (bind ?duration 0)
         (bind ?seen (create$ ))
