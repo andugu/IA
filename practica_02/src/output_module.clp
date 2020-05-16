@@ -123,6 +123,7 @@
         )
         (printout t "S'espera una durada de " ?total_time " minuts al programa d'avui" crlf)
         (print_types ?personal_exercices)
+        (print_bodyparts ?personal_exercices)
         (printout t "============================================" crlf)
         (printout t "============================================" crlf)
         (progn$ (?e ?personal_exercices)
