@@ -35,25 +35,11 @@
     (if (eq high ?type) then (printout t "Repetitions: " ?self:repetitions_high crlf))
 )
 
-(defmessage-handler PersonalExercice subclass primary()
-    (send ?self:base_exercice subclass)
-)
-
 (defmessage-handler PersonalExercice bodyparts primary()
     (send ?self:base_exercice get-body_parts)
 )
 
-(defmessage-handler BodyBalance subclass primary()
-    bodybalance
-)
 
-(defmessage-handler WeightLoss subclass primary()
-    weightloss
-)
-
-(defmessage-handler MuscleGrowth subclass primary()
-    musclegrowth
-)
 
 (defmodule output_module
     (import MAIN ?ALL)
@@ -66,7 +52,7 @@
 (deffunction has_type (?type ?exercices)
     (bind ?return FALSE)
     (progn$ (?e ?exercices)
-        (bind ?t (send ?e subclass))
+        (bind ?t (send ?e get-exercice_type))
         (if (eq ?t ?type) then (bind ?return TRUE))
     )
     ?return
