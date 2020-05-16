@@ -41,11 +41,21 @@
     (user_created)
     ?user <- (object (is-a User))
     =>
-    (bind ?min (send ?user get-min_blood_pressure))
-    (bind ?max (send ?user get-max_blood_pressure))
-    ;(bind ?problem (find-instance ((?p Physical)) (eq ?p:instance_name "Obesidad")))
-    ;(bind ?last (+ 1 (length$ (send ?user get-problems))))
-    ;(slot-insert$ ?user problems ?last ?problem)
+    (bind ?min (send ?user get-min_blood_pressure)) ; greater 90
+    (bind ?max (send ?user get-max_blood_pressure)) ; greater 114
+    (if (< 90 ?min) then
+        (printout t "El usuari té la hipertensió" crlf)
+        (bind ?problem (find-instance ((?p Diet)) (eq ?p:instance_name "Hipertension")))
+        (bind ?last (+ 1 (length$ (send ?user get-problems))))
+        (slot-insert$ ?user problems ?last ?problem)
+    else (if (< 114 ?max) then
+        (printout t "El usuari té la hipertensió" crlf)
+        (bind ?problem (find-instance ((?p Diet)) (eq ?p:instance_name "Hipertension")))
+        (bind ?last (+ 1 (length$ (send ?user get-problems))))
+        (slot-insert$ ?user problems ?last ?problem)
+    )
+    )
+    ;
 
 )
 
