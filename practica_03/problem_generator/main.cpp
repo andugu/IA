@@ -7,6 +7,8 @@
 #include <iostream> 
 #include <string>
 
+#include "include/generator.h"
+
 /* Constants definitions */
 const int MIN_ARGS = 2; 
 
@@ -34,6 +36,8 @@ int main(int argc, char* argv[]){
     }  
     
     std::string outFile = argv[1]; 
+
+    Generator gen; 
 
     return 0; 
 }

@@ -4,11 +4,11 @@ FLAGS = -Wall -Wextra
 GCC = g++ $(STD) $(FLAGS)
 OUT = -o generator 
 # Files to compile 
-# INCLUDE = 
  
 MAIN = main.cpp  
-SRC = $(MAIN) 
-FILES = $(SRC)
+SRC = $(MAIN) src/generator.cpp  
+INCLUDE = 
+FILES = $(SRC) include/generator.h 
 
 # Rules 
 all: main 
@@ -16,3 +16,5 @@ all: main
 main:  $(FILES)
 	$(GCC) $(SRC) $(OUT) 
 
+clean:
+	rm generator 
