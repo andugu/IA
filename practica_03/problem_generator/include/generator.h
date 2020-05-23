@@ -14,7 +14,7 @@ class Generator{
         Generator(unsigned int randSeed);
 
 
-        Problem generate(std::string const& domainName);
+        Problem generate(std::string const& domainName, unsigned int nExercices);
 
 
     private:
