@@ -6,9 +6,9 @@ OUT = -o generator
 # Files to compile 
  
 MAIN = main.cpp  
-SRC = $(MAIN) src/generator.cpp  
+SRC = $(MAIN) src/*.cpp
 INCLUDE = 
-FILES = $(SRC) include/generator.h 
+FILES = $(SRC) include/*.h 
 
 # Rules 
 all: main 

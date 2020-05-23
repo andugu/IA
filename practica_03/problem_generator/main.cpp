@@ -1,43 +1,50 @@
 /**
  * Coaching Potato Problem Generator
- * Given a set of parameters this program generates 
- * a problem 
- * 
+ * Given a set of parameters this program generates
+ * a problem
+ *
  * */
-#include <iostream> 
+#include <iostream>
 #include <string>
 
 #include "include/generator.h"
 
 /* Constants definitions */
-const int MIN_ARGS = 2; 
+const int MIN_ARGS = 4;
 
 /**
- * Usage function: 
- *  Displayed when the user supplied 
- *  wrong arguments 
+ * Usage function:
+ *  Displayed when the user supplied
+ *  wrong arguments
  * */
 void usage(){
-    std::cout << std::endl << "Usage: generator arg1 arg2.. " << std::endl; 
-     
-    
+    std::cerr << std::endl;
+    std::cerr << "Usage: generator outFile seed domain " << std::endl;
+    std::cerr << "  outFile: the name of the output file" << std::endl;
+    std::cerr << "  seed: the seed for random generation" << std::endl;
+    std::cerr << "  domain: the name of the PDDL domain" << std::endl;
+    std::cerr << std::endl;
 }
 
 
 /**
  * Main function:
- *  Entry point to the program 
+ *  Entry point to the program
  * */
 int main(int argc, char* argv[]){
-    
+
     if(argc < MIN_ARGS){
         usage();
-        return EXIT_FAILURE; 
-    }  
-    
-    std::string outFile = argv[1]; 
+        return EXIT_FAILURE;
+    }
+    // parameter parsing
+    std::string outFile = argv[1];
+    unsigned int seed = std::stoi(argv[2]);
+    std::string domain = argv[3];
 
-    Generator gen; 
+    Generator gen(seed);
+    auto p = gen.generate(domain);
+    p.write(outFile); 
 
-    return 0; 
+    return 0;
 }
