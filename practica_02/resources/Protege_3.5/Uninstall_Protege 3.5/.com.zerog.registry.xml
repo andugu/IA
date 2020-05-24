@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry install_date="2020-05-14 19:52:14" version="1.1" last_modified="2020-05-14 19:52:17">
+	<products>
+		<product name="Protege 3.5" id="6ea9b719-1ef7-11b2-b33e-99503a9e78c6" version="1.0.0.0" copyright="2009" info_url="" support_url="" location="/Users/andugu/.Protege/Protege_3.5" last_modified="2020-05-14 19:52:15">
+		<![CDATA[]]>
+			<vendor name="Stanford Center for Biomedical Informatics Research" id="994d7f3b-1ec1-11b2-b320-ef29621bcc1c" home_page="http://bmir.stanford.edu/" email="vendetti@stanford.edu"/>
+			<feature short_name="AppFull" name="AppFull" last_modified="2020-05-14 19:52:15">
+			<![CDATA[This installs the application feature (full, e.g., editors and plug-ins).]]>
+				<component ref_id="6ea9b748-1ef7-11b2-b362-99503a9e78c6" version="1.0.0.0" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5/Uninstall Protege 3.5.app"/>
+				<component ref_id="6ea9b747-1ef7-11b2-b360-99503a9e78c6" version="1.0.0.0" location="/Users/andugu/.Protege/Protege_3.5/Protege.app"/>
+				<component ref_id="a336a3e4-1ef7-11b2-8cfa-99503a9e78c6" version="1.0.0.0" location=""/>
+			</feature>
+		</product>
+	</products>
+	<components>
+		<component id="a336a3e4-1ef7-11b2-8cfa-99503a9e78c6" version="1.0.0.0" name="AG- AppFull" location="">
+			<resource keyfile="false" name="plugins" location="/Users/andugu/.Protege/Protege_3.5/plugins" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="org.protege.owl.axiome" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="axiome.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/axiome.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collections-generic-4.01.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/collections-generic-4.01.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="colt-1.2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/colt-1.2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="concurrent-1.3.4.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/concurrent-1.3.4.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-3d-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-3d-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-3d-demos-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-3d-demos-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-algorithms-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-algorithms-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-api-2.0-tests.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-api-2.0-tests.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-api-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-api-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-graph-impl-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-graph-impl-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-io-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-io-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-jai-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-jai-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-jai-samples-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-jai-samples-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-samples-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-samples-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jung-visualization-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-visualization-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="stax-api-1.0.1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/stax-api-1.0.1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swingx-1.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/swingx-1.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wstx-asl-3.2.6.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/wstx-asl-3.2.6.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.bmir.protegex.bp.ref" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_bp_import.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/about_bp_import.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="about_bp_ref.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/about_bp_ref.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bioportal-services-lib.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/bioportal-services-lib.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bioportalReference.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/bioportalReference.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="glazedlists_java15-1.9.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/glazedlists_java15-1.9.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xpp3_min-1.1.4c.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/xpp3_min-1.1.4c.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xstream-1.3.1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/xstream-1.3.1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.changeanalysis" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ca.uvic.cs.chisel.cajun.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/ca.uvic.cs.chisel.cajun.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="change-analysis.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/change-analysis.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jcalendar-1.3.3.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/jcalendar-1.3.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jcommon-1.0.16.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/jcommon-1.0.16.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jfreechart-1.0.13.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/jfreechart-1.0.13.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="layouts.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/layouts.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.draw2d_3.2.100.v20070522.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/org.eclipse.draw2d_3.2.100.v20070522.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="piccolo.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/piccolo.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="piccolox.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/piccolox.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.changes" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="change-management.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/change-management.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="doc" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/doc" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ChangesDoc.doc" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/doc/ChangesDoc.doc" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="icu4j.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/icu4j.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="projects" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="changes.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects/changes.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="changes.rdf" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects/changes.rdf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="changes.rdfs" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects/changes.rdfs" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.chatPlugin" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.chatPlugin" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="chat.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.chatPlugin/chat.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.chatPlugin/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.datamaster" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about-datamaster.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/about-datamaster.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="datamaster.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/datamaster.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mysql-connector-COPYING" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/mysql-connector-COPYING" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mysql-connector-java-5.1.6-bin.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/mysql-connector-java-5.1.6-bin.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mysql-connector-README.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/mysql-connector-README.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.metaanalysis" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.metaanalysis" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.metaanalysis/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.ezpal" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="doc" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="template.pins" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc/template.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="template.pont" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc/template.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="template.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc/template.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ezpal-tab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/ezpal-tab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/readme" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.facets_tab" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.facets_tab" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="facet-constraints-tab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.facets_tab/facet-constraints-tab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.instance_tree" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.instance_tree" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="instance-tree.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.instance_tree/instance-tree.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ca.uvic.cs.chisel.jambalaya" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="bsf.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/bsf.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="doc" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="gradient.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/gradient.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jambalaya_about.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/jambalaya_about.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jambalaya_docs.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/jambalaya_docs.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="quick_views.png" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/quick_views.png" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="shrimplogo.png" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/shrimplogo.png" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="gxl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/gxl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jambalaya.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/jambalaya.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="js.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/js.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="layouts.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/layouts.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="libsea.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/libsea.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="license.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/license.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="piccolo.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/piccolo.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="piccolox.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/piccolox.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="treemap.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/treemap.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="se.liu.ida.JessTab" location="/Users/andugu/.Protege/Protege_3.5/plugins/se.liu.ida.JessTab" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="JessTab17.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/se.liu.ida.JessTab/JessTab17.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/se.liu.ida.JessTab/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.query.lucene" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="lucene-core.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/lucene-core.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="luceneQueryPlugin.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/luceneQueryPlugin.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="phonetix.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/phonetix.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="versions.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/versions.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xstream.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/xstream.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.protege.owl.mappingmaster" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jaxen-1.1.3.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/jaxen-1.1.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jdom.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/jdom.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jxl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/jxl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MappingMaster.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/MappingMaster.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ssm.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/ssm.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="stax-api-1.0.1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/stax-api-1.0.1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xml-apis.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/xml-apis.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="meta-analysis.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.metaanalysis/meta-analysis.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="dfki.protege.ontoviz" location="/Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="build.xml" location="/Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/build.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="grappa1_2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/grappa1_2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ontoviz-tab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/ontoviz-tab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/protege.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/readme.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.debugger" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.debugger" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="OWLDebugger.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.debugger/OWLDebugger.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.debugger/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.owlindividualstab" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlindividualstab" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="OWLDLIndividualsTab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlindividualstab/OWLDLIndividualsTab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlindividualstab/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="jakarta-oro-2.0.8.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor/jakarta-oro-2.0.8.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ManchesterOWLSyntaxEditor.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor/ManchesterOWLSyntaxEditor.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.owldoc" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="AbstractSyntax.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/AbstractSyntax.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="languages" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Labels-cn.xml" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages/Labels-cn.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Labels-es.xml" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages/Labels-es.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Labels-fi.xml" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages/Labels-fi.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="OWLDoc.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/OWLDoc.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.owlviz" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="batik-awt-util.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-awt-util.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-dom.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-dom.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-ext.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-ext.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-extension.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-extension.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-svg-dom.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-svg-dom.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-svggen.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-svggen.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-util.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-util.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="batik-xml.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-xml.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="OWLViz.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/OWLViz.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.pal_tabs" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_pal_tabs.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/about_pal_tabs.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="antlr.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/antlr.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="examples" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="DatesAndTimes" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="DatesAndTimes.pins" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes/DatesAndTimes.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DatesAndTimes.pont" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes/DatesAndTimes.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DatesAndTimes.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes/DatesAndTimes.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pal_query" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="pal_query.pins" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query/pal_query.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pal_query.pont" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query/pal_query.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pal_query.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query/pal_query.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Worldhistory" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="DatesAndTimes.pins" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/DatesAndTimes.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DatesAndTimes.pont" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/DatesAndTimes.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="DatesAndTimes.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/DatesAndTimes.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Worldhistory.pins" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/Worldhistory.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Worldhistory.pont" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/Worldhistory.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Worldhistory.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/Worldhistory.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pal.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/pal.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.prompt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_prompt.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/about_prompt.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="doc" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="activate_prompt.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/activate_prompt.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="compare_mode.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/compare_mode.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="configure_prompt.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/configure_prompt.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="conflicts_tab.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/conflicts_tab.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="create_op_dialog.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/create_op_dialog.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="creating.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/creating.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edit_dialog.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/edit_dialog.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edit_operation.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/edit_operation.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="extract_mode.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/extract_mode.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="images" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Add.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Add.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="BackReferences.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/BackReferences.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="choosename.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/choosename.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="chooserole.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/chooserole.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="compare_mode.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/compare_mode.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="config1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/config1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="config3.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/config3.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="configure1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/configure1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="conflict_tab.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/conflict_tab.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Create.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Create.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="create_op_dialog.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/create_op_dialog.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="creati1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="creati2.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati2.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="creati3.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati3.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="creati4.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati4.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="creating_op_tab.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creating_op_tab.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Delete.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Delete.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="dummy.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/dummy.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="dummy_conflict.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/dummy_conflict.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edit_dialog.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/edit_dialog.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="enable1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/enable1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="enable2.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/enable2.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Find.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Find.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="header_line.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/header_line.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="includ1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/includ1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="includ2.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/includ2.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="initia4.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initia4.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="initial1gif.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initial1gif.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="initial_menu.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initial_menu.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="initial_open.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initial_open.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="instal1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/instal1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Load.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Load.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Local.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Local.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Mapped.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Mapped.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt_configure_box.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/prompt_configure_box.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt_init.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/prompt_init.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt_uninit.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/prompt_uninit.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Remove.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Remove.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="result_window.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/result_window.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="select_class.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/select_class.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="serving_nerd.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/serving_nerd.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Source.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Source.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="source1.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/source1.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="source_bases.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/source_bases.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="suggest_tab.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/suggest_tab.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Up.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Up.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="View.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/View.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="view_sources2.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/view_sources2.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="warning.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/warning.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="image_table.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/image_table.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="index.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/index.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="initialize_prompt.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/initialize_prompt.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="install_prompt.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/install_prompt.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="merge_mode.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/merge_mode.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="move_frames_mode.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/move_frames_mode.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="new_operations.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/new_operations.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="operations.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/operations.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="overview.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/overview.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="perform_operation.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/perform_operation.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt_configure_box.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/prompt_configure_box.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt_menu.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/prompt_menu.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt_tab.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/prompt_tab.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="remove_operation.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/remove_operation.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="remove_suffix.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/remove_suffix.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="resolve_conflict.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/resolve_conflict.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="result_window.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/result_window.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="set_up_prompt.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/set_up_prompt.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="source_bases.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/source_bases.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="suggestions.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/suggestions.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="view_source_bases.htm" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/view_source_bases.htm" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jacl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/jacl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jython.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/jython.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugins" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ca.uvic.cs.cogz" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="cajun.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/cajun.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="cogz.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/cogz.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="docs" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/docs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="install.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/docs/install.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="release_notes.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/docs/release_notes.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="gnujaxp.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/gnujaxp.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="itext-1.4.3.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/itext-1.4.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jcommon-1.0.5.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/jcommon-1.0.5.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jfreechart-1.0.2-experimental.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/jfreechart-1.0.2-experimental.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jfreechart-1.0.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/jfreechart-1.0.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="layouts.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/layouts.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.draw2d_3.2.100.v20070522.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.draw2d_3.2.100.v20070522.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.emf.common_2.4.0.v200806091234.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.emf.common_2.4.0.v200806091234.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.emf.ecore.xmi_2.4.0.v200806091234.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.emf.ecore.xmi_2.4.0.v200806091234.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.emf.ecore_2.4.0.v200806091234.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.emf.ecore_2.4.0.v200806091234.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.eodm.doc_0.9.1.v200710090302.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.doc_0.9.1.v200710090302.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.eodm.editor_0.8.0.v200710090352.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.editor_0.8.0.v200710090352.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.eodm.owl_0.9.1.v200710090302.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.owl_0.9.1.v200710090302.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.eodm.rdf_0.9.1.v200710090302.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.rdf_0.9.1.v200710090302.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.eodm_0.9.1.v200710090302.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm_0.9.1.v200710090302.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="piccolo.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/piccolo.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="piccolox.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/piccolox.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pqviz.common.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/pqviz.common.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="reportstyle.css" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/reportstyle.css" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.promptx.foam" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="align.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/align.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-logging.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/commons-logging.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="config" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="alignmentParametersComplete.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/alignmentParametersComplete.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="alignmentParametersSimple.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/alignmentParametersSimple.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="file_properties_local.xml" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/file_properties_local.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="manifest.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/manifest.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="rules.obj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/rules.obj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="stopwords.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/stopwords.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="tree.obj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/tree.obj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="foam.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/foam.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="googleapi.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/googleapi.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jwnl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/jwnl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="kaon2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/kaon2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="weka.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/weka.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xercesImpl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/xercesImpl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.promptx.mappingDomainPSM" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.mappingDomainPSM" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="mappingDomainPSM.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.mappingDomainPSM/mappingDomainPSM.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.promptx.simpleMappingStorage" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.simpleMappingStorage" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="simpleMappingStorage.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.simpleMappingStorage/simpleMappingStorage.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.promptx.synonyms" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.synonyms" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="synonyms.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.synonyms/synonyms.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.promptx.umls" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="kss-api-5.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls/kss-api-5.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="PromptUMLSPlugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls/PromptUMLSPlugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="umls.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls/umls.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="prompt.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/prompt.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="tcljava.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/tcljava.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="vkbc.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/vkbc.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protege.collab" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_protege_collab.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/about_protege_collab.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jcalendar.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/jcalendar.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege-collab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/protege-collab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.owl.inference.pellet" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="aterm-java-1.6.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/aterm-java-1.6.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-lang-2.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/commons-lang-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-api.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-api.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-apibinding.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-apibinding.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-change.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-change.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-debugging.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-debugging.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-dig1_1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-dig1_1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-functionalparser.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-functionalparser.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-functionalrenderer.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-functionalrenderer.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-impl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-impl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-krssparser.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-krssparser.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-metrics.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-metrics.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-oboparser.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-oboparser.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-owlxmlparser.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-owlxmlparser.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-owlxmlrenderer.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-owlxmlrenderer.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-rdfapi.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-rdfapi.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-rdfxmlparser.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-rdfxmlparser.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-rdfxmlrenderer.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-rdfxmlrenderer.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlapi-util.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-util.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pellet.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/pellet.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege-pellet.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/protege-pellet.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="relaxngDatatype.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/relaxngDatatype.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="versions.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/versions.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xsdlib.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/xsdlib.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protege.script" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_script_console.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/about_script_console.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="antlr-2.7.6.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/antlr-2.7.6.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="asm-2.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="asm-analysis-2.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-analysis-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="asm-tree-2.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-tree-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="asm-util-2.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-util-2.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bsf.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/bsf.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bsfperl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/bsfperl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="bsh.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/bsh.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="doap.rdf" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/doap.rdf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="groovy-1.5.6.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/groovy-1.5.6.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jarVersions.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/jarVersions.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jruby.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/jruby.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jython.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/jython.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ProtegeScript.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/ProtegeScript.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/readme" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protege.stringsearch" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="doc" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/doc" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_string_search_tab.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/doc/about_string_search_tab.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/readme" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="string-search-tab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/string-search-tab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.iam.soton.akt.tgviztab" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TGVizTab-v1.4-b2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab/TGVizTab-v1.4-b2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="TG_v1.4.1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab/TG_v1.4.1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.protege.wizard" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="BasicWizardsLibrary.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard/BasicWizardsLibrary.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="uk.ac.man.cs.mig.coode.protege.wizard.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="meta.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl/meta.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="OWLWizards.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl/OWLWizards.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.xml_tab" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_xml_tab.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab/about_xml_tab.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xml-tab.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab/xml-tab.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="6ea9b748-1ef7-11b2-b362-99503a9e78c6" version="1.0.0.0" name="InstallAnywhere Uninstall Component" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5/Uninstall Protege 3.5.app" vendor="Stanford Center for Biomedical Informatics Research">
+			<resource keyfile="false" name="Protege_3.5_Install_05_14_2020_19_52_14.log" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5/Logs/Protege_3.5_Install_05_14_2020_19_52_14.log" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Protege_3.5" location="/Users/andugu/.Protege/Protege_3.5" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Uninstall_Protege 3.5" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Logs" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5/Logs" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[true]]>
+			</resource>
+			<resource keyfile="false" name="regid.2013-04.edu.stanford.protege_c4292884-1f07-11b2-bffa-ec480a7e09a1.swidtag" location="/Users/andugu/.Protege/Protege_3.5/regid.2013-04.edu.stanford.protege_c4292884-1f07-11b2-bffa-ec480a7e09a1.swidtag" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name=".com.zerog.registry.xml" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5/.com.zerog.registry.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+		<component id="6ea9b747-1ef7-11b2-b360-99503a9e78c6" version="1.0.0.0" name="Common" location="/Users/andugu/.Protege/Protege_3.5/Protege.app" vendor="Stanford Center for Biomedical Informatics Research">
+			<resource keyfile="false" name="Uninstall_Protege 3.5" location="/Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="protege.jar" location="/Users/andugu/.Protege/Protege_3.5/protege.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="looks.jar" location="/Users/andugu/.Protege/Protege_3.5/looks.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="unicode_panel.jar" location="/Users/andugu/.Protege/Protege_3.5/unicode_panel.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugins" location="/Users/andugu/.Protege/Protege_3.5/plugins" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="abox.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/abox.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="absolute.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/absolute.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="antlr-2.7.5.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/antlr-2.7.5.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="antlr-runtime-3.3.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/antlr-runtime-3.3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="arq-extra.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/arq-extra.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="arq.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/arq.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="assert.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/assert.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="axis.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/axis.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-discovery-0.4.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/commons-discovery-0.4.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-lang-2.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/commons-lang-2.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="commons-logging-1.1.1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/commons-logging-1.1.1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="concurrent.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/concurrent.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ddm.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/ddm.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="doap.rdf" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/doap.rdf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="drools-compiler-5.4.0-SNAPSHOT.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/drools-compiler-5.4.0-SNAPSHOT.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="drools-core-5.4.0-SNAPSHOT.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/drools-core-5.4.0-SNAPSHOT.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edtftpj-1.5.2.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/edtftpj-1.5.2.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ekitspell.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/ekitspell.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="forms.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/forms.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="icu4j_3.4.4.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/icu4j_3.4.4.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="implicit-imports.repository" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/implicit-imports.repository" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="iri.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/iri.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jcalendar.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jcalendar.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jdom.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jdom.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jena-dig.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jena-dig.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jena.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jena.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="jep-2.4.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jep-2.4.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="json.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/json.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="junit.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/junit.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="kazuki.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/kazuki.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="knowledge-api-5.4.0-SNAPSHOT.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/knowledge-api-5.4.0-SNAPSHOT.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="knowledge-internal-api-5.4.0-SNAPSHOT.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/knowledge-internal-api-5.4.0-SNAPSHOT.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="log4j-1.2.12.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/log4j-1.2.12.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="mvel2-2.1.0.drools8.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/mvel2-2.1.0.drools8.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="org.eclipse.jdt.core_3.7.0.v_B61.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/org.eclipse.jdt.core_3.7.0.v_B61.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="orphanNodesAlg.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/orphanNodesAlg.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owl-portability-p3.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/owl-portability-p3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owl-portability.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/owl-portability.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="OWLProfiles.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/OWLProfiles.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="OWLProfiles.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/OWLProfiles.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="owlsyntax.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/owlsyntax.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege-owl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protege-owl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege-system.forms" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protege-system.forms" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protege.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protegeForms.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protegeForms.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="query.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/query.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="rdfb.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/rdfb.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slf4j-api-1.5.8.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/slf4j-api-1.5.8.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slf4j-log4j12-1.5.8.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/slf4j-log4j12-1.5.8.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sqwrl.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/sqwrl.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ss.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/ss.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="stax-api-1.0.1.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/stax-api-1.0.1.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swingx-1.0.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swingx-1.0.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrl-api.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-api.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrl-drools-bridge.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-drools-bridge.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrl-jess-bridge.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-jess-bridge.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrl-tab-p3.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-tab-p3.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrl.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrla.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrla.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrla.pprj" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrla.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrlb.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrlb.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrli.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrli.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrlm.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrlm.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="swrlx.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrlx.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SWRLXML.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/SWRLXML.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="tbox.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/tbox.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="temporal.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/temporal.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="versions.txt" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/versions.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wstx-asl-3.2.9.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/wstx-asl-3.2.9.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xercesImpl.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/xercesImpl.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xml-apis.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/xml-apis.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xsp.owl" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/xsp.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.rdf_backend" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="about_rdf_backend.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/about_rdf_backend.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="rdf-api.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/rdf-api.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="rdf-backend.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/rdf-backend.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/readme" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="xerces.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/xerces.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="edu.stanford.smi.protegex.standard_extensions" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="html_export" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="footer.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/footer.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="header.html" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/header.html" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="htmlexport.css" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/htmlexport.css" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="htmlexport.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/htmlexport.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="HTMLExportConfigurations.xml" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/HTMLExportConfigurations.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="images" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="class.abstract.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.abstract.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="class.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="class.metaclass.abstract.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.metaclass.abstract.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="class.metaclass.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.metaclass.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="facet.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/facet.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="instance.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/instance.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="ProtegeLogo.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/ProtegeLogo.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slot.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slot.inherited.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.inherited.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slot.inherited.overridden.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.inherited.overridden.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="slot.overridden.gif" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.overridden.gif" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JGo.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/JGo.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="JGoLayout.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/JGoLayout.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="plugin.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/plugin.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="standard-extensions.jar" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/standard-extensions.jar" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="standard_extensions_text.properties" location="/Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/standard_extensions_text.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="examples" location="/Users/andugu/.Protege/Protege_3.5/examples" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="collaborativeNewspaper" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="annotation_collaborativeNewspaper.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/annotation_collaborativeNewspaper.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="annotation_collaborativeNewspaper.rdf" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/annotation_collaborativeNewspaper.rdf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="annotation_collaborativeNewspaper.rdfs" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/annotation_collaborativeNewspaper.rdfs" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collaborativeNewspaper.pins" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/collaborativeNewspaper.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collaborativeNewspaper.pont" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/collaborativeNewspaper.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collaborativeNewspaper.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/collaborativeNewspaper.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collaborativePizza" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="annotation_collaborativePizza.owl.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/annotation_collaborativePizza.owl.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="annotation_collaborativePizza.owl.rdf" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/annotation_collaborativePizza.owl.rdf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="annotation_collaborativePizza.owl.rdfs" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/annotation_collaborativePizza.owl.rdfs" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collaborativePizza.owl" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/collaborativePizza.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="collaborativePizza.owl.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/collaborativePizza.owl.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="newspaper" location="/Users/andugu/.Protege/Protege_3.5/examples/newspaper" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="newspaper.pins" location="/Users/andugu/.Protege/Protege_3.5/examples/newspaper/newspaper.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="newspaper.pont" location="/Users/andugu/.Protege/Protege_3.5/examples/newspaper/newspaper.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="newspaper.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/newspaper/newspaper.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pizza" location="/Users/andugu/.Protege/Protege_3.5/examples/pizza" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="pizza.owl" location="/Users/andugu/.Protege/Protege_3.5/examples/pizza/pizza.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="pizza.owl.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/pizza/pizza.owl.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="rdf" location="/Users/andugu/.Protege/Protege_3.5/examples/rdf" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="MotorVehicle.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/rdf/MotorVehicle.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MotorVehicle.rdf" location="/Users/andugu/.Protege/Protege_3.5/examples/rdf/MotorVehicle.rdf" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="MotorVehicle.rdfs" location="/Users/andugu/.Protege/Protege_3.5/examples/rdf/MotorVehicle.rdfs" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="server" location="/Users/andugu/.Protege/Protege_3.5/examples/server" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="metaproject.pins" location="/Users/andugu/.Protege/Protege_3.5/examples/server/metaproject.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="metaproject.pont" location="/Users/andugu/.Protege/Protege_3.5/examples/server/metaproject.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="metaproject.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/server/metaproject.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="sqwrl" location="/Users/andugu/.Protege/Protege_3.5/examples/sqwrl" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="SQWRLCollectionExamples.owl" location="/Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCollectionExamples.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SQWRLCollectionExamples.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCollectionExamples.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SQWRLCoreExamples.owl" location="/Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCoreExamples.owl" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="SQWRLCoreExamples.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCoreExamples.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wines" location="/Users/andugu/.Protege/Protege_3.5/examples/wines" type="directory" uninstall="true" rollbackEnabledCancel="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="wines.pins" location="/Users/andugu/.Protege/Protege_3.5/examples/wines/wines.pins" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wines.pont" location="/Users/andugu/.Protege/Protege_3.5/examples/wines/wines.pont" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="wines.pprj" location="/Users/andugu/.Protege/Protege_3.5/examples/wines/wines.pprj" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="Protege.ico" location="/Users/andugu/.Protege/Protege_3.5/Protege.ico" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="log4j.xml" location="/Users/andugu/.Protege/Protege_3.5/log4j.xml" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="logging.properties" location="/Users/andugu/.Protege/Protege_3.5/logging.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="licensing.txt" location="/Users/andugu/.Protege/Protege_3.5/licensing.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="readme.txt" location="/Users/andugu/.Protege/Protege_3.5/readme.txt" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege.properties" location="/Users/andugu/.Protege/Protege_3.5/protege.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="protege_text.properties" location="/Users/andugu/.Protege/Protege_3.5/protege_text.properties" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="run_protege_server.sh" location="/Users/andugu/.Protege/Protege_3.5/run_protege_server.sh" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="run_protege.sh" location="/Users/andugu/.Protege/Protege_3.5/run_protege.sh" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="run_protege.applescript" location="/Users/andugu/.Protege/Protege_3.5/run_protege.applescript" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+			<resource keyfile="false" name="shutdown_protege_server.sh" location="/Users/andugu/.Protege/Protege_3.5/shutdown_protege_server.sh" type="file" uninstall="true" rollbackEnabledCancel="true"/>
+		</component>
+	</components>
+</registry>

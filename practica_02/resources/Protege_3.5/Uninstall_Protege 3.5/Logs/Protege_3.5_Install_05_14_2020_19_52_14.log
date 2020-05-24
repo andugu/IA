@@ -1,0 +1,1573 @@
+__________________________________________________________________________
+
+Thu May 14 19:52:28 GMT+01:00 2020
+
+Free Memory: 71438 kB
+Total Memory: 83008 kB
+
+java.class.path:
+    install_protege_3.5.jar
+
+ZGUtil.CLASS_PATH:
+    install_protege_3.5.jar
+
+sun.boot.class.path:
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar
+    /System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+
+java.ext.dirs:
+    /Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext
+
+java.version                  == 1.6.0_65 (Java 1)
+mrj.version                   == 1070.1.6.0_65-468
+java.vm.name                  == Java HotSpot(TM) 64-Bit Server VM
+java.vm.vendor                == Apple Inc.
+java.vm.version               == 20.65-b04-468
+java.vm.specification.name    == Java Virtual Machine Specification
+java.vm.specification.vendor  == Sun Microsystems Inc.
+java.vm.specification.version == 1.0
+java.specification.name       == Java Platform API Specification
+java.specification.vendor     == Sun Microsystems Inc.
+java.specification.version    == 1.6
+java.vendor                   == Apple Inc.
+java.vendor.url               == http://www.apple.com/
+java.class.version            == 50.0
+java.compiler                 == null
+java.home                     == /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+java.io.tmpdir                == /var/folders/gr/ss3tjk9j6d96r5wb6_4lh5340000gn/T/
+os.name                       == Mac OS X
+os.arch                       == x86_64
+os.version                    == 10.15.4
+path.separator                == :
+file.separator                == /
+file.encoding                 == MacRoman
+user.name                     == andugu
+user.home                     == /Users/andugu
+user.dir                      == /Users/andugu/Downloads
+user.language                 == es
+user.region                   == null
+__________________________________________________________________________
+
+Installed Feature(s) AppFull of Protege 3.5
+
+Install Begin: MAY 14, 2020 7:50:29 PM GMT+01:00
+Install End: MAY 14, 2020 7:52:17 PM GMT+01:00
+
+Installed by InstallAnywhere 14.0 Enterprise Build 4390
+
+
+User Interactions
+-----------------
+
+
+#Choose Install Set
+#------------------
+CHOSEN_FEATURE_LIST=AppFull
+CHOSEN_INSTALL_FEATURE_LIST=AppFull
+CHOSEN_INSTALL_SET=Typical
+
+#Choose Install Folder
+#---------------------
+USER_INSTALL_DIR=/Users/andugu/.Protege/Protege_3.5
+
+#Choose Alias Folder
+#-------------------
+USER_SHORTCUTS=Do Not Install
+
+#Install
+#-------
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/protege.jar=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/looks.jar=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/unicode_panel.jar=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/Protege.ico=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/log4j.xml=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/logging.properties=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/licensing.txt=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/readme.txt=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/protege.properties=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/protege_text.properties=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/run_protege_server.sh=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/run_protege.sh=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/run_protege.applescript=Yes
+-fileOverwrite_/Users/andugu/.Protege/Protege_3.5/shutdown_protege_server.sh=Yes
+
+Summary
+-------
+
+Installation: Successful null
+
+483 Successes
+1 Warnings
+0 NonFatalErrors
+0 FatalErrors
+
+Action Notes:
+
+None
+
+Install Log Detail:
+
+Check Disk Space:         /Users/andugu/Protege_3.5
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 109.226.850; Free Disk Space: -1
+
+Check Disk Space:         /Users/andugu/Protege_3.5
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 109.226.850; Free Disk Space: -1
+
+Check Disk Space:         /Users/andugu/.Protege/Protege_3.5
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 109.226.850; Free Disk Space: -1
+
+Check Disk Space:         /Users/andugu/.Protege/Protege_3.5
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 109.226.850; Free Disk Space: -1
+
+Install Directory:        /Users/andugu/.Protege/Protege_3.5/
+                          Status: SUCCESSFUL
+
+Install Directory:        /Users/andugu/.Protege/Protege_3.5/Uninstall_Protege 3.5/
+                          Status: SUCCESSFUL
+
+Install Uninstaller:      Protege 3.5(Install All Uninstaller Components)
+                          Status: SUCCESSFUL
+
+Install Uninstaller:      Protege 3.5(Install All Uninstaller Components)
+                          Status: SUCCESSFUL
+
+Create LaunchAnywhere:    Protege.app (Install All LaunchAnywhere Java Executable Components)
+                          Status: SUCCESSFUL
+
+Create LaunchAnywhere:    Protege.app (Install All LaunchAnywhere Java Executable Components)
+                          Status: WARNING
+                          Additional Notes: WARNING - Platform Not Supported for Pure Java installer: LaunchAnywhere executables not installed
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/protege.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/looks.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/unicode_panel.jar
+                          Status: SUCCESSFUL
+
+Install Directory:        /Users/andugu/.Protege/Protege_3.5/plugins/
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/axiome.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/collections-generic-4.01.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/colt-1.2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/concurrent-1.3.4.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-3d-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-3d-demos-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-algorithms-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-api-2.0-tests.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-api-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-graph-impl-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-io-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-jai-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-jai-samples-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-samples-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/jung-visualization-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/stax-api-1.0.1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/swingx-1.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.axiome/wstx-asl-3.2.6.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/about_bp_import.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/about_bp_ref.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/bioportal-services-lib.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/bioportalReference.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/glazedlists_java15-1.9.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/xpp3_min-1.1.4c.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.bmir.protegex.bp.ref/xstream-1.3.1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/ca.uvic.cs.chisel.cajun.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/change-analysis.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/jcalendar-1.3.3.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/jcommon-1.0.16.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/jfreechart-1.0.13.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/layouts.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/org.eclipse.draw2d_3.2.100.v20070522.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/piccolo.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/piccolox.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changeanalysis/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/change-management.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/doc/ChangesDoc.doc
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/icu4j.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects/changes.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects/changes.rdf
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.changes/projects/changes.rdfs
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.chatPlugin/chat.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.chatPlugin/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/about-datamaster.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/datamaster.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/mysql-connector-COPYING
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/mysql-connector-java-5.1.6-bin.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/mysql-connector-README.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.datamaster/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.metaanalysis/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc/template.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc/template.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/doc/template.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/ezpal-tab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.ezpal/readme
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.facets_tab/facet-constraints-tab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.instance_tree/instance-tree.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/bsf.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/gradient.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/jambalaya_about.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/jambalaya_docs.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/quick_views.png
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/doc/shrimplogo.png
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/gxl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/jambalaya.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/js.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/layouts.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/libsea.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/license.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/piccolo.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/piccolox.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/ca.uvic.cs.chisel.jambalaya/treemap.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/se.liu.ida.JessTab/JessTab17.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/se.liu.ida.JessTab/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/lucene-core.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/luceneQueryPlugin.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/phonetix.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/versions.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.query.lucene/xstream.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/jaxen-1.1.3.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/jdom.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/jxl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/MappingMaster.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/ssm.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/stax-api-1.0.1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/org.protege.owl.mappingmaster/xml-apis.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.metaanalysis/meta-analysis.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/build.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/grappa1_2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/ontoviz-tab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/protege.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/dfki.protege.ontoviz/readme.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/abox.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/absolute.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/antlr-2.7.5.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/antlr-runtime-3.3.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/arq-extra.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/arq.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/assert.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/axis.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/commons-discovery-0.4.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/commons-lang-2.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/commons-logging-1.1.1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/concurrent.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/ddm.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/doap.rdf
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/drools-compiler-5.4.0-SNAPSHOT.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/drools-core-5.4.0-SNAPSHOT.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/edtftpj-1.5.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/ekitspell.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/forms.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/icu4j_3.4.4.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/implicit-imports.repository
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/iri.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jcalendar.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jdom.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jena-dig.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jena.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/jep-2.4.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/json.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/junit.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/kazuki.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/knowledge-api-5.4.0-SNAPSHOT.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/knowledge-internal-api-5.4.0-SNAPSHOT.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/log4j-1.2.12.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/mvel2-2.1.0.drools8.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/org.eclipse.jdt.core_3.7.0.v_B61.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/orphanNodesAlg.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/owl-portability-p3.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/owl-portability.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/OWLProfiles.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/OWLProfiles.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/owlsyntax.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protege-owl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protege-system.forms
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protege.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/protegeForms.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/query.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/rdfb.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/slf4j-api-1.5.8.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/slf4j-log4j12-1.5.8.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/sqwrl.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/ss.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/stax-api-1.0.1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swingx-1.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-api.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-drools-bridge.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-jess-bridge.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl-tab-p3.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrl.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrla.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrla.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrlb.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrli.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrlm.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/swrlx.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/SWRLXML.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/tbox.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/temporal.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/versions.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/wstx-asl-3.2.9.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/xercesImpl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/xml-apis.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl/xsp.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.debugger/OWLDebugger.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.debugger/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlindividualstab/OWLDLIndividualsTab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlindividualstab/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor/jakarta-oro-2.0.8.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor/ManchesterOWLSyntaxEditor.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.manchesterowlsyntaxeditor/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/AbstractSyntax.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages/Labels-cn.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages/Labels-es.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/languages/Labels-fi.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/OWLDoc.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owldoc/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-awt-util.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-dom.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-ext.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-extension.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-svg-dom.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-svggen.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-util.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/batik-xml.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/OWLViz.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.owlviz/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/about_pal_tabs.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/antlr.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes/DatesAndTimes.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes/DatesAndTimes.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/DatesAndTimes/DatesAndTimes.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query/pal_query.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query/pal_query.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/pal_query/pal_query.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/DatesAndTimes.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/DatesAndTimes.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/DatesAndTimes.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/Worldhistory.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/Worldhistory.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/examples/Worldhistory/Worldhistory.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/pal.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.pal_tabs/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/about_prompt.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/activate_prompt.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/compare_mode.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/configure_prompt.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/conflicts_tab.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/create_op_dialog.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/creating.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/edit_dialog.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/edit_operation.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/extract_mode.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Add.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/BackReferences.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/choosename.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/chooserole.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/compare_mode.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/config1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/config3.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/configure1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/conflict_tab.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Create.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/create_op_dialog.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati2.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati3.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creati4.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/creating_op_tab.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Delete.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/dummy.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/dummy_conflict.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/edit_dialog.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/enable1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/enable2.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Find.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/header_line.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/includ1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/includ2.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initia4.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initial1gif.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initial_menu.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/initial_open.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/instal1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Load.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Local.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Mapped.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/prompt_configure_box.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/prompt_init.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/prompt_uninit.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Remove.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/result_window.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/select_class.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/serving_nerd.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Source.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/source1.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/source_bases.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/suggest_tab.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/Up.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/View.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/view_sources2.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/images/warning.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/image_table.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/index.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/initialize_prompt.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/install_prompt.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/merge_mode.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/move_frames_mode.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/new_operations.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/operations.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/overview.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/perform_operation.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/prompt_configure_box.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/prompt_menu.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/prompt_tab.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/remove_operation.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/remove_suffix.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/resolve_conflict.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/result_window.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/set_up_prompt.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/source_bases.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/suggestions.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/doc/view_source_bases.htm
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/jacl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/jython.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/cajun.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/cogz.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/docs/install.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/docs/release_notes.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/gnujaxp.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/itext-1.4.3.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/jcommon-1.0.5.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/jfreechart-1.0.2-experimental.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/jfreechart-1.0.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/layouts.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.draw2d_3.2.100.v20070522.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.emf.common_2.4.0.v200806091234.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.emf.ecore.xmi_2.4.0.v200806091234.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.emf.ecore_2.4.0.v200806091234.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.doc_0.9.1.v200710090302.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.editor_0.8.0.v200710090352.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.owl_0.9.1.v200710090302.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm.rdf_0.9.1.v200710090302.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/org.eclipse.eodm_0.9.1.v200710090302.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/piccolo.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/piccolox.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/pqviz.common.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/ca.uvic.cs.cogz/reportstyle.css
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/align.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/commons-logging.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/alignmentParametersComplete.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/alignmentParametersSimple.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/file_properties_local.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/manifest.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/rules.obj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/stopwords.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/config/tree.obj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/foam.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/googleapi.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/jwnl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/kaon2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/weka.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.foam/xercesImpl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.mappingDomainPSM/mappingDomainPSM.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.simpleMappingStorage/simpleMappingStorage.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.synonyms/synonyms.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls/kss-api-5.0.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls/PromptUMLSPlugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/plugins/edu.stanford.smi.protegex.promptx.umls/umls.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/prompt.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/tcljava.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.prompt/vkbc.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/about_protege_collab.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/jcalendar.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.collab/protege-collab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/aterm-java-1.6.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/commons-lang-2.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-api.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-apibinding.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-change.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-debugging.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-dig1_1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-functionalparser.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-functionalrenderer.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-impl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-krssparser.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-metrics.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-oboparser.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-owlxmlparser.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-owlxmlrenderer.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-rdfapi.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-rdfxmlparser.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-rdfxmlrenderer.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/owlapi-util.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/pellet.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/protege-pellet.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/relaxngDatatype.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/versions.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.owl.inference.pellet/xsdlib.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/about_script_console.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/antlr-2.7.6.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-2.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-analysis-2.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-tree-2.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/asm-util-2.2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/bsf.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/bsfperl.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/bsh.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/doap.rdf
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/groovy-1.5.6.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/jarVersions.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/jruby.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/jython.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/ProtegeScript.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.script/readme
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/about_rdf_backend.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/rdf-api.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/rdf-backend.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/readme
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.rdf_backend/xerces.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/footer.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/header.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/htmlexport.css
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/htmlexport.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/HTMLExportConfigurations.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.abstract.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.metaclass.abstract.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/class.metaclass.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/facet.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/instance.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/ProtegeLogo.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.inherited.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.inherited.overridden.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/html_export/images/slot.overridden.gif
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/JGo.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/JGoLayout.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/standard-extensions.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.standard_extensions/standard_extensions_text.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/doc/about_string_search_tab.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/readme
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protege.stringsearch/string-search-tab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab/TGVizTab-v1.4-b2.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.iam.soton.akt.tgviztab/TG_v1.4.1.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard/BasicWizardsLibrary.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl/meta.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl/OWLWizards.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/uk.ac.man.cs.mig.coode.protege.wizard.owl/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab/about_xml_tab.html
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab/plugin.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/plugins/edu.stanford.smi.protegex.xml_tab/xml-tab.jar
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/annotation_collaborativeNewspaper.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/annotation_collaborativeNewspaper.rdf
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/annotation_collaborativeNewspaper.rdfs
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/collaborativeNewspaper.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/collaborativeNewspaper.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativeNewspaper/collaborativeNewspaper.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/annotation_collaborativePizza.owl.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/annotation_collaborativePizza.owl.rdf
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/annotation_collaborativePizza.owl.rdfs
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/collaborativePizza.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/collaborativePizza/collaborativePizza.owl.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/newspaper/newspaper.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/newspaper/newspaper.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/newspaper/newspaper.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/pizza/pizza.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/pizza/pizza.owl.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/rdf/MotorVehicle.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/rdf/MotorVehicle.rdf
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/rdf/MotorVehicle.rdfs
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/server/metaproject.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/server/metaproject.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/server/metaproject.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCollectionExamples.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCollectionExamples.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCoreExamples.owl
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/sqwrl/SQWRLCoreExamples.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/wines/wines.pins
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/wines/wines.pont
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/examples/wines/wines.pprj
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/Protege.ico
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/log4j.xml
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/logging.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/licensing.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/readme.txt
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/protege.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/protege_text.properties
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/run_protege_server.sh
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/run_protege.sh
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/run_protege.applescript
+                          Status: SUCCESSFUL
+
+Install File:             /Users/andugu/.Protege/Protege_3.5/shutdown_protege_server.sh
+                          Status: SUCCESSFUL
+
+
