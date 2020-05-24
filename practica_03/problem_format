@@ -1,0 +1,48 @@
+##################################
+      PROBLEM FORMAT
+##################################
+
+
+#################
+      DOMAIN
+#################
+CoachingPotato
+
+#################
+      OBJECTS
+#################
+e1, e2, e3...en - Exercice
+
+#################
+      INIT
+#################
+(precursor e1 e2) ; e1 es precursor de e2
+(preparador e4 e5); e4 es preparador de e5
+(nivel 1 e1) ; 1 es el nivel de e1
+(nivel 3 e5); 3 es el nivel de e5
+(nivel_objectivo 4 e3); 4 es el nivel al que se quiere llegar
+
+
+#################
+      GOAL
+#################
+ (forall (?e - Exercice) (nivel ?nivel ?e) (nivel_objectivo ?obj ?e) (eq ?nivel ?nivel_objectivo))
+
+##################################
+      DOMAIN FORMAT
+##################################
+
+#################
+  REQUIREMENTS
+#################
+Unknwon
+
+#################
+  PREDICATES
+#################
+
+
+#################
+  ACTIONS
+#################
+(:action AssignExercice)
