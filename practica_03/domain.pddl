@@ -2,7 +2,7 @@
 
 (define (domain CoachingPotatoPlanner)
     (:requirements :strips :adl :equality :typing)
-    (:types ejercicio nivel dia - object)
+    (:types ejercicio nivel dia)
     (:predicates (preparador ?x - ejercicio ?y - ejercicio) ; x es preparador de y
     			 (dificultad ?d - nivel ?x - ejercicio) 	; d es la dificultad del ejercicio x
     			 (objetivo ?n - nivel ?x - ejercicio)		; nivel objetivo para el ejercicio x
@@ -12,20 +12,20 @@
     
     (:action realizado
 		:parameters (?e - ejercicio ?n - nivel)
-		:precondition ( and (exists (dificultad ?n ?e) ) 
-							(exists (objetivo ?n ?e) )
+		:precondition (and (dificultad ?n ?e)  
+						   (objetivo ?n ?e)
 					  )
 		:effect (conseguido ?e)    	
     )
 
     (:action asignar
     	:parameters (?e - ejercicio ?d - dia ?n - nivel)
-    	:precondition ( and ( imply ( exists (preparador ?x - ejercicio ?e)  ) ( exists (asig ?x ?d) ) )
-    						( exists (dificultad ?n ?e ) )
-    						( not ( exists (objetivo ?n ?e ) ) )
+    	:precondition (and (imply (preparador ?x ?e) (asig ?x ?d) )
+    						(dificultad ?n ?e)
+    						(not (objetivo ?n ?e ))
     				  )
-    	:effect ( and (not (dificultad ?n ?e) )
-    				  (change (object ?lvl - nivel) (+ ?n 1))
+    	:effect (and (not (dificultad ?n ?e) )
+    				  (change (object ?lvl) (+ ?n 1))
     				  (dificultad ?lvl ?e)
     				  (asig ?e ?d) 
     			)
