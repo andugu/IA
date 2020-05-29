@@ -3,7 +3,7 @@
 (define (problem nivel_basico)
     (:domain CoachingPotatoPlanner)
     (:objects e1 e2 e3 e4 e5 e6 e7 e8 e9 		- ejercicio
-    		  n1 n2 n3 n4 n5 n6 n7 n8 n9 n20 	- nivel
+    		  n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 	- nivel
     		  d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 
     		  d11 d12 d13 d14 d15				- dia
     )

@@ -17,12 +17,12 @@ class Problem{
 
         explicit Problem(std::string const& domainName);
 
-        void addExercice(Exercice& ex); 
+        void addExercice(Exercice& ex);
 
         void write(std::string const& fileName) const;
 
     private:
-
+ 
         std::string writeDomain() const;
         std::string writeObjects() const;
         std::string writeInit() const;

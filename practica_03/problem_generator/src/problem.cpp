@@ -26,7 +26,7 @@ void Problem::write(std::string const& fileName) const{
 
 
 void Problem::addExercice(Exercice& ex){
-    exercices.push_back(ex); 
+    exercices.push_back(ex);
 }
 
 
