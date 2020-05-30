@@ -69,19 +69,20 @@ std::string Problem::writeInit(){
      for(auto& e : exercices){
          e.reset(); // reset iterators
          // add precursors
+         auto id = " e" + std::to_string(e.getID());
 
          while(e.nextPrecursor()){
              auto exercice = e.getPrecursor();
+             auto idP = " e"  + std::to_string(exercice->getID());
+             objects += writeStatement("precursor", idP + id, " ");
          }
          // add preparators
          while(e.nextPreparator()){
              auto exercice = e.getPreparator();
          }
-         auto id = e.getID();
          auto level = "n" + std::to_string(e.getLevel());
-         std::string name = " e" + std::to_string(id);
-         std::string content = " " + level + name;
-         objects += writeStatement("dificultad", content, ";; exercice " + name + "\n");
+         std::string content = " " + level + id;
+         objects += writeStatement("dificultad", content, ";; exercice " + id + "\n");
 
      }
      objects += "\n";

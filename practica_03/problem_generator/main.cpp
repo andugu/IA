@@ -47,6 +47,15 @@ int main(int argc, char* argv[]){
     unsigned int nExercices = std::stoi(argv[4]);
     unsigned int maxPrecursors = std::stoi(argv[5]);
     unsigned int maxPredecesors = std::stoi(argv[6]);
+    // check input
+    if(maxPrecursors >= nExercices){
+        std::cerr << "Max precursors cannot be greater than the number of exercices" << std::endl;
+        return EXIT_FAILURE;
+    }
+    if(maxPredecesors >= nExercices){
+        std::cerr << "Max predecesors cannot be greater than the number of exercices" << std::endl;
+        return EXIT_FAILURE;
+    }
     // generator
     Generator gen(seed);
     auto p = gen.generate(domain, nExercices, maxPredecesors, maxPrecursors);

@@ -27,6 +27,14 @@ Problem Generator::generate(std::string const& domainName, unsigned int nExercic
         exercices.push_back(e);
     }
     // add relationships
+    for(int j = 0; j < nExercices; ++j){
+        auto precursors = (std::rand() % maxPrecursors) + 1;
+        for(unsigned int i = 0; i < precursors; ++i){
+            auto it = std::rand() % nExercices;
+            while(it == j)it = std::rand() % nExercices;
+            exercices[j].addPrecursor(exercices[it]);
+        }
+    }
     for(unsigned int i = 0; i < maxPrecursors; ++i){
 
     }
@@ -37,7 +45,7 @@ Problem Generator::generate(std::string const& domainName, unsigned int nExercic
     // add objectives
     for(auto i = 0; i < nObjectives; ++i){
         auto level = exercices[i].getObjective();
-        unsigned int obj = (std::rand() % (Problem::MAX_LEVEL - level)) + level;
+        unsigned int obj = (std::rand() % (Problem::MAX_LEVEL - level)) + level + 1;
         exercices[i].setObjective(obj);
     }
 
