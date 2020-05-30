@@ -91,7 +91,7 @@ static char *serrmsg[] = {
 };
 
 
-/* void opserr( int errno, char *par ); */
+void opserr( int errno, char *par );
 
 
 static int sact_err;
@@ -202,7 +202,7 @@ int supported( char *str )
 /**********************************************************************/
 file:
 { 
-  opserr( DOMDEF_EXPECTED, NULL ); 
+  //opserr( DOMDEF_EXPECTED, NULL ); 
 }
 domain_definition 
 ;
@@ -362,12 +362,12 @@ functions_list
 require_def:
 OPEN_PAREN  REQUIREMENTS_TOK 
 { 
-  opserr( REQUIREM_EXPECTED, NULL ); 
+  //opserr( REQUIREM_EXPECTED, NULL ); 
 }
 NAME
 { 
   if ( !supported( $4 ) ) {
-    opserr( NOT_SUPPORTED, $4 );
+    //opserr( NOT_SUPPORTED, $4 );
     yyerror();
   }
 }
@@ -382,7 +382,7 @@ require_key_star:
 NAME
 { 
   if ( !supported( $1 ) ) {
-    opserr( NOT_SUPPORTED, $1 );
+    //opserr( NOT_SUPPORTED, $1 );
     yyerror();
   }
 }
@@ -394,7 +394,7 @@ require_key_star
 types_def:
 OPEN_PAREN  TYPES_TOK
 { 
-  opserr( TYPEDEF_EXPECTED, NULL ); 
+  //opserr( TYPEDEF_EXPECTED, NULL ); 
 }
 typed_list_name  CLOSE_PAREN
 {
@@ -407,7 +407,7 @@ typed_list_name  CLOSE_PAREN
 constants_def:
 OPEN_PAREN  CONSTANTS_TOK
 { 
-  opserr( CONSTLIST_EXPECTED, NULL ); 
+  //opserr( CONSTLIST_EXPECTED, NULL ); 
 }
 typed_list_name  CLOSE_PAREN
 {
@@ -422,7 +422,7 @@ typed_list_name  CLOSE_PAREN
 action_def:
 OPEN_PAREN  ACTION_TOK  
 { 
-  opserr( ACTION, NULL ); 
+  //opserr( ACTION, NULL ); 
 }  
 NAME
 { 
@@ -993,25 +993,6 @@ VARIABLE  typed_list_variable        /* a list element (gets type from next one)
 /* 
  * call	bison -pops -bscan-ops scan-ops.y
  */
-
-void opserr( int errno, char *par )
-
-{
-
-/*   sact_err = errno; */
-
-/*   if ( sact_err_par ) { */
-/*     free(sact_err_par); */
-/*   } */
-/*   if ( par ) { */
-/*     sact_err_par = new_Token(strlen(par)+1); */
-/*     strcpy(sact_err_par, par); */
-/*   } else { */
-/*     sact_err_par = NULL; */
-/*   } */
-
-}
-  
 
 
 int yyerror( char *msg )

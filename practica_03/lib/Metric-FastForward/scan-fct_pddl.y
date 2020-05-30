@@ -98,7 +98,7 @@ static char * serrmsg[] = {
 };
 
 
-/* void fcterr( int errno, char *par ); */
+void fcterr( int errno, char *par );
 
 
 static int sact_err;
@@ -190,7 +190,7 @@ problem_definition  file
 problem_definition : 
 OPEN_PAREN DEFINE_TOK         
 { 
-  fcterr( PROBNAME_EXPECTED, NULL ); 
+  //fcterr( PROBNAME_EXPECTED, NULL ); 
 }
 problem_name  problem_defs  CLOSE_PAREN                 
 {  
@@ -217,7 +217,7 @@ base_domain_name :
 OPEN_PAREN  BDOMAIN_TOK  NAME  CLOSE_PAREN
 { 
   if ( SAME != strcmp($3, gdomain_name) ) {
-    fcterr( BADDOMAIN, NULL );
+    //fcterr( BADDOMAIN, NULL );
     yyerror();
   }
 }
@@ -253,7 +253,7 @@ OPEN_PAREN  OBJECTS_TOK  typed_list_name  CLOSE_PAREN
 init_def:
 OPEN_PAREN  INIT_TOK
 {
-  fcterr( INIFACTS, NULL ); 
+  //fcterr( INIFACTS, NULL ); 
 }
 init_el_plus  CLOSE_PAREN
 {
@@ -267,7 +267,7 @@ init_el_plus  CLOSE_PAREN
 goal_def:
 OPEN_PAREN  GOAL_TOK
 { 
-  fcterr( GOALDEF, NULL ); 
+  //fcterr( GOALDEF, NULL ); 
 }
 adl_goal_description  CLOSE_PAREN
 {
@@ -875,22 +875,6 @@ NAME  name_star
 /* 
  * call	bison -pfct -bscan-fct scan-fct.y
  */
-void fcterr( int errno, char *par ) {
-
-/*   sact_err = errno; */
-
-/*   if ( sact_err_par ) { */
-/*     free( sact_err_par ); */
-/*   } */
-/*   if ( par ) { */
-/*     sact_err_par = new_Token( strlen(par)+1 ); */
-/*     strcpy( sact_err_par, par); */
-/*   } else { */
-/*     sact_err_par = NULL; */
-/*   } */
-
-}
-
 
 
 int yyerror( char *msg )

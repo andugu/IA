@@ -89,3 +89,16 @@ lint:
 	lclint -booltype Bool $(SOURCES) 2> output.lint
 
 # DO NOT DELETE
+
+main.o: ff.h memory.h output.h parse.h expressions.h inst_pre.h inst_easy.h
+main.o: inst_hard.h inst_final.h relax.h search.h
+memory.o: ff.h memory.h inst_pre.h
+output.o: ff.h output.h
+parse.o: ff.h memory.h output.h parse.h
+expressions.o: ff.h output.h memory.h expressions.h
+inst_pre.o: ff.h output.h memory.h expressions.h inst_pre.h
+inst_easy.o: ff.h output.h memory.h expressions.h inst_pre.h inst_easy.h
+inst_hard.o: ff.h output.h memory.h expressions.h inst_pre.h inst_hard.h
+inst_final.o: ff.h output.h memory.h expressions.h inst_pre.h inst_final.h
+relax.o: ff.h output.h memory.h expressions.h relax.h search.h
+search.o: ff.h output.h memory.h expressions.h relax.h search.h
