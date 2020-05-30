@@ -2,7 +2,7 @@
 
 (define (domain CoachingPotatoPlanner)
     (:requirements :strips :adl :equality :typing)
-    (:types ejercicio nivel dia)
+    (:types ejercicio nivel dia valor)
     (:predicates (preparador ?x - ejercicio ?y - ejercicio) ; x es preparador de y
                  (precursor ?x - ejercicio ?y - ejercicio)  ; x es precursor de y
     			 (dificultad ?d - nivel ?x - ejercicio) 	; d es la dificultad del ejercicio x
@@ -12,7 +12,7 @@
                  (sig ?n1 - nivel ?n2 - nivel)              ; n2 = n1+1
                  (ant ?d1 - dia ?d2 - dia)                  ; ayer
                  (primer_dia ?d - dia)                      ; primer dia
-                 (capacidad_dia ?d - dia)                   ; nº de exercicios que contiene un dia
+                 (count ?d - dia ?v - valor)                ; count de ejercicios en un dia
     )
 
     (:action alcanzado
@@ -21,7 +21,11 @@
 		:effect (conseguido ?e)    	
     )
 
-    
+    (:action count
+        :parameters ()
+        :precondition ()
+        :effect (forall (?d - day) (assign (count ?d ?v) 0))
+    )
 
     (:action asignar
     	:parameters (?e - ejercicio ?d - dia ?n - nivel ?l - nivel)
@@ -31,11 +35,9 @@
                             (not (objetivo ?n ?e))
                             (sig ?n ?l)
                             (not (asig ?e ?d))
-                            (< (capacidad_dia ?d) 6)
     				  )
     	:effect (and (not (dificultad ?n ?e) )
     				  (dificultad ?l ?e)
-                      (increase (capacidad_dia ?d) 1)
     				  (asig ?e ?d)
     			)
     ) 
