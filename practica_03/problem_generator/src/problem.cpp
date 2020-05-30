@@ -12,7 +12,7 @@ Problem::Problem(std::string const& domainName){
     domain = domainName;
 }
 
-void Problem::write(std::string const& fileName) const{
+void Problem::write(std::string const& fileName){
     std::ofstream file(fileName); // RAII -> not closing necessary
     file << ";; Generated problem " << fileName << std::endl;
     file << writeStatement("define", writeStatement("problem") +
@@ -43,13 +43,13 @@ void Problem::addExercice(Exercice& ex){
  std::string Problem::writeObjects() const{
      std::string objects = "\n";
      // add exercices
-     auto it = 0;
+
      for(auto const& e : exercices){
-         objects += " e" + std::to_string(it);
-         it += 1;
+         objects += " e" + std::to_string(e.getID());
      }
      objects += " - ejercicio\n";
      // add levels
+     auto it = 0;
      for(it = 1; it <= MAX_LEVEL; ++it){
          objects += " n" + std::to_string(it);
      }
@@ -63,8 +63,39 @@ void Problem::addExercice(Exercice& ex){
      return writeStatement(":objects", objects);
  }
 
- std::string Problem::writeInit() const{
-     return writeStatement(":init");
+std::string Problem::writeInit(){
+     std::string objects = "";
+     // add exercices relationships
+     for(auto& e : exercices){
+         e.reset(); // reset iterators
+         // add precursors
+
+         while(e.nextPrecursor()){
+             auto exercice = e.getPrecursor();
+         }
+         // add preparators
+         while(e.nextPreparator()){
+             auto exercice = e.getPreparator();
+         }
+
+     }
+     objects += "\n";
+     // add level relationships
+     for(auto i = 2; i <= MAX_LEVEL; ++i){
+         auto content = " n" + std::to_string(i - 1) + " n" + std::to_string(i);
+         objects += writeStatement("sig", content , " ");
+     }
+     objects += "\n";
+     // add day relationships
+     for(auto i = 2; i <= MAX_DAYS; ++i){
+         auto content = " d" + std::to_string(i - 1) + " d" + std::to_string(i);
+         objects += writeStatement("ant", content , " ");
+     }
+     objects += "\n";
+
+     // add first day
+     objects += writeStatement("primer_dia d1");
+     return writeStatement(":init", objects);
  }
 
 

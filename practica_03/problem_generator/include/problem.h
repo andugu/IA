@@ -19,13 +19,13 @@ class Problem{
 
         void addExercice(Exercice& ex);
 
-        void write(std::string const& fileName) const;
+        void write(std::string const& fileName) ;
 
     private:
 
         std::string writeDomain() const;
         std::string writeObjects() const;
-        std::string writeInit() const;
+        std::string writeInit();
         std::string writeGoal() const;
 
         std::string writeStatement(std::string const& header, std::string const& content = "", std::string const& end ="\n") const;
@@ -37,6 +37,6 @@ class Problem{
         std::list<Exercice> exercices;
 
         static const unsigned int MAX_DAYS = 15;
-        static const unsigned int MAX_LEVEL = 10; 
+        static const unsigned int MAX_LEVEL = 10;
 
 };
