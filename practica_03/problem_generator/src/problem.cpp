@@ -15,7 +15,7 @@ Problem::Problem(std::string const& domainName){
 void Problem::write(std::string const& fileName){
     std::ofstream file(fileName); // RAII -> not closing necessary
     file << ";; Generated problem " << fileName << std::endl;
-    file << writeStatement("define", writeStatement("problem") +
+    file << writeStatement("define", writeStatement("problem", " nivel_basico") +
         writeDomain() +
         writeObjects() +
         writeInit() +
@@ -77,6 +77,11 @@ std::string Problem::writeInit(){
          while(e.nextPreparator()){
              auto exercice = e.getPreparator();
          }
+         auto id = e.getID();
+         auto level = e.getLevel();
+         std::string name = " e" + std::to_string(id);
+         std::string content = " " + level + name;
+         objects += writeStatement("dificultad", content, ";; exercice " + name + "\n");
 
      }
      objects += "\n";
