@@ -52,6 +52,14 @@ void Exercice::reset(){
     preparersIt = preparers.begin();
 }
 
+std::string Exercice::getLevel() const{
+    return level;
+}
+
+std::string Exercice::getObjective() const{
+    return objective;
+}
+
 
 
 /*******************

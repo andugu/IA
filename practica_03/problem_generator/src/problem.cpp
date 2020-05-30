@@ -100,7 +100,16 @@ std::string Problem::writeInit(){
 
 
  std::string Problem::writeGoal() const{
-     return writeStatement(":goal");
+     std::string objects = "";
+     for(auto const& e : exercices){
+         auto level = e.getLevel();
+         auto objective = e.getObjective();
+         if(level != objective){
+            objects += writeStatement("conseguido", " e" + std::to_string(e.getID()));
+         }
+     }
+
+     return writeStatement(":goal", writeStatement("and", objects));
  }
 
 std::string Problem::writeStatement(std::string const& header, std::string const& content, std::string const& end) const{

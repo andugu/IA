@@ -33,6 +33,10 @@ class Exercice{
 
         unsigned int getID() const;
 
+        std::string getLevel() const;
+
+        std::string getObjective() const; 
+
 
     private:
 
