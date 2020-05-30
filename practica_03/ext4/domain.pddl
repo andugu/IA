@@ -12,7 +12,9 @@
                  (sig ?n1 - nivel ?n2 - nivel)              ; n2 = n1+1
                  (ant ?d1 - dia ?d2 - dia)                  ; ayer
                  (primer_dia ?d - dia)                      ; primer dia
-                 (capacidad_dia ?d - dia)                   ; nº de exercicios que contiene un dia
+    )
+    (:functions  (minutos_dia ?d - dia)                     ; nº de minutos de ejercicio en un dia
+                 (minutos_ejercicio ?e - ejercicio)         ; nº de minutos de un solo ejercicio
     )
 
     (:action alcanzado
@@ -20,8 +22,6 @@
 		:precondition (and (dificultad ?n ?e) (objetivo ?n ?e))
 		:effect (conseguido ?e)    	
     )
-
-    
 
     (:action asignar
     	:parameters (?e - ejercicio ?d - dia ?n - nivel ?l - nivel)
@@ -31,14 +31,12 @@
                             (not (objetivo ?n ?e))
                             (sig ?n ?l)
                             (not (asig ?e ?d))
-                            (< (capacidad_dia ?d) 6)
+                            (<= (+ (minutos_dia ?d) (minutos_ejercicio ?e)) 90)
     				  )
-    	:effect (and (not (dificultad ?n ?e) )
+    	:effect (and  (not (dificultad ?n ?e) )
     				  (dificultad ?l ?e)
-                      (increase (capacidad_dia ?d) 1)
     				  (asig ?e ?d)
+                      (increase (minutos_dia ?d) (minutos_ejercicio ?e))
     			)
-    ) 
-    
-
+    )
 )
