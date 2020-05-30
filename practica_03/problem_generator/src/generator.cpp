@@ -13,7 +13,7 @@ Generator::Generator(unsigned int randSeed){
 }
 
 Problem Generator::generate(std::string const& domainName, unsigned int nExercices,
-                 unsigned int maxPrecursors, unsigned int maxPredecesors){
+                 unsigned int maxPrecursors, unsigned int maxPreparers){
     Problem p;
     int nObjectives = pObjective * nExercices;
     std::vector<Exercice> exercices;
@@ -28,18 +28,20 @@ Problem Generator::generate(std::string const& domainName, unsigned int nExercic
     }
     // add relationships
     for(int j = 0; j < nExercices; ++j){
+        auto preparers = (std::rand() % maxPreparers) + 1;
+        for(unsigned int i = 0; i < preparers; ++i){
+            auto it = std::rand() % nExercices;
+            while(it == j)it = std::rand() % nExercices;
+            exercices[j].addPreparer(exercices[it]);
+        }
+    }
+    for(int j = 0; j < nExercices; ++j){
         auto precursors = (std::rand() % maxPrecursors) + 1;
         for(unsigned int i = 0; i < precursors; ++i){
             auto it = std::rand() % nExercices;
             while(it == j)it = std::rand() % nExercices;
             exercices[j].addPrecursor(exercices[it]);
         }
-    }
-    for(unsigned int i = 0; i < maxPrecursors; ++i){
-
-    }
-    for(unsigned int i = 0; i < maxPredecesors; ++i){
-
     }
 
     // add objectives

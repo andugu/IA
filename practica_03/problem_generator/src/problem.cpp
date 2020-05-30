@@ -79,6 +79,8 @@ std::string Problem::writeInit(){
          // add preparators
          while(e.nextPreparator()){
              auto exercice = e.getPreparator();
+             auto idP = " e"  + std::to_string(exercice->getID());
+             objects += writeStatement("preparador", idP + id, " ");
          }
          auto level = "n" + std::to_string(e.getLevel());
          std::string content = " " + level + id;
