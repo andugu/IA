@@ -10,7 +10,7 @@
 #include "include/generator.h"
 
 /* Constants definitions */
-const int MIN_ARGS = 7;
+const int MIN_ARGS = 8;
 
 /**
  * Usage function:
@@ -19,13 +19,14 @@ const int MIN_ARGS = 7;
  * */
 void usage(){
     std::cerr << std::endl;
-    std::cerr << "usage: generator outFile seed domain nExercices maxPrecursors maxPredecesors" << std::endl;
+    std::cerr << "usage: generator outFile seed domain nExercices maxPrecursors maxPredecesors duration" << std::endl;
     std::cerr << "  outFile: the name of the output file" << std::endl;
     std::cerr << "  seed: the seed for random generation" << std::endl;
     std::cerr << "  domain: the name of the PDDL domain" << std::endl;
     std::cerr << "  nExercices: number of exercices to generate" << std::endl;
     std::cerr << "  maxPrecursors: max number of precursors per exercice" << std::endl;
     std::cerr << "  maxPredecesors: max number of predecesors per exercice" << std::endl;
+    std::cerr << "  duration: flag for ext4, specifies if the exercice must have duration" << std::endl;
     std::cerr << std::endl;
 }
 
@@ -47,6 +48,7 @@ int main(int argc, char* argv[]){
     unsigned int nExercices = std::stoi(argv[4]);
     unsigned int maxPrecursors = std::stoi(argv[5]);
     unsigned int maxPredecesors = std::stoi(argv[6]);
+    bool hasDuration = argv[7] == "true";
     // check input
     if(maxPrecursors >= nExercices){
         std::cerr << "Max precursors cannot be greater than the number of exercices" << std::endl;
@@ -58,7 +60,7 @@ int main(int argc, char* argv[]){
     }
     // generator
     Generator gen(seed);
-    auto p = gen.generate(domain, nExercices, maxPredecesors, maxPrecursors);
+    auto p = gen.generate(domain, nExercices, maxPredecesors, maxPrecursors, hasDuration);
     // save problem generated
     p.write(outFile);
 

@@ -7,12 +7,14 @@
 Exercice::Exercice(){
     level = 0;
     objective = 0;
+    duration = 0;
 }
 
 Exercice::Exercice(unsigned int i, unsigned int lvl, unsigned int obj){
     level = lvl;
     objective = obj;
     id = i;
+    duration = 0;
 }
 
 void Exercice::addPrecursor(Exercice& ex){
@@ -64,6 +66,13 @@ void Exercice::setObjective(unsigned int obj){
     objective = obj;
 }
 
+void Exercice::setDuration(unsigned int d){
+    duration = d;
+}
+
+unsigned int Exercice::getDuration() const{
+    return duration;
+}
 
 
 /*******************

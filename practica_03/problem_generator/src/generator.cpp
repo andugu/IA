@@ -13,7 +13,8 @@ Generator::Generator(unsigned int randSeed){
 }
 
 Problem Generator::generate(std::string const& domainName, unsigned int nExercices,
-                 unsigned int maxPrecursors, unsigned int maxPreparers){
+                 unsigned int maxPrecursors, unsigned int maxPreparers,
+                 bool hasDuration){
     Problem p;
     int nObjectives = pObjective * nExercices;
     std::vector<Exercice> exercices;

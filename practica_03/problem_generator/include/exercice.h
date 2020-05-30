@@ -37,11 +37,17 @@ class Exercice{
 
         unsigned int getObjective() const;
 
+        unsigned int getDuration() const;
+        
+        void setDuration(unsigned int d);
+
         void setObjective(unsigned int obj);
 
 
     private:
 
+        // duration
+        unsigned int duration;
         // exercice name
         unsigned int id;
         // current level that the user has

@@ -17,7 +17,8 @@ class Generator{
 
 
         Problem generate(std::string const& domainName, unsigned int nExercices,
-                         unsigned int maxPrecursors, unsigned int maxPredecesors);
+                         unsigned int maxPrecursors, unsigned int maxPredecesors,
+                         bool hasDuration);
 
 
     private:
