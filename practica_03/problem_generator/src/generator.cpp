@@ -16,6 +16,7 @@ Problem Generator::generate(std::string const& domainName, unsigned int nExercic
                  unsigned int maxPrecursors, unsigned int maxPreparers,
                  bool hasDuration){
     Problem p;
+    std::srand(seed); // set seed 
     int nObjectives = pObjective * nExercices;
     std::vector<Exercice> exercices;
     exercices.reserve(nExercices);
@@ -25,6 +26,7 @@ Problem Generator::generate(std::string const& domainName, unsigned int nExercic
         unsigned int level = (std::rand() % (Problem::MAX_LEVEL - 1)) + 1;
         // unsigned int objective = (std::rand() % (Problem::MAX_LEVEL - level)) + level;
         Exercice e(i, level, level);
+        if(hasDuration)e.setDuration((std::rand() % (MAX_DURATION  - MIN_DURATION)) + MIN_DURATION);
         exercices.push_back(e);
     }
     // add relationships
