@@ -41,7 +41,26 @@ void Problem::addExercice(Exercice& ex){
 
 
  std::string Problem::writeObjects() const{
-     return writeStatement(":objects");
+     std::string objects = "\n";
+     // add exercices
+     auto it = 0;
+     for(auto const& e : exercices){
+         objects += " e" + std::to_string(it);
+         it += 1;
+     }
+     objects += " - ejercicio\n";
+     // add levels
+     for(it = 1; it <= MAX_LEVEL; ++it){
+         objects += " n" + std::to_string(it);
+     }
+     objects += " - nivel\n";
+     // add days
+     for(it = 1; it <= MAX_DAYS; ++it){
+         objects += " d" + std::to_string(it);
+     }
+     objects += " - dia\n";
+
+     return writeStatement(":objects", objects);
  }
 
  std::string Problem::writeInit() const{

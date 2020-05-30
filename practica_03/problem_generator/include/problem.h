@@ -22,7 +22,7 @@ class Problem{
         void write(std::string const& fileName) const;
 
     private:
- 
+
         std::string writeDomain() const;
         std::string writeObjects() const;
         std::string writeInit() const;
@@ -36,5 +36,7 @@ class Problem{
         /* List of exercices of the current problem*/
         std::list<Exercice> exercices;
 
+        static const unsigned int MAX_DAYS = 15;
+        static const unsigned int MAX_LEVEL = 10; 
 
 };
