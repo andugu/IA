@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "problem.h"
 
 /**
@@ -14,11 +16,15 @@ class Generator{
         Generator(unsigned int randSeed);
 
 
-        Problem generate(std::string const& domainName, unsigned int nExercices);
+        Problem generate(std::string const& domainName, unsigned int nExercices,
+                         unsigned int maxPrecursors, unsigned int maxPredecesors);
 
 
     private:
 
+        // percentatge of exercices that will have
+        // an objective
+        float pObjective;
         unsigned int seed;
 
 };

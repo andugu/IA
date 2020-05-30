@@ -24,8 +24,8 @@ void usage(){
     std::cerr << "  seed: the seed for random generation" << std::endl;
     std::cerr << "  domain: the name of the PDDL domain" << std::endl;
     std::cerr << "  nExercices: number of exercices to generate" << std::endl;
-    std::cerr << "  maxPrecursors: max number of precursors per exercice" << std::endl; 
-    std::cerr << "  maxPredecesors: max number of predecesors per exercice" << std::endl; 
+    std::cerr << "  maxPrecursors: max number of precursors per exercice" << std::endl;
+    std::cerr << "  maxPredecesors: max number of predecesors per exercice" << std::endl;
     std::cerr << std::endl;
 }
 
@@ -45,12 +45,12 @@ int main(int argc, char* argv[]){
     unsigned int seed = std::stoi(argv[2]);
     std::string domain = argv[3];
     unsigned int nExercices = std::stoi(argv[4]);
-    unsigned int maxPrecursors = std::stoi(argv[5]); 
-    unsigned int maxPredecesors = std::stoi(argv[6]); 
+    unsigned int maxPrecursors = std::stoi(argv[5]);
+    unsigned int maxPredecesors = std::stoi(argv[6]);
     // generator
     Generator gen(seed);
-    auto p = gen.generate(domain, nExercices);
-    // save problem generated 
+    auto p = gen.generate(domain, nExercices, maxPredecesors, maxPrecursors);
+    // save problem generated
     p.write(outFile);
 
     return 0;

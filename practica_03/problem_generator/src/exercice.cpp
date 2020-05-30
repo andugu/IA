@@ -5,11 +5,11 @@
  *********************/
 
 Exercice::Exercice(){
-    level = "0";
-    objective = "0";
+    level = 0;
+    objective = 0;
 }
 
-Exercice::Exercice(unsigned int i, std::string const& lvl, std::string const& obj){
+Exercice::Exercice(unsigned int i, unsigned int lvl, unsigned int obj){
     level = lvl;
     objective = obj;
     id = i;
@@ -52,12 +52,16 @@ void Exercice::reset(){
     preparersIt = preparers.begin();
 }
 
-std::string Exercice::getLevel() const{
+unsigned int Exercice::getLevel() const{
     return level;
 }
 
-std::string Exercice::getObjective() const{
+unsigned int Exercice::getObjective() const{
     return objective;
+}
+
+void Exercice::setObjective(unsigned int obj){
+    objective = obj;
 }
 
 

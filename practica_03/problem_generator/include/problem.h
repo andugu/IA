@@ -13,6 +13,9 @@ class Problem{
 
     public:
 
+        static const unsigned int MAX_DAYS = 15;
+        static const unsigned int MAX_LEVEL = 10;
+
         Problem() = default;
 
         explicit Problem(std::string const& domainName);
@@ -36,7 +39,6 @@ class Problem{
         /* List of exercices of the current problem*/
         std::list<Exercice> exercices;
 
-        static const unsigned int MAX_DAYS = 15;
-        static const unsigned int MAX_LEVEL = 10;
+
 
 };

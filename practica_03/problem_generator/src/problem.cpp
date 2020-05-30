@@ -78,7 +78,7 @@ std::string Problem::writeInit(){
              auto exercice = e.getPreparator();
          }
          auto id = e.getID();
-         auto level = e.getLevel();
+         auto level = "n" + std::to_string(e.getLevel());
          std::string name = " e" + std::to_string(id);
          std::string content = " " + level + name;
          objects += writeStatement("dificultad", content, ";; exercice " + name + "\n");
@@ -107,8 +107,8 @@ std::string Problem::writeInit(){
  std::string Problem::writeGoal() const{
      std::string objects = "";
      for(auto const& e : exercices){
-         auto level = e.getLevel();
-         auto objective = e.getObjective();
+         auto level = "n" + std::to_string(e.getLevel());
+         auto objective = "n" + std::to_string(e.getObjective());
          if(level != objective){
             objects += writeStatement("conseguido", " e" + std::to_string(e.getID()));
          }

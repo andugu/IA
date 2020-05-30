@@ -15,7 +15,7 @@ class Exercice{
 
         Exercice();
 
-        Exercice(unsigned int i, std::string const& lvl, std::string const& obj);
+        Exercice(unsigned int i, unsigned int lvl, unsigned int obj);
 
         void addPrecursor(Exercice& ex);
 
@@ -33,9 +33,11 @@ class Exercice{
 
         unsigned int getID() const;
 
-        std::string getLevel() const;
+        unsigned int getLevel() const;
 
-        std::string getObjective() const; 
+        unsigned int getObjective() const;
+
+        void setObjective(unsigned int obj);
 
 
     private:
@@ -43,9 +45,9 @@ class Exercice{
         // exercice name
         unsigned int id;
         // current level that the user has
-        std::string level;
+        unsigned int level;
         // objective level
-        std::string objective;
+        unsigned int objective;
         // save relationship with other exercices
         ExerciceList precursors;
         ExerciceList preparers;
