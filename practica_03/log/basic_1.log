@@ -1,0 +1,79 @@
+n 'COACHINGPOTATOPLANNER' defined
+ ... done.
+ff: parsing problem file
+problem 'NIVEL_BASICO' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   28 into depth [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: ALCANZADO E4 N2
+        1: ALCANZADO E7 N1
+        2: SIN-PREPARADOR E9 D1 N1 N2
+        3: SIN-PREPARADOR E9 D2 N2 N3
+        4: SIN-PREPARADOR E8 D1 N1 N2
+        5: SIN-PREPARADOR E9 D3 N3 N4
+        6: SIN-PREPARADOR E8 D2 N2 N3
+        7: SIN-PREPARADOR E9 D4 N4 N5
+        8: SIN-PREPARADOR E8 D3 N3 N4
+        9: SIN-PREPARADOR E9 D5 N5 N6
+       10: SIN-PREPARADOR E8 D4 N4 N5
+       11: SIN-PREPARADOR E9 D6 N6 N7
+       12: SIN-PREPARADOR E8 D5 N5 N6
+       13: SIN-PREPARADOR E9 D7 N7 N8
+       14: SIN-PREPARADOR E1 D1 N1 N2
+       15: SIN-PREPARADOR E8 D6 N6 N7
+       16: SIN-PREPARADOR E9 D8 N8 N9
+       17: SIN-PREPARADOR E1 D2 N2 N3
+       18: ALCANZADO E1 N3
+       19: SIN-PREPARADOR E8 D7 N7 N8
+       20: ALCANZADO E8 N8
+       21: SIN-PREPARADOR E9 D9 N9 N10
+       22: ALCANZADO E9 N10
+       23: SIN-PREPARADOR E5 D1 N1 N2
+       24: CON-PREPARADOR E6 D1 N2 N3
+       25: SIN-PREPARADOR E5 D2 N2 N3
+       26: CON-PREPARADOR E6 D2 N3 N4
+       27: SIN-PREPARADOR E5 D3 N3 N4
+       28: CON-PREPARADOR E6 D3 N4 N5
+       29: ALCANZADO E6 N5
+
+
+time spent:    0.01 seconds instantiating 6 easy, 1140 hard action templates
+               0.00 seconds reachability analysis, yielding 302 facts and 711 actions
+               0.00 seconds creating final representation with 270 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 31 states, to a max depth of 2
+               0.01 seconds total time
+
