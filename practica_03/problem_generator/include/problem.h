@@ -1,3 +1,6 @@
+#ifndef PROBLEM_H
+#define PROBLEM_H
+
 #include <string>
 #include <list>
 #include <fstream>
@@ -42,3 +45,6 @@ class Problem{
 
 
 };
+
+
+#endif 

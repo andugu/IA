@@ -1,3 +1,6 @@
+#ifndef GENERATOR_H
+#define GENERATOR_H
+
 #include <vector>
 
 #include "problem.h"
@@ -24,7 +27,7 @@ class Generator{
     private:
 
         static const unsigned int MAX_DURATION = 30;
-        static const unsigned int MIN_DURATION = 5; 
+        static const unsigned int MIN_DURATION = 5;
 
         // percentatge of exercices that will have
         // an objective
@@ -32,3 +35,5 @@ class Generator{
         unsigned int seed;
 
 };
+
+#endif

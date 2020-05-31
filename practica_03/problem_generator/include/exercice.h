@@ -1,3 +1,6 @@
+#ifndef EXERCICE_H
+#define EXERCICE_H
+
 #include <list>
 #include <memory>
 
@@ -38,7 +41,7 @@ class Exercice{
         unsigned int getObjective() const;
 
         unsigned int getDuration() const;
-        
+
         void setDuration(unsigned int d);
 
         void setObjective(unsigned int obj);
@@ -63,3 +66,5 @@ class Exercice{
 
 
 };
+
+#endif 
