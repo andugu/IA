@@ -9,7 +9,7 @@
     )
 
     (:init (preparador e1 e2) (preparador e3 e4) (preparador e5 e6)
-           (precursor e7 e9) (precursor e8 e3)
+           (precursor e2 e9) (precursor e3 e8)
     	   (dificultad n1 e1) (dificultad n1 e3) (dificultad n1 e5)
     	   (dificultad n2 e2) (dificultad n2 e4) (dificultad n2 e6)
     	   (dificultad n1 e7) (dificultad n1 e8) (dificultad n1 e9)
@@ -26,8 +26,8 @@
     )
 
 
-    (:goal (conseguido e1) (conseguido e6) (conseguido e4)
-           (conseguido e7) (conseguido e8) (conseguido e9)
+    (:goal (and (conseguido e1) (conseguido e6) (conseguido e4)
+           (conseguido e7) (conseguido e8) (conseguido e9))
     )
 
 
