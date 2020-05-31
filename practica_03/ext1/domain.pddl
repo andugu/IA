@@ -29,7 +29,7 @@
                             (sig ?n ?l)
                             (not (asig ?e ?d))
     				  )
-    	:effect (and (not (dificultad ?n ?e) )
+    	:effect (and  (not (dificultad ?n ?e) )
     				  (dificultad ?l ?e)
     				  (asig ?e ?d)
     			)

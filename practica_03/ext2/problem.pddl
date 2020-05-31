@@ -8,12 +8,13 @@
     		  d11 d12 d13 d14 d15				- dia
     )
 
-    (:init (preparador e1 e2) (preparador e3 e4) (preparador e5 e6)
-           (precursor e2 e9) (precursor e3 e8)
+    (:init (predecesor e5 e2) (predecesor e8 e9)
+    	   (preparador e1 e2) (preparador e3 e4) (preparador e5 e6)
+           (preparador e2 e4)
     	   (dificultad n1 e1) (dificultad n1 e3) (dificultad n1 e5)
     	   (dificultad n2 e2) (dificultad n2 e4) (dificultad n2 e6)
     	   (dificultad n1 e7) (dificultad n1 e8) (dificultad n1 e9)
-    	   (objetivo n3 e1) (objetivo n5 e6) (objetivo n2 e4)
+    	   (objetivo n3 e1) (objetivo n5 e6) (objetivo n4 e4)
     	   (objetivo n1 e7) (objetivo n8 e8) (objetivo n10 e9)
     	   (sig n1 n2) (sig n2 n3) (sig n3 n4)
     	   (sig n4 n5) (sig n5 n6) (sig n6 n7)
@@ -25,10 +26,8 @@
            (ant d13 d14) (ant d14 d15)
     )
 
-
     (:goal (and (conseguido e1) (conseguido e6) (conseguido e4)
-           (conseguido e7) (conseguido e8) (conseguido e9))
+    			(conseguido e7)	(conseguido e8) (conseguido e9)
+    	   )
     )
-
-
 )
