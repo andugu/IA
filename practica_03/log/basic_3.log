@@ -1,0 +1,40 @@
+
+ff: parsing domain file
+domain 'COACHINGPOTATOPLANNER' defined
+ ... done.
+ff: parsing problem file
+problem 'NIVEL_BASICO' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   11 into depth [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+
+best first search space empty! problem proven unsolvable.
+
+
+
+time spent:    0.01 seconds instantiating 3 easy, 1170 hard action templates
+               0.00 seconds reachability analysis, yielding 343 facts and 918 actions
+               0.00 seconds creating final representation with 343 relevant facts
+               0.00 seconds building connectivity graph
+               0.19 seconds searching, evaluating 6168 states, to a max depth of 1
+               0.20 seconds total time
+
