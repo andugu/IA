@@ -25,6 +25,8 @@ class Problem{
 
         void addExercice(Exercice& ex);
 
+        void setType(bool hasDuration, bool hasDayLimit);
+
         void write(std::string const& fileName) ;
 
     private:
@@ -35,6 +37,9 @@ class Problem{
         std::string writeGoal() const;
 
         std::string writeStatement(std::string const& header, std::string const& content = "", std::string const& end ="\n") const;
+
+        bool hasDuration;
+        bool hasDayLimit;
 
         /* Name of the domain to address*/
         std::string domain;
@@ -47,4 +52,4 @@ class Problem{
 };
 
 
-#endif 
+#endif

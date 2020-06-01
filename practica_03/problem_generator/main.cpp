@@ -10,7 +10,7 @@
 #include "include/generator.h"
 
 /* Constants definitions */
-const int MIN_ARGS = 9;
+const int MIN_ARGS = 8;
 
 /**
  * Usage function:
@@ -48,8 +48,10 @@ int main(int argc, char* argv[]){
     unsigned int nExercices = std::stoi(argv[4]);
     unsigned int maxPrecursors = std::stoi(argv[5]);
     unsigned int maxPredecesors = std::stoi(argv[6]);
-    bool hasDuration = argv[7] == "ext3";
-    bool hasDayLimit = argv[8] == "ext4";
+    std::string type = argv[7];
+    bool hasDuration = type == "ext4";
+    bool hasDayLimit = type == "ext3";
+
     // check input
     if(maxPrecursors >= nExercices){
         std::cerr << "Max precursors cannot be greater than the number of exercices" << std::endl;
@@ -63,6 +65,7 @@ int main(int argc, char* argv[]){
     Generator gen(seed);
     auto p = gen.generate(domain, nExercices, maxPredecesors, maxPrecursors, hasDuration);
     // save problem generated
+    p.setType(hasDuration, hasDayLimit);
     p.write(outFile);
 
     return 0;

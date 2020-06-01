@@ -24,6 +24,11 @@ void Problem::write(std::string const& fileName){
 
 }
 
+void Problem::setType(bool hasD, bool hasDL){
+    hasDuration = hasD;
+    hasDayLimit = hasDL;
+}
+
 
 void Problem::addExercice(Exercice& ex){
     exercices.push_back(ex);
@@ -82,6 +87,11 @@ std::string Problem::writeInit(){
              auto idP = " e"  + std::to_string(exercice->getID());
              objects += writeStatement("preparador", idP + id, " ");
          }
+         
+         if(hasDuration){
+             objects += " ";
+             objects += writeStatement("=", writeStatement("minutos_ejercicio ", id, std::to_string(e.getDuration())), " ");
+         }
          auto level = "n" + std::to_string(e.getLevel());
          std::string content = " " + level + id;
          objects += writeStatement("dificultad", content, ";; exercice " + id + "\n");
@@ -100,7 +110,16 @@ std::string Problem::writeInit(){
          objects += writeStatement("ant", content , " ");
      }
      objects += "\n";
-
+     // add day duration or capacity
+     for(auto i = 1; i <= MAX_DAYS; ++i){
+        std::string day = " d" + std::to_string(i);
+        if(hasDuration){
+            objects += writeStatement("=", writeStatement("minutos_dia", day, " 0"), " ");
+        }
+        else if(hasDayLimit){
+            objects += writeStatement("=", writeStatement("capacidad_dia", day, " 0"), " ");
+        }
+     }
      // add first day
      objects += writeStatement("primer_dia d1");
      return writeStatement(":init", objects);

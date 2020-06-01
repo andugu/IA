@@ -9,8 +9,7 @@
 TYPE	= 
 ADDONS	= 
 
-CC      = gcc
-
+CC      = gcc  
 CFLAGS	= -O6 -Wall -g -ansi $(TYPE) $(ADDONS) 
 # -g -pg
 

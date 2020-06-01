@@ -202,7 +202,6 @@ int supported( char *str )
 /**********************************************************************/
 file:
 { 
-  //opserr( DOMDEF_EXPECTED, NULL ); 
 }
 domain_definition 
 ;
@@ -362,12 +361,10 @@ functions_list
 require_def:
 OPEN_PAREN  REQUIREMENTS_TOK 
 { 
-  //opserr( REQUIREM_EXPECTED, NULL ); 
 }
 NAME
 { 
   if ( !supported( $4 ) ) {
-    //opserr( NOT_SUPPORTED, $4 );
     yyerror();
   }
 }
@@ -382,7 +379,6 @@ require_key_star:
 NAME
 { 
   if ( !supported( $1 ) ) {
-    //opserr( NOT_SUPPORTED, $1 );
     yyerror();
   }
 }
@@ -394,7 +390,6 @@ require_key_star
 types_def:
 OPEN_PAREN  TYPES_TOK
 { 
-  //opserr( TYPEDEF_EXPECTED, NULL ); 
 }
 typed_list_name  CLOSE_PAREN
 {
@@ -407,7 +402,6 @@ typed_list_name  CLOSE_PAREN
 constants_def:
 OPEN_PAREN  CONSTANTS_TOK
 { 
-  //opserr( CONSTLIST_EXPECTED, NULL ); 
 }
 typed_list_name  CLOSE_PAREN
 {
@@ -422,7 +416,6 @@ typed_list_name  CLOSE_PAREN
 action_def:
 OPEN_PAREN  ACTION_TOK  
 { 
-  //opserr( ACTION, NULL ); 
 }  
 NAME
 { 

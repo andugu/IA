@@ -190,7 +190,6 @@ problem_definition  file
 problem_definition : 
 OPEN_PAREN DEFINE_TOK         
 { 
-  //fcterr( PROBNAME_EXPECTED, NULL ); 
 }
 problem_name  problem_defs  CLOSE_PAREN                 
 {  
@@ -217,7 +216,6 @@ base_domain_name :
 OPEN_PAREN  BDOMAIN_TOK  NAME  CLOSE_PAREN
 { 
   if ( SAME != strcmp($3, gdomain_name) ) {
-    //fcterr( BADDOMAIN, NULL );
     yyerror();
   }
 }
@@ -253,7 +251,6 @@ OPEN_PAREN  OBJECTS_TOK  typed_list_name  CLOSE_PAREN
 init_def:
 OPEN_PAREN  INIT_TOK
 {
-  //fcterr( INIFACTS, NULL ); 
 }
 init_el_plus  CLOSE_PAREN
 {
@@ -267,7 +264,6 @@ init_el_plus  CLOSE_PAREN
 goal_def:
 OPEN_PAREN  GOAL_TOK
 { 
-  //fcterr( GOALDEF, NULL ); 
 }
 adl_goal_description  CLOSE_PAREN
 {

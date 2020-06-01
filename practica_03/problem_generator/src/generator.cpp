@@ -1,6 +1,6 @@
 #include "../include/generator.h"
 
-
+#include <iostream> // DEBUG
 
 /*******************
  *    PUBLIC
@@ -28,16 +28,20 @@ Problem Generator::generate(std::string const& domainName, unsigned int nExercic
         if(hasDuration)e.setDuration((std::rand() % (MAX_DURATION  - MIN_DURATION)) + MIN_DURATION);
         exercices.push_back(e);
     }
+
+
     // add relationships
-    for(int j = 0; j < nExercices; ++j){
+    for(int j = 0; j < nExercices && maxPreparers > 0; ++j){
         auto preparers = (std::rand() % maxPreparers) + 1;
         for(unsigned int i = 0; i < preparers; ++i){
             auto it = std::rand() % nExercices;
             while(it == j)it = std::rand() % nExercices;
             exercices[j].addPreparer(exercices[it]);
         }
+
     }
-    for(int j = 0; j < nExercices; ++j){
+
+    for(int j = 0; j < nExercices && maxPrecursors > 0; ++j){
         auto precursors = (std::rand() % maxPrecursors) + 1;
         for(unsigned int i = 0; i < precursors; ++i){
             auto it = std::rand() % nExercices;
