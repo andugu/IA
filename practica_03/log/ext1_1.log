@@ -1,0 +1,81 @@
+
+ff: parsing domain file
+domain 'COACHINGPOTATOPLANNER' defined
+ ... done.
+ff: parsing problem file
+problem 'NIVEL_BASICO' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   29 into depth [1]
+                                  28            [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: ALCANZADO E7 N1
+        1: ASIGNAR E9 D1 N1 N2
+        2: ASIGNAR E9 D2 N2 N3
+        3: ASIGNAR E8 D1 N1 N2
+        4: ASIGNAR E9 D3 N3 N4
+        5: ASIGNAR E8 D2 N2 N3
+        6: ASIGNAR E9 D4 N4 N5
+        7: ASIGNAR E8 D3 N3 N4
+        8: ASIGNAR E9 D5 N5 N6
+        9: ASIGNAR E8 D4 N4 N5
+       10: ASIGNAR E9 D6 N6 N7
+       11: ASIGNAR E6 D1 N2 N3
+       12: ASIGNAR E8 D5 N5 N6
+       13: ASIGNAR E9 D7 N7 N8
+       14: ASIGNAR E1 D1 N1 N2
+       15: ASIGNAR E6 D2 N3 N4
+       16: ASIGNAR E4 D1 N2 N3
+       17: ASIGNAR E8 D6 N6 N7
+       18: ASIGNAR E9 D8 N8 N9
+       19: ASIGNAR E1 D2 N2 N3
+       20: ALCANZADO E1 N3
+       21: ASIGNAR E6 D3 N4 N5
+       22: ALCANZADO E6 N5
+       23: ASIGNAR E4 D2 N3 N4
+       24: ALCANZADO E4 N4
+       25: ASIGNAR E8 D7 N7 N8
+       26: ALCANZADO E8 N8
+       27: ASIGNAR E9 D9 N9 N10
+       28: ALCANZADO E9 N10
+     
+
+time spent:    0.00 seconds instantiating 6 easy, 1140 hard action templates
+               0.00 seconds reachability analysis, yielding 296 facts and 621 actions
+               0.00 seconds creating final representation with 264 relevant facts
+               0.01 seconds building connectivity graph
+               0.00 seconds searching, evaluating 30 states, to a max depth of 1
+               0.01 seconds total time
+

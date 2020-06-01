@@ -1,0 +1,160 @@
+
+ff: parsing domain file
+domain 'COACHINGPOTATOPLANNER' defined
+ ... done.
+ff: parsing problem file
+problem 'NIVEL_BASICO' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   50 into depth [1]
+                                  48            [1]
+                                  47            [1]
+                                  46            [1]
+                                  45            [1][2]
+                                  44            [1]
+                                  42            [1]
+                                  41            [1]
+                                  40            [1]
+                                  39            [1]
+                                  38            [1][2]
+                                  37            [1]
+                                  36            [1]
+                                  35            [1]
+                                  34            [1][2][3]
+                                  31            [1]
+                                  30            [1]
+                                  29            [1][2]
+                                  27            [1]
+                                  26            [1][2]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1][2][3]
+                                  16            [1][2][3][4][5]
+                                  11            [1]
+                                  10            [1][2][3][4][5][6]
+                                   9            [1][2][3][4][5]
+                                   8            [1] --- pruning stopped --- [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+
+advancing to distance:   50
+                         48
+                         47
+                         46
+                         45
+                         44
+                         43
+                         37
+                         36
+                         28
+                         23
+                         22
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: ASIGNAR E1 D0
+        1: ASIGNAR E3 D0
+        2: ASIGNAR E4 D0
+        3: COMPLETADO E4
+        4: ASIGNAR E6 D0
+        5: ASIGNAR E7 D0
+        6: ASIGNAR E9 D0
+        7: DIA_SIGUIENTE
+        8: ASIGNAR E1 D1
+        9: COMPLETADO E1
+       10: ASIGNAR E3 D1
+       11: ASIGNAR E4 D1
+       12: ASIGNAR E6 D1
+       13: ASIGNAR E7 D1
+       14: ASIGNAR E9 D1
+       15: DIA_SIGUIENTE
+       16: ASIGNAR E1 D2
+       17: ASIGNAR E3 D2
+       18: ASIGNAR E4 D2
+       19: ASIGNAR E9 D2
+       20: COMPLETADO E9
+       21: ASIGNAR E2 D2
+       22: ASIGNAR E5 D2
+       23: DIA_SIGUIENTE
+       24: ASIGNAR E1 D3
+       25: ASIGNAR E6 D3
+       26: COMPLETADO E6
+       27: ASIGNAR E7 D3
+       28: COMPLETADO E7
+       29: ASIGNAR E9 D3
+       30: ASIGNAR E2 D3
+       31: DIA_SIGUIENTE
+       32: ASIGNAR E1 D4
+       33: ASIGNAR E6 D4
+       34: ASIGNAR E4 D4
+       35: ASIGNAR E2 D4
+       36: COMPLETADO E2
+       37: ASIGNAR E5 D4
+       38: ASIGNAR E7 D4
+       39: DIA_SIGUIENTE
+       40: ASIGNAR E1 D5
+       41: ASIGNAR E2 D5
+       42: ASIGNAR E5 D5
+       43: COMPLETADO E5
+       44: ASIGNAR E3 D5
+       45: ASIGNAR E4 D5
+       46: ASIGNAR E9 D5
+       47: DIA_SIGUIENTE
+       48: ASIGNAR E1 D6
+       49: ASIGNAR E2 D6
+       50: ASIGNAR E3 D6
+       51: COMPLETADO E3
+       52: ASIGNAR E7 D6
+       53: ASIGNAR E6 D6
+       54: ASIGNAR E8 D6
+       55: DIA_SIGUIENTE
+       56: ASIGNAR E1 D7
+       57: ASIGNAR E2 D7
+       58: ASIGNAR E5 D7
+       59: ASIGNAR E7 D7
+       60: ASIGNAR E8 D7
+       61: DIA_SIGUIENTE
+       62: ASIGNAR E1 D8
+       63: ASIGNAR E2 D8
+       64: ASIGNAR E8 D8
+       65: COMPLETADO E8
+     
+
+time spent:    0.01 seconds instantiating 9 easy, 648 hard action templates
+               0.00 seconds reachability analysis, yielding 279 facts and 657 actions
+               0.00 seconds creating final representation with 279 relevant facts, 60 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               1.92 seconds searching, evaluating 8287 states, to a max depth of 6
+               1.93 seconds total time
+

@@ -1,0 +1,123 @@
+
+ff: parsing domain file
+domain 'COACHINGPOTATOPLANNER' defined
+ ... done.
+ff: parsing problem file
+problem 'NIVEL_BASICO' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:   38 into depth [1]
+                                  37            [1]
+                                  36            [1]
+                                  35            [1]
+                                  34            [1]
+                                  33            [1]
+                                  32            [1][2]
+                                  30            [1]
+                                  29            [1]
+                                  28            [1]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1]
+                                  24            [1][2][3]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1][2][3]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1][2][3]
+                                  15            [1][2][3][4]
+                                  14            [1][2][3][4]
+                                  12            [1][2][3][4][5][6][7]
+                                  10            [1][2][3]
+                                   9            [1][2]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1]
+                                   3            [1][2][3][4]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: ASIGNAR E1 D0
+        1: ASIGNAR E2 D0
+        2: ASIGNAR E9 D0
+        3: ASIGNAR E8 D0
+        4: ASIGNAR E7 D0
+        5: ASIGNAR E6 D0
+        6: DIA_SIGUIENTE
+        7: ASIGNAR E1 D1
+        8: COMPLETADO E1
+        9: ASIGNAR E9 D1
+       10: ASIGNAR E7 D1
+       11: ASIGNAR E6 D1
+       12: ASIGNAR E4 D1
+       13: COMPLETADO E4
+       14: ASIGNAR E2 D1
+       15: DIA_SIGUIENTE
+       16: ASIGNAR E1 D2
+       17: ASIGNAR E2 D2
+       18: COMPLETADO E2
+       19: ASIGNAR E9 D2
+       20: COMPLETADO E9
+       21: ASIGNAR E8 D2
+       22: ASIGNAR E7 D2
+       23: COMPLETADO E7
+       24: ASIGNAR E6 D2
+       25: COMPLETADO E6
+       26: DIA_SIGUIENTE
+       27: ASIGNAR E1 D3
+       28: ASIGNAR E2 D3
+       29: ASIGNAR E8 D3
+       30: COMPLETADO E8
+       31: ASIGNAR E9 D3
+       32: ASIGNAR E7 D3
+       33: ASIGNAR E3 D3
+       34: DIA_SIGUIENTE
+       35: ASIGNAR E1 D4
+       36: ASIGNAR E2 D4
+       37: ASIGNAR E5 D4
+       38: ASIGNAR E3 D4
+       39: ASIGNAR E9 D4
+       40: ASIGNAR E8 D4
+       41: DIA_SIGUIENTE
+       42: ASIGNAR E1 D5
+       43: ASIGNAR E2 D5
+       44: ASIGNAR E5 D5
+       45: ASIGNAR E9 D5
+       46: ASIGNAR E8 D5
+       47: ASIGNAR E3 D5
+       48: DIA_SIGUIENTE
+       49: ASIGNAR E1 D6
+       50: ASIGNAR E2 D6
+       51: ASIGNAR E5 D6
+       52: COMPLETADO E5
+       53: ASIGNAR E3 D6
+       54: ASIGNAR E9 D6
+       55: ASIGNAR E8 D6
+       56: DIA_SIGUIENTE
+       57: ASIGNAR E3 D7
+       58: COMPLETADO E3
+     
+
+time spent:    0.00 seconds instantiating 9 easy, 137 hard action templates
+               0.00 seconds reachability analysis, yielding 279 facts and 146 actions
+               0.00 seconds creating final representation with 279 relevant facts, 60 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.06 seconds searching, evaluating 935 states, to a max depth of 7
+               0.06 seconds total time
+
