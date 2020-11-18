@@ -1,3 +1,1 @@
-# Laboratori de IA
-
-🏡 of our IA lab sessions
+# Pràctiques i treball d'innovació d'IA
